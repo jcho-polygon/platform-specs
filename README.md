@@ -1,2 +1,2 @@
 # api-specs
-Specifications for Polygon.io APIs
+Specifications for Polygon.io Platform APIs
