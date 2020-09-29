@@ -1,0 +1,27 @@
+type: object
+required: [ price, size, exchange, conditions, timestamp ]
+properties:
+  price:
+    type: number
+    format: double
+    example: 9349.44
+    description: Trade Price
+  size:
+    type: number
+    format: double
+    example: 0.03
+    description: Size of the trade
+  exchange:
+    type: integer
+    example: 2
+    description: Exchange the trade occurred on
+  conditions:
+    type: array
+    items:
+      type: integer
+    example: [ 2, 0 ]
+    description: Conditions of this trade
+  timestamp:
+    type: integer
+    example: 1525930460102
+    description: Timestamp of this trade

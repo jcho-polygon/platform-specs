@@ -1,0 +1,36 @@
+type: object
+required: [ symbol, analysts, change, sell, strongSell, buy, strongBuy, hold, mean, updated ]
+properties:
+  symbol:
+    type: string
+    example: AAPL
+    description: Symbol which we are requesting ratings
+  analysts:
+    type: number
+    example: 27
+    description: Number of analysts reporting
+  change:
+    type: number
+    format: double
+    example: -0.04
+    description: Change from last month to current
+  strongBuy:
+    description: Strong buy ratings
+    $ref: '../index.yml#/RatingSection'
+  buy:
+    description: Moderate buy ratings
+    $ref: '../index.yml#/RatingSection'
+  hold:
+    description: Hold ratings
+    $ref: '../index.yml#/RatingSection'
+  sell:
+    description: Moderate Sell ratings
+    $ref: '../index.yml#/RatingSection'
+  strongSell:
+    description: Strong Sell ratings
+    $ref: '../index.yml#/RatingSection'
+  updated:
+    type: string
+    example: "11/10/2018"
+    format: date-time
+    description: Last time the ratings for this symbol were updated.

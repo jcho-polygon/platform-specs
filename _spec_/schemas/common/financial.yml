@@ -1,0 +1,73 @@
+type: object
+required: [ symbol, reportDate, reportDateStr ]
+properties:
+  symbol:
+    type: string
+    example: AAPL
+    description: Stock Symbol
+  reportDate:
+    type: string
+    format: date-time
+    example: "2017-12-31T00:00:00.000Z"
+    description: Report Date
+  reportDateStr:
+    type: string
+    example: "2017-12-31"
+    description: Report date as non date format
+  grossProfit:
+    type: integer
+    example: 33912000000
+  costOfRevenue:
+    type: integer
+    example: 54381000000
+  operatingRevenue:
+    type: integer
+    example: 88293000000
+  totalRevenue:
+    type: integer
+    example: 88293000000
+  operatingIncome:
+    type: integer
+    example: 26274000000
+  netIncome:
+    type: integer
+    example: 20065000000
+  researchAndDevelopment:
+    type: integer
+    example: 3407000000
+  operatingExpense:
+    type: integer
+    example: 7638000000
+  currentAssets:
+    type: integer
+    example: 143810000000
+  totalAssets:
+    type: integer
+    example: 406794000000
+  totalLiabilities:
+    type: integer
+    example: 266595000000
+  currentCash:
+    type: integer
+    example: 27491000000
+  currentDebt:
+    type: integer
+    example: 18478000000
+  totalCash:
+    type: integer
+    example: 77153000000
+  totalDebt:
+    type: integer
+    example: 122400000000
+  shareholderEquity:
+    type: integer
+    example: 140199000000
+  cashChange:
+    type: integer
+    example: 7202000000
+  cashFlow:
+    type: integer
+    example: 28293000000
+  operatingGainsLosses:
+    type: number
+    example: null

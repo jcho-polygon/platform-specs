@@ -1,0 +1,14 @@
+type: object
+required: [ p, x ]
+properties:
+  p:
+    type: number
+    format: double
+    example: 0.2907
+    description: Price of this book level
+  x:
+    type: object
+    description: Exchange to Size of this price level
+    example:
+      "2": 0.553
+      "5": 2.32

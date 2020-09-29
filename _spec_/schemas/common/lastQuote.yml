@@ -1,0 +1,36 @@
+type: object
+required: [ askprice, asksize, askexchange, bidprice, bidsize, bidexchange, timestamp ]
+properties:
+  askprice:
+    type: number
+    format: double
+    example: 159.59
+    description: Ask Price
+  asksize:
+    type: integer
+    example: 2
+    description: Ask Size
+  askexchange:
+    type: integer
+    example: 11
+    description: Exchange the ask happened on
+  bidprice:
+    type: number
+    format: double
+    example: 159.45
+    description: Bid Price
+  bidsize:
+    type: integer
+    example: 20
+    description: Bid Size
+  bidexchange:
+    type: integer
+    example: 12
+    description: Exchange the bid happened on
+  # cond:
+  #   type: integer
+  #   description: Condition of the quote
+  timestamp:
+    type: integer
+    example: 1518086601843
+    description: Timestamp of this trade

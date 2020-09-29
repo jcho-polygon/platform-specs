@@ -1,0 +1,6 @@
+type: object
+example:
+  "1": Regular
+  "2": Acquisition
+  "3": AveragePrice
+  "4": AutomaticExecution

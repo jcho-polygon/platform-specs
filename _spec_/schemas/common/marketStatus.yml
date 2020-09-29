@@ -1,0 +1,44 @@
+type: object
+required: [ market, serverTime, exchanges ]
+properties:
+  market:
+    type: string
+    example: open
+    description: Status of the market as a whole
+    enum: [ open, closed, extended-hours ]
+  serverTime:
+    type: string
+    example: "2018-07-19T08:51:07-04:00"
+    description: Current time of the server
+    format: date-time
+  exchanges:
+    type: object
+    properties:
+      nyse:
+        type: string
+        example: open
+        description: Status of the market as a whole
+        enum: [ open, closed, extended-hours ]
+      nasdaq:
+        type: string
+        example: open
+        description: Status of the market as a whole
+        enum: [ open, closed, extended-hours ]
+      otc:
+        type: string
+        example: extended-hours
+        description: Status of the market as a whole
+        enum: [ open, closed, extended-hours ]
+  currencies:
+    type: object
+    properties:
+      fx:
+        type: string
+        example: open
+        description: Status of the forex market
+        enum: [ open, closed ]
+      crypto:
+        type: string
+        example: open
+        description: Status of the crypto market
+        enum: [ open, closed ]

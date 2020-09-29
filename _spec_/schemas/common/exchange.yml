@@ -1,0 +1,32 @@
+type: object
+required: [ id, type, market, mic, name, tape ]
+properties:
+  id:
+    type: number
+    example: 2
+    description: ID of the exchange
+  type:
+    type: string
+    example: exchange
+    enum: ['TRF', 'exchange']
+    description: |
+      The type of exchange this is.<br/>
+      - TRF = Trade Reporting Facility<br/>
+      - exchange = Reporting exchange on the tape
+  market:
+    type: string
+    example: equities
+    enum: ['equities', 'indecies']
+    description: Market data type this exchange contains
+  mic:
+    type: string
+    example: XASE
+    description: Market Identification Code
+  name:
+    type: string
+    example: NYSE American (AMEX)
+    description: Name of the exchange
+  tape:
+    type: string
+    example: A
+    description: Tape id of the exchange

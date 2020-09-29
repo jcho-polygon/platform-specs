@@ -1,0 +1,36 @@
+type: object
+required: [ c1, c2, c3, c4, e, p, s, t ]
+properties:
+  c1:
+    type: integer
+    example: 14
+    description: Condition 1 of this trade
+  c2:
+    type: integer
+    example: 12
+    description: Condition 2 of this trade
+  c3:
+    type: integer
+    example: 0
+    description: Condition 3 of this trade
+  c4:
+    type: integer
+    example: 0
+    description: Condition 4 of this trade
+  e:
+    type: string
+    example: 12
+    description: The exchange this trade happened on
+  p:
+    type: number
+    format: double
+    example: 172.17
+    description: Price of the trade
+  s:
+    type: integer
+    example: 50
+    description: Size of the trade
+  t:
+    type: integer
+    example: 1517529601006
+    description: Timestamp of this trade

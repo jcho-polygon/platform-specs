@@ -1,0 +1,27 @@
+type: object
+required: [ c, h, l, o, v ]
+properties:
+  c:
+    type: number
+    format: double
+    example: 0.2907
+    description: Close price
+  h:
+    type: number
+    format: double
+    example: 0.2947
+    description: High price
+  l:
+    type: number
+    format: double
+    example: 0.2901
+    description: Low price
+  o:
+    type: number
+    format: double
+    example: 0.2905
+    description: Open price
+  v:
+    type: integer
+    example: 1432
+    description: Volume

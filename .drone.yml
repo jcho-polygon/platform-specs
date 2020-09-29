@@ -1,81 +1,82 @@
 ---
-  kind: pipeline
-  type: docker
-  name: review
-  
-  platform:
-    os: linux
-    arch: amd64
-  
-  steps:
-  - name: validate spec
-    image: polygonio/swagger-cli
-    commands:
-    - swagger-cli validate _spec_/*.yaml --outfile _built_/swagger.json --type json
+kind: pipeline
+type: docker
+name: review
 
-  trigger:
-    branch:
-    - master
-    event:
-    - pull_request
-  
----
-  kind: pipeline
-  type: docker
-  name: build and deploy to staging
+platform:
+  os: linux
+  arch: amd64
 
-  platform:
-    os: linux
-    arch: amd64
+steps:
+- name: validate spec
+  image: polygonio/swagger-cli
+  commands:
+  - swagger-cli validate _spec_/index.yml
 
-  steps:
-  - name: bundle spec
-    image: polygonio/swagger-cli
-    commands:
-    - swagger-cli bundle _spec_/*.yaml --outfile _built_/swagger.json --type json
-
-  - name: upload spec
-    image: plugins/gcs
-    settings:
-      cache_control: no-cache
-      source: _built_/swagger.json
-      target: polygon-io-public/docs/api_specs/platform/staging/swagger.json
-      token:
-        from_secret: gcs_api_spec_editor_token
-
-  trigger:
-    branch:
-    - master
-    event:
-    - push
+trigger:
+  branch:
+  - master
+  event:
+  - pull_request
 
 ---
-  kind: pipeline
-  type: docker
-  name: build and deploy to production
+kind: pipeline
+type: docker
+name: build and deploy to staging
 
-  platform:
-    os: linux
-    arch: amd64
+platform:
+  os: linux
+  arch: amd64
 
-  steps:
-  - name: bundle spec
-    image: polygonio/swagger-cli
-    commands:
-    - swagger-cli bundle _spec_/*.yaml --outfile _built_/swagger.json --type json
+steps:
+- name: bundle spec
+  image: polygonio/swagger-cli
+  commands:
+  - swagger-cli bundle _spec_/index.yml --outfile _built_/spec.json --type json
 
-  - name: upload spec
-    image: plugins/gcs
-    settings:
-      cache_control: no-cache
-      source: _built_/swagger.json
-      target: polygon-io-public/docs/api_specs/platform/swagger.json
-      token:
-        from_secret: gcs_api_spec_editor_token
+- name: upload spec
+  image: plugins/gcs
+  settings:
+    cache_control: no-cache
+    source: _built_/spec.json
+    target: polygon-io-public/docs/api_specs/platform/staging/spec.json
+    token:
+      from_secret: gcs_api_spec_editor_token
 
-  trigger:
-    event:
-    - tag
-    ref:
-    - refs/tags/production-*
-  
+trigger:
+  branch:
+  - master
+  event:
+  - push
+
+---
+kind: pipeline
+type: docker
+name: build and deploy to production
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: bundle spec
+  image: polygonio/swagger-cli
+  commands:
+  - swagger-cli bundle _spec_/index.yml --outfile _built_/spec.json --type json
+
+- name: upload spec
+  image: plugins/gcs
+  settings:
+    cache_control: no-cache
+    source: _built_/spec.json
+    target: polygon-io-public/docs/api_specs/platform/prod/spec.json
+    token:
+      from_secret: gcs_api_spec_editor_token
+
+trigger:
+  event:
+  - tag
+  ref:
+  - refs/tags/production-*
+
+...

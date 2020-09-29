@@ -1,0 +1,39 @@
+type: object
+required: [ o, h, l, c, v ]
+properties:
+  T:
+    type: string
+    description: Ticker symbol
+    example: AAPL
+  v:
+    type: integer
+    description: Volume
+    example: 31315282
+  o:
+    type: number
+    format: double
+    description: Open
+    example: 102.87
+  c:
+    type: number
+    format: double
+    description: Close
+    example: 103.74
+  h:
+    type: number
+    format: double
+    description: High
+    example: 103.82
+  l:
+    type: number
+    format: double
+    description: Low
+    example: 102.65
+  t:
+    type: integer
+    description: Unix Msec Timestamp ( Start of Aggregate window )
+    example: 1549314000000
+  "n":
+    type: number
+    description: Number of items in aggregate window
+    example: 4

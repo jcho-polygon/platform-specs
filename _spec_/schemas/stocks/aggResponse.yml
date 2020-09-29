@@ -1,0 +1,27 @@
+type: object
+required: [ status, ticker, adjusted, results ]
+properties:
+  ticker:
+    type: string
+    description: Ticker symbol requested
+    example: AAPL
+  status:
+    type: string
+    description: Status of the response
+    example: OK
+  adjusted:
+    type: boolean
+    description: If this response was adjusted for splits
+    example: true
+  queryCount:
+    type: integer
+    description: Number of aggregate (min or day) used to generate the response
+    example: 55
+  resultsCount:
+    type: integer
+    description: Total number of results generated
+    example: 2
+  results:
+    type: array
+    items:
+      $ref: '../index.yml#/Aggv2'

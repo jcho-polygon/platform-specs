@@ -1,0 +1,6 @@
+NotFound:
+  description: The specified resource was not found
+Conflict:
+  description: Parameter is invalid or incorrect.
+Unauthorized:
+  description: Unauthorized - Check our API Key and account status

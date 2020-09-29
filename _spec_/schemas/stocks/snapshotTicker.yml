@@ -1,0 +1,31 @@
+type: object
+required: [ ticker, day, lastTrade, min, prevDay, todaysChange, todaysChangePerc, updated ]
+properties:
+  ticker:
+    type: string
+    example: AAPL
+    description: Ticker of the object
+  day:
+    $ref: "../index.yml#/StocksSnapshotAgg"
+  lastTrade:
+    $ref: "../index.yml#/Trade"
+  lastQuote:
+    $ref: "../index.yml#/StocksSnapshotQuote"
+  min:
+    $ref: "../index.yml#/StocksSnapshotAgg"
+  prevDay:
+    $ref: "../index.yml#/StocksSnapshotAgg"
+  todaysChange:
+    type: number
+    format: double
+    example: .001
+    description: Value of the change from previous day
+  todaysChangePerc:
+    type: number
+    format: double
+    example: 2.55
+    description: Percentage change since previous day
+  updated:
+    type: integer
+    example: 1547787608999
+    description: Last Updated timestamp

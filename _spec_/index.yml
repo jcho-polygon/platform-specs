@@ -1,0 +1,26 @@
+openapi: 3.0.3
+info:
+  title: Polygon API
+  description: The future of fintech.
+  version: "1.0.1"
+servers:
+  - url: 'https://api.polygon.io'
+    description: 'Polygon Platform API'
+paths:
+  /idk:
+    get:
+      responses:
+        '200':
+          description: oh yeah
+components:
+  schemas:
+    $ref: 'schemas/index.yml'
+  responses:
+    $ref: 'responses.yml'
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      name: apiKey
+      in: query
+security:
+  - apiKey: []

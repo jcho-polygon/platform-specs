@@ -1,0 +1,21 @@
+type: object
+required: [ ask, bid, exchange, timestamp ]
+properties:
+  ask:
+    type: number
+    format: double
+    example: 0.7817
+    description: Ask Price
+  bid:
+    type: number
+    format: double
+    example: 0.78154
+    description: Bid Price
+  exchange:
+    type: integer
+    example: 20
+    description: Exchange this trade happened on
+  timestamp:
+    type: integer
+    example: 1518086520785
+    description: Timestamp of this trade

@@ -1,0 +1,51 @@
+type: object
+required: [ t, q, i, x, s, c, p, z ]
+properties:
+  T:
+    type: string
+    example: AAPL
+    description: Ticker of the object
+  t:
+    type: integer
+    example: 1547787608999125754
+    description: Nanosecond accuracy SIP Unix Timestamp
+  y:
+    type: integer
+    example: 1547787608999125754
+    description: Nanosecond accuracy Participant/Exchange Unix Timestamp
+  f:
+    type: integer
+    example: 1547787608999125754
+    description: Nanosecond accuracy TRF(Trade Reporting Facility) Unix Timestamp
+  q:
+    type: integer
+    example: 23547
+    description: Sequence Number
+  i:
+    type: string
+    example: "00MGON"
+    description: Trade ID
+  x:
+    type: integer
+    example: 11
+    description: Exchange ID
+  s:
+    type: integer
+    example: 100
+    description: Size/Volume of the trade
+  c:
+    type: array
+    description: Conditions
+    items:
+      type: integer
+      description: Condition code
+      example: 14
+  p:
+    type: number
+    format: double
+    example: 223.001
+    description: Price of the trade
+  z:
+    type: integer
+    example: 1
+    description: Tape where trade occurred. ( 1,2 = CTA, 3 = UTP )

@@ -1,0 +1,91 @@
+type: object
+required: [ name, symbol, exchange, description, updated ]
+properties:
+  logo:
+    type: string
+    example: https://s3.polygon.io/logos/aapl/logo.png
+    description: URL of the entities logo.
+  exchange:
+    type: string
+    example: Nasdaq Global Select
+    description: Symbols primary exchange
+  name:
+    type: string
+    example: Apple Inc.
+    description: Name of the company/entity
+  symbol:
+    $ref: '../index.yml#/StockSymbol'
+  listdate:
+    type: string
+    format: date
+    description: Date this symbol was listed on the exchange.
+  cik:
+    type: string
+    example: "0000320193"
+    description: Official CIK guid used for SEC database / filings.
+  bloomberg:
+    type: string
+    example: EQ0010169500001000
+    description: Bloomberg guid for this symbol
+  figi:
+    type: string
+    description: guid for the OpenFigi project ( https://openfigi.com/ )
+  lei:
+    type: string
+    example: HWUPKR0MPOU8FGXBT394
+    description: Legal Entity Identifier (LEI) guid for symbol ( https://en.wikipedia.org/wiki/Legal_Entity_Identifier )
+  sic:
+    type: integer
+    example: 3571
+    description: Standard Industrial Classification (SIC) id for symbol ( https://en.wikipedia.org/wiki/Standard_Industrial_Classification )
+  country:
+    type: string
+    example: us
+    description: Country in which this company is registered
+  industry:
+    type: string
+    example: Computer Hardware
+    description: Industry this company operates in
+  sector:
+    type: string
+    example: Technology
+    description: Sector of the indsutry in which this symbol operates in
+  marketcap:
+    type: integer
+    example: 815604985500
+    description: Current market cap for this company
+  employees:
+    type: integer
+    example: 116000
+    description: Approximate number of employees
+  phone:
+    type: string
+    example: "(408) 996-1010"
+    description: Phone number for this company. Usually corporate contact number.
+  ceo:
+    type: string
+    example: Tim Cook
+    description: Name of the companies current CEO
+  url:
+    type: string
+    example: http://www.apple.com
+    description: URL of the companies website
+  description:
+    type: string
+    example: |
+      Apple Inc. designs, manufactures, and markets mobile communication and media devices, personal computers, and portable digital music players to consumers...
+    description: A description of the company and what they do/offer
+  similar:
+    type: array
+    example: ['MSFT','IBM','GOOGL']
+    items:
+      $ref: '../index.yml#/StockSymbol'
+  tags:
+    type: array
+    example: [ "Technology", "Consumer Electronics", "Computer Hardware" ]
+    items:
+      type: string
+  updated:
+    type: string
+    format: date-time
+    description: Last time this company record was updated.

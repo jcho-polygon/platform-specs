@@ -1,0 +1,253 @@
+type: object
+description: Financials
+required: [ ticker, exDate, paymentDate, ratio, tofactor, forfactor ]
+properties:
+  ticker:
+    $ref: '../index.yml#/TickerSymbol'
+  period:
+    type: string
+    example: "Q"
+    description: Reporting period.
+    enum: [ "Q", "T", "QA", "TA", "Y", "YA" ]
+  calendarDate:
+    type: string
+    format: date-time
+    example: "2019-03-31"
+  reportPeriod:
+    type: string
+    format: date-time
+    example: "2019-03-31"
+  updated:
+    type: string
+    format: date-time
+    example: "1999-03-28"
+  accumulatedOtherComprehensiveIncome:
+    type: integer
+  assets:
+    type: integer
+  assetsAverage:
+    type: integer
+  assetsCurrent:
+    type: integer
+  assetTurnover:
+    type: integer
+  assetsNonCurrent:
+    type: integer
+  bookValuePerShare:
+    type: number
+    format: double
+  capitalExpenditure:
+    type: integer
+  cashAndEquivalents:
+    type: integer
+  cashAndEquivalentsUSD:
+    type: integer
+  costOfRevenue:
+    type: integer
+  consolidatedIncome:
+    type: integer
+  currentRatio:
+    type: number
+    format: double
+  debtToEquityRatio:
+    type: number
+    format: double
+  debt:
+    type: integer
+  debtCurrent:
+    type: integer
+  debtNonCurrent:
+    type: integer
+  debtUSD:
+    type: integer
+  deferredRevenue:
+    type: integer
+  depreciationAmortizationAndAccretion:
+    type: integer
+  deposits:
+    type: integer
+  dividendYield:
+    type: integer
+  dividendsPerBasicCommonShare:
+    type: integer
+  earningBeforeInterestTaxes:
+    type: integer
+  earningsBeforeInterestTaxesDepreciationAmortization:
+    type: integer
+  EBITDAMargin:
+    type: number
+    format: double
+  earningsBeforeInterestTaxesDepreciationAmortizationUSD:
+    type: integer
+  earningBeforeInterestTaxesUSD:
+    type: integer
+  earningsBeforeTax:
+    type: integer
+  earningsPerBasicShare:
+    type: number
+    format: double
+  earningsPerDilutedShare:
+    type: number
+    format: double
+  earningsPerBasicShareUSD:
+    type: number
+    format: double
+  shareholdersEquity:
+    type: integer
+  averageEquity:
+    type: integer
+  shareholdersEquityUSD:
+    type: integer
+  enterpriseValue:
+    type: integer
+  enterpriseValueOverEBIT:
+    type: integer
+  enterpriseValueOverEBITDA:
+    type: number
+    format: double
+  freeCashFlow:
+    type: integer
+  freeCashFlowPerShare:
+    type: number
+    format: double
+  foreignCurrencyUSDExchangeRate:
+    type: integer
+  grossProfit:
+    type: integer
+  grossMargin:
+    type: number
+    format: double
+  goodwillAndIntangibleAssets:
+    type: integer
+  interestExpense:
+    type: integer
+  investedCapital:
+    type: integer
+  investedCapitalAverage:
+    type: integer
+  inventory:
+    type: integer
+  investments:
+    type: integer
+  investmentsCurrent:
+    type: integer
+  investmentsNonCurrent:
+    type: integer
+  totalLiabilities:
+    type: integer
+  currentLiabilities:
+    type: integer
+  liabilitiesNonCurrent:
+    type: integer
+  marketCapitalization:
+    type: integer
+  netCashFlow:
+    type: integer
+  netCashFlowBusinessAcquisitionsDisposals:
+    type: integer
+  issuanceEquityShares:
+    type: integer
+  issuanceDebtSecurities:
+    type: integer
+  paymentDividendsOtherCashDistributions:
+    type: integer
+  netCashFlowFromFinancing:
+    type: integer
+  netCashFlowFromInvesting:
+    type: integer
+  netCashFlowInvestmentAcquisitionsDisposals:
+    type: integer
+  netCashFlowFromOperations:
+    type: integer
+  effectOfExchangeRateChangesOnCash:
+    type: integer
+  netIncome:
+    type: integer
+  netIncomeCommonStock:
+    type: integer
+  netIncomeCommonStockUSD:
+    type: integer
+  netLossIncomeFromDiscontinuedOperations:
+    type: integer
+  netIncomeToNonControllingInterests:
+    type: integer
+  profitMargin:
+    type: number
+    format: double
+  operatingExpenses:
+    type: integer
+  operatingIncome:
+    type: integer
+  tradeAndNonTradePayables:
+    type: integer
+  payoutRatio:
+    type: integer
+  priceToBookValue:
+    type: number
+    format: double
+  priceEarnings:
+    type: number
+    format: double
+  priceToEarningsRatio:
+    type: number
+    format: double
+  propertyPlantEquipmentNet:
+    type: integer
+  preferredDividendsIncomeStatementImpact:
+    type: integer
+  sharePriceAdjustedClose:
+    type: number
+    format: double
+  priceSales:
+    type: number
+    format: double
+  priceToSalesRatio:
+    type: number
+    format: double
+  tradeAndNonTradeReceivables:
+    type: integer
+  accumulatedRetainedEarningsDeficit:
+    type: integer
+  revenues:
+    type: integer
+  revenuesUSD:
+    type: integer
+  researchAndDevelopmentExpense:
+    type: integer
+  returnOnAverageAssets:
+    type: integer
+  returnOnAverageEquity:
+    type: integer
+  returnOnInvestedCapital:
+    type: integer
+  returnOnSales:
+    type: number
+    format: double
+  shareBasedCompensation:
+    type: integer
+  sellingGeneralAndAdministrativeExpense:
+    type: integer
+  shareFactor:
+    type: integer
+  shares:
+    type: integer
+  weightedAverageShares:
+    type: integer
+  weightedAverageSharesDiluted:
+    type: integer
+  salesPerShare:
+    type: number
+    format: double
+  tangibleAssetValue:
+    type: integer
+  taxAssets:
+    type: integer
+  incomeTaxExpense:
+    type: integer
+  taxLiabilities:
+    type: integer
+  tangibleAssetsBookValuePerShare:
+    type: number
+    format: double
+  workingCapital:
+    type: integer

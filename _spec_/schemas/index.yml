@@ -1,0 +1,104 @@
+# Reference
+LastTrade:
+ $ref: 'common/lastTrade.yml'
+LastQuote:
+ $ref: 'common/lastQuote.yml'
+HistTrade:
+ $ref: 'common/historicTrade.yml'
+Quote:
+ $ref: 'common/quote.yml'
+Aggregate:
+ $ref: 'common/aggregate.yml'
+Company:
+ $ref: 'common/company.yml'
+Symbol:
+ $ref: 'common/symbol.yml'
+Dividend:
+ $ref: 'common/dividend.yml'
+News:
+ $ref: 'common/news.yml'
+Earning:
+ $ref: 'common/earning.yml'
+Financial:
+ $ref: 'common/financial.yml'
+Exchange:
+ $ref: 'common/exchange.yml'
+StockSymbol:
+ $ref: 'common/stockSymbol.yml'
+ConditionTypeMap:
+ $ref: 'common/conditionTypeMap.yml'
+SymbolTypeMap:
+ $ref: 'common/symbolTypeMap.yml'
+Error:
+ $ref: 'common/error.yml'
+MarketStatus:
+ $ref: 'common/marketStatus.yml'
+MarketHoliday:
+ $ref: 'common/marketHoliday.yml'
+AnalystRatings:
+ $ref: 'common/analystRatings.yml'
+RatingSection:
+ $ref: 'common/ratingSection.yml'
+
+#Ticker:
+#  $ref: 'reference/ticker.yml'
+TickerSymbol:
+  $ref: 'reference/tickerSymbol.yml'
+Split:
+  $ref: 'reference/split.yml'
+Financials:
+  $ref: 'reference/financials.yml'
+
+# Stocks
+Trade:
+  $ref: 'stocks/trade.yml'
+StocksSnapshotTicker:
+  $ref: 'stocks/snapshotTicker.yml'
+StocksSnapshotBookItem:
+  $ref: 'stocks/snapshotBookItem.yml'
+StocksOpenClose:
+  $ref: 'stocks/openClose.yml'
+StocksSnapshotTickerBook:
+  $ref: 'stocks/snapshotTickerBook.yml'
+StocksV2Trade:
+  $ref: 'stocks/v2Trade.yml'
+StocksV2NBBO:
+  $ref: 'stocks/v2NBBO.yml'
+StocksSnapshotAgg:
+  $ref: 'stocks/snapshotAggregate.yml'
+StocksSnapshotQuote:
+  $ref: 'stocks/snapshotQuote.yml'
+Aggv2:
+  $ref: 'stocks/aggV2.yml'
+AggResponse:
+  $ref: 'stocks/aggResponse.yml'
+
+# Forex
+Forex:
+  $ref: 'forex/forex.yml'
+LastForexTrade:
+  $ref: 'forex/lastTrade.yml'
+LastForexQuote:
+  $ref: 'forex/lastQuote.yml'
+ForexAggregate:
+  $ref: 'forex/aggregate.yml'
+ForexSnapshotTicker:
+  $ref: 'forex/snapshotTrade.yml'
+ForexSnapshotAgg:
+  $ref: 'forex/snapshotAggregate.yml'
+
+# Crypto
+CryptoTick:
+ $ref: 'crypto/tick.yml'
+CryptoTickJson:
+ $ref: 'crypto/tickJSON.yml'
+CryptoExchange:
+ $ref: 'crypto/exchange.yml'
+CryptoSnapshotTicker:
+ $ref: 'crypto/snapshotTicker.yml'
+CryptoSnapshotBookItem:
+ $ref: 'crypto/snapshotBookItem.yml'
+CryptoSnapshotTickerBook:
+ $ref: 'crypto/snapshotTickerBook.yml'
+CryptoSnapshotAgg:
+ $ref: 'crypto/snapshotAggregate.yml'
