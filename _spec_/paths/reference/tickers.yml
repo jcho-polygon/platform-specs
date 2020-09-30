@@ -1,0 +1,132 @@
+summary: Tickers
+description: |
+  Query all ticker symbols which are supported by Polygon.io. This API includes Indices, Crypto, FX, and Stocks/Equities.
+parameters:
+  - name: sort
+    in: query
+    description: |
+      Which field to sort by.
+      For desc place a `-` in front of the field name.
+
+      **Example:**
+      - `?sort=-ticker` to sort symbols Z-A
+      - `?sort=type` to sort symbols by type
+    required: false
+    schema:
+      type: string
+    example: ticker
+  - name: type
+    in: query
+    description: |
+      If you want the results to only container a certain type.
+
+      **Example:**
+      - `?type=etp` to get all ETFs
+      - `?type=cs` to get all Common Stock's
+    required: false
+    schema:
+      type: string
+  - name: market
+    in: query
+    description: |
+      Get tickers for a specific market
+
+      **Example:**
+      - `?market=stocks` to get all stock tickers
+      - `?market=indices` to get all index tickers
+    required: false
+    schema:
+      type: string
+      enum: ["STOCKS","INDICES","CRYPTO","FX","BONDS","MF","MMF"]
+  - name: locale
+    in: query
+    description: |
+      Get tickers for a specific region/locale
+
+      **Example:**
+      - `?locale=us` to get all US tickers
+      - `?locale=g` to get all Global tickers
+    required: false
+    schema:
+      type: string
+  - name: search
+    in: query
+    description: |
+      Search the name of tickers
+
+      **Example:**
+      - `?search=microsoft` Search tickers for microsoft
+    required: false
+    schema:
+      type: string
+  - name: perpage
+    in: query
+    description: |
+      How many items to be on each page during pagination. Max 50
+    required: false
+    schema:
+      type: integer
+    example: 50
+  - name: page
+    in: query
+    description: |
+      Which page of results to return
+    required: false
+    schema:
+      type: integer
+    example: 1
+  - name: active
+    in: query
+    description: |
+      Filter for only active or inactive symbols
+    required: false
+    schema:
+      type: boolean
+tags:
+  - Reference
+responses:
+  200:
+    description: An array of symbols
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            $ref: '../../schemas/index.yml#/Symbol'
+          example:
+            - ticker: AAPL
+              name: Apple Inc.
+              market: STOCKS
+              locale: US
+              currency: USD
+              active: true
+              primaryExch: NGS
+              type: cs
+              codes:
+                cik: 0000320193
+                figiuid: EQ0010169500001000
+                scfigi: BBG001S5N8V8
+                cfigi: BBG000B9XRY4
+                figi: BBG000B9Y5X2
+              updated: "2019-01-15T05:21:28.437Z"
+              url: https://api.polygon.io/v2/reference/tickers/AAPL
+            - ticker: $AEDAUD
+              name: United Arab Emirates dirham - Australian dollar
+              market: FX
+              locale: G
+              currency: AUD
+              active: true
+              primaryExch: FX
+              updated: 2019-01-25
+              attrs:
+                currencyName: Australian dollar,
+                currency: AUD,
+                baseName: United Arab Emirates dirham,
+                base: AED
+              url: https://api.polygon.io/v2/tickers/$AEDAUD
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+  409:
+    $ref: '../../responses.yml#/Conflict'

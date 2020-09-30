@@ -1,0 +1,120 @@
+# Common
+/v2/aggs/ticker/{ticker}/prev:
+  get:
+    $ref: 'common/previousClose.yml'
+/v2/aggs/ticker/{ticker}/range/{multiplier}/{timespan}/{from}/{to}:
+  get:
+    $ref: 'common/tickerAggregates.yml'
+/v2/aggs/grouped/locale/{locale}/market/{market}/{date}:
+  get:
+    $ref: 'common/groupedDailyAggregates.yml'
+
+# Reference
+/v2/reference/tickers:
+  get:
+    $ref: 'reference/tickers.yml'
+/v2/reference/types:
+  get:
+    $ref: 'reference/tickerTypes.yml'
+/v1/meta/symbols/{symbol}/company:
+  get:
+    $ref: 'reference/tickerDetails.yml'
+/v1/meta/symbols/{symbol}/news:
+  get:
+    $ref: 'reference/tickerNews.yml'
+/v2/reference/markets:
+  get:
+    $ref: 'reference/markets.yml'
+/v2/reference/locales:
+  get:
+    $ref: 'reference/locales.yml'
+/v2/reference/splits/{symbol}:
+  get:
+    $ref: 'reference/splits.yml'
+/v2/reference/dividends/{symbol}:
+  get:
+    $ref: 'reference/dividends.yml'
+/v2/reference/financials/{symbol}:
+  get:
+    $ref: 'reference/financials.yml'
+/v1/marketstatus/upcoming:
+  get:
+    $ref: 'reference/marketHolidays.yml'
+/v1/marketstatus/now:
+  get:
+    $ref: 'reference/marketStatus.yml'
+
+# Stocks
+/v1/meta/exchanges:
+  get:
+    $ref: 'stocks/exchanges.yml'
+/v2/ticks/stocks/trades/{ticker}/{date}:
+  get:
+    $ref: 'stocks/historicTrades.yml'
+/v2/ticks/stocks/nbbo/{ticker}/{date}:
+  get:
+    $ref: 'stocks/historicQuotes.yml'
+/v1/last/stocks/{symbol}:
+  get:
+    $ref: 'stocks/lastTrade.yml'
+/v1/last_quote/stocks/{symbol}:
+  get:
+    $ref: 'stocks/lastQuote.yml'
+/v1/open-close/{symbol}/{date}:
+  get:
+    $ref: 'stocks/openClose.yml'
+/v1/meta/conditions/{ticktype}:
+  get:
+    $ref: 'stocks/conditionMappings.yml'
+/v2/snapshot/locale/us/markets/stocks/tickers:
+  get:
+    $ref: 'stocks/snapshotAllTickers.yml'
+/v2/snapshot/locale/us/markets/stocks/tickers/{ticker}:
+  get:
+    $ref: 'stocks/snapshotTicker.yml'
+/v2/snapshot/locale/us/markets/stocks/{direction}:
+  get:
+    $ref: 'stocks/snapshotGainersLosers.yml'
+
+# Forex
+/v1/historic/forex/{from}/{to}/{date}:
+  get:
+    $ref: 'forex/historicTrades.yml'
+/v1/conversion/{from}/{to}:
+  get:
+    $ref: 'forex/conversion.yml'
+/v1/last_quote/currencies/{from}/{to}:
+  get:
+    $ref: 'forex/lastQuote.yml'
+/v2/snapshot/locale/global/markets/forex/tickers:
+  get:
+    $ref: 'forex/snapshotAllTickers.yml'
+/v2/snapshot/locale/global/markets/forex/{direction}:
+  get:
+    $ref: 'forex/snapshotGainersLosers.yml'
+
+# Crypto
+/v1/meta/crypto-exchanges:
+  get:
+    $ref: 'crypto/exchanges.yml'
+/v1/last/crypto/{from}/{to}:
+  get:
+    $ref: 'crypto/lastTrade.yml'
+/v1/open-close/crypto/{from}/{to}/{date}:
+  get:
+    $ref: 'crypto/openClose.yml'
+/v1/historic/crypto/{from}/{to}/{date}:
+  get:
+    $ref: 'crypto/historicTrades.yml'
+/v2/snapshot/locale/global/markets/crypto/tickers:
+  get:
+    $ref: 'crypto/snapshotAllTickers.yml'
+/v2/snapshot/locale/global/markets/crypto/tickers/{ticker}:
+  get:
+    $ref: 'crypto/snapshotTicker.yml'
+/v2/snapshot/locale/global/markets/crypto/tickers/{ticker}/book:
+  get:
+    $ref: 'crypto/snapshotFullBook.yml'
+/v2/snapshot/locale/global/markets/crypto/{direction}:
+  get:
+    $ref: 'crypto/snapshotGainersLosers.yml'

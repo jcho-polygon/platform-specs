@@ -1,0 +1,41 @@
+summary: Last Quote for a Currency Pair
+description: |
+  Get Last Quote Tick for a Currency Pair.
+tags:
+  - Forex / Currencies
+parameters:
+  - name: from
+    in: path
+    description: From Symbol of the pair
+    required: true
+    schema:
+      type: string
+    example: AUD
+  - name: to
+    in: path
+    description: To Symbol of the pair
+    required: true
+    schema:
+      type: string
+    example: USD
+responses:
+  200:
+    description: Last quote tick for this currency pair
+    content:
+      application/json:
+        schema:
+          type: object
+          required: [ status, symbol, last ]
+          properties:
+            status:
+              type: string
+              example: success
+              description: Status of this requests response
+            symbol:
+              type: string
+              example: AUD/USD
+              description: Symbol Pair that was evaluated from the request
+            last:
+              $ref: "../../schemas/index.yml#/LastForexQuote"
+  default:
+    $ref: "../../responses.yml#/DefaultError"

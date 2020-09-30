@@ -1,0 +1,69 @@
+summary: Daily Open / Close
+description: |
+  Get the open, close prices of a symbol on a certain day.
+tags:
+  - Crypto
+parameters:
+  - name: from
+    in: path
+    description: From Symbol of the pair
+    required: true
+    schema:
+      type: string
+    example: BTC
+  - name: to
+    in: path
+    description: To Symbol of the pair
+    required: true
+    schema:
+      type: string
+    example: USD
+  - name: date
+    in: path
+    description: Date of the requested open/close
+    required: true
+    schema:
+      type: string
+      format: date
+    example: "2018-5-9"
+responses:
+  200:
+    description: Open Close of this symbol
+    content:
+      application/json:
+        schema:
+          type: object
+          required: [ status, symbol, last ]
+          properties:
+            symbol:
+              type: string
+              example: BTC-USD
+              description: Symbol Pair that was evaluated from the request
+            isUTC:
+              type: boolean
+              description: If the timestamps are in UTC timezone
+              example: true
+            day:
+              type: string
+              format: date
+              example: 2018-5-9
+            open:
+              type: number
+              format: double
+              description: Opening trade price
+              example: 9228.1801
+            close:
+              type: number
+              format: double
+              description: Closing trade price
+              example: 9300.40000001
+            openTrades:
+              type: array
+              items:
+                $ref: "../../schemas/index.yml#/CryptoTickJson"
+            closingTrades:
+              type: array
+              items:
+                $ref: "../../schemas/index.yml#/CryptoTickJson"
+  default:
+    $ref: "../../responses.yml#/DefaultError"

@@ -1,0 +1,34 @@
+summary: Ticker Types
+description: |
+  Get the mapping of ticker types to descriptions / long names
+tags:
+  - Reference
+responses:
+  200:
+    description: An array of types
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            status:
+              type: string
+              example: OK
+            results:
+              type: object
+              example:
+                types:
+                  CS: Common Stock
+                  ADR: American Depository Receipt
+                  NVDR: Non-Voting Depository Receipt
+                  GDR: Global Depositary Receipt
+                indexTypes:
+                  INDEX: Index
+                  ETF: Exchange Traded Fund (ETF)
+                  ETN: Exchange Traded Note (ETN)
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+  409:
+    $ref: '../../responses.yml#/Conflict'

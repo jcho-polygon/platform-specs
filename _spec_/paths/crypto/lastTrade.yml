@@ -1,0 +1,53 @@
+summary: Last Trade for a Crypto Pair
+description: |
+  Get Last Trade Tick for a Currency Pair.
+tags:
+  - Crypto
+parameters:
+  - name: from
+    in: path
+    description: From Symbol of the pair
+    required: true
+    schema:
+      type: string
+    example: BTC
+  - name: to
+    in: path
+    description: To Symbol of the pair
+    required: true
+    schema:
+      type: string
+    example: USD
+responses:
+  200:
+    description: Last tick for this currency pair
+    content:
+      application/json:
+        schema:
+          type: object
+          required: [ status, symbol, last ]
+          properties:
+            status:
+              type: string
+              example: success
+              description: Status of this requests response
+            symbol:
+              type: string
+              example: BTC-USD
+              description: Symbol Pair that was evaluated from the request
+            last:
+              $ref: "../../schemas/index.yml#/CryptoTick"
+            lastAverage:
+              type: object
+              properties:
+                avg:
+                  type: number
+                  format: double
+                  description: Average of the trades analyzed
+                  example: 9348.727
+                tradesAveraged:
+                  type: integer
+                  description: Number of trades that were analyzed to get the average.
+                  example: 10
+  default:
+    $ref: "../../responses.yml#/DefaultError"

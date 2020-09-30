@@ -1,0 +1,33 @@
+summary: Markets
+description: |
+  Get the list of currently supported markets
+tags:
+  - Reference
+responses:
+  200:
+    description: An array of markets
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            status:
+              type: string
+              example: OK
+            results:
+              type: array
+              example:
+                - market: STOCKS
+                  desc: Stocks / Equities / ETFs
+                - market: INDICES
+                  desc: Indices
+                - market: MF
+                  desc: Mutual Funds
+              items:
+                type: string
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+  409:
+    $ref: '../../responses.yml#/Conflict'

@@ -1,0 +1,33 @@
+summary: Locales
+description: |
+  Get the list of currently supported locales
+tags:
+  - Reference
+responses:
+  200:
+    description: An array of locales
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            status:
+              type: string
+              example: OK
+            results:
+              type: array
+              example:
+                - locale: US
+                  name: United States
+                - locale: GB
+                  name: Great Britain / UK
+                - locale: CA
+                  name: Canada
+              items:
+                type: string
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+  409:
+    $ref: '../../responses.yml#/Conflict'

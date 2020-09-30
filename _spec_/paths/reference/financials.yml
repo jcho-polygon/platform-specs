@@ -1,0 +1,62 @@
+summary: Stock Financials
+description: |
+  Get the historical financials for this ticker.
+parameters:
+  - name: symbol
+    in: path
+    description: |
+      Symbol we want financials for
+    required: true
+    schema:
+      type: string
+    example: AAPL
+  - name: limit
+    in: query
+    description: |
+      Limit the number of results
+    required: false
+    example: 5
+    schema:
+      type: integer
+  - name: type
+    in: query
+    description: |
+      Type of reports
+    required: false
+    schema:
+      type: string
+      enum: [ "Y", "YA", "Q", "QA", "T", "TA" ]
+  - name: sort
+    in: query
+    description: |
+      Sort direction
+    required: false
+    schema:
+      type: string
+      enum: [ "reportPeriod", "-reportPeriod", "calendarDate", "-calendarDate" ]
+tags:
+  - Reference
+responses:
+  200:
+    description: An array of financials
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            status:
+              type: string
+              example: OK
+            count:
+              type: integer
+              example: 1
+            results:
+              type: array
+              items:
+                $ref: '../../schemas/index.yml#/Financials'
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+  409:
+    $ref: '../../responses.yml#/Conflict'

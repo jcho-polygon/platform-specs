@@ -1,0 +1,30 @@
+summary: Snapshot - Single Ticker Full Book ( L2 )
+description: |
+  See the current level 2 book of a single ticker. This is the combined book from all the exchanges.
+tags:
+  - Crypto
+parameters:
+  - name: ticker
+    in: path
+    description: Ticker of the snapshot
+    required: true
+    schema:
+      type: string
+    example: ~BTCUSD
+responses:
+  200:
+    description: Get current level 2 book for a ticker
+    content:
+      application/json:
+        schema:
+          type: object
+          required: [ status, tickers ]
+          properties:
+            status:
+              type: string
+              example: OK
+              description: Status of this requests response
+            data:
+              $ref: "../../schemas/index.yml#/CryptoSnapshotTickerBook"
+  default:
+    $ref: "../../responses.yml#/DefaultError"

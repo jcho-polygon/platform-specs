@@ -4,3 +4,6 @@ Conflict:
   description: Parameter is invalid or incorrect.
 Unauthorized:
   description: Unauthorized - Check our API Key and account status
+DefaultError:
+  description: Unexpected error
+

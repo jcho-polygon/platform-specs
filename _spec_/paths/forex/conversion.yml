@@ -1,0 +1,74 @@
+summary: Real-time Currency Conversion
+description: |
+  Convert currencies using the latest market conversion rates. Note than you can convert in both directions. For example USD->CAD or CAD->USD.
+tags:
+  - Forex / Currencies
+parameters:
+  - name: from
+    in: path
+    description: From Symbol of the pair
+    required: true
+    schema:
+      type: string
+    example: AUD
+  - name: to
+    in: path
+    description: To Symbol of the pair
+    required: true
+    schema:
+      type: string
+    example: USD
+  - name: amount
+    in: query
+    description: Amount we want to convert. With decimal
+    required: false
+    schema:
+      type: integer
+    example: 100
+  - name: precision
+    in: query
+    description: Decimal precision of the conversion. Defaults to 2 which is 2 decimal places accuracy.
+    required: false
+    schema:
+      type: integer
+      enum: [0, 1, 2, 3, 4, 5]
+    example: 2
+responses:
+  200:
+    description: Last tick for this currency pair, plus the converted amount for the requested amount.
+    content:
+      application/json:
+        schema:
+          type: object
+          required: [ status, from, to, initialAmount, converted, lastTrade ]
+          properties:
+            status:
+              type: string
+              example: success
+              description: Status of this requests response
+            from:
+              type: string
+              example: AUD
+              description: From currency symbol
+            to:
+              type: string
+              example: USD
+              description: To currency symbol
+            initialAmount:
+              type: number
+              format: double
+              example: 100.00
+              description: The amount we are to convert
+            converted:
+              type: number
+              format: double
+              example: 78.76
+              description: To currency symbol
+            lastTrade:
+              $ref: "../../schemas/index.yml#/LastForexTrade"
+            symbol:
+              type: string
+              example: AUD/USD
+              description: Symbol Pair that was evaluated from the request
+  default:
+    $ref: "../../responses.yml#/DefaultError"

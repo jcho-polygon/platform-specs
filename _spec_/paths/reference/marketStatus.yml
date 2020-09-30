@@ -1,0 +1,18 @@
+summary: Market Status
+description: |
+  Current status of each market
+tags:
+  - Reference
+responses:
+  200:
+    description: Status of the market and each exchange
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/MarketStatus'
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+  409:
+    $ref: '../../responses.yml#/Conflict'

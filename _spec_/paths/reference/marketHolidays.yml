@@ -1,0 +1,20 @@
+summary: Market Holidays
+description: |
+  Get upcoming market holidays and their open/close times
+tags:
+  - Reference
+responses:
+  200:
+    description: Holidays for each market in the near future
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            $ref: '../../schemas/index.yml#/MarketHoliday'
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+  409:
+    $ref: '../../responses.yml#/Conflict'

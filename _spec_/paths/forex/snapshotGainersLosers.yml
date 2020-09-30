@@ -1,0 +1,34 @@
+summary: Snapshot - Gainers / Losers
+description: |
+  See the current snapshot of the top 20 gainers or losers of the day at the moment.
+tags:
+  - Forex / Currencies
+parameters:
+  - name: direction
+    in: path
+    description: |
+      Direction we want
+    required: true
+    schema:
+      type: string
+      enum: [ "gainers", "losers"]
+    example: gainers
+responses:
+  200:
+    description: Get the current gainers / losers of the day
+    content:
+      application/json:
+        schema:
+          type: object
+          required: [ status, tickers ]
+          properties:
+            status:
+              type: string
+              example: OK
+              description: Status of this requests response
+            tickers:
+              type: array
+              items:
+                $ref: "../../schemas/index.yml#/ForexSnapshotTicker"
+  default:
+    $ref: "../../responses.yml#/DefaultError"

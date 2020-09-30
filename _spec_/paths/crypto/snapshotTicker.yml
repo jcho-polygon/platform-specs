@@ -1,0 +1,30 @@
+summary: Snapshot - Single Ticker
+description: |
+  See the current snapshot of a single ticker
+tags:
+  - Crypto
+parameters:
+  - name: ticker
+    in: path
+    description: Ticker of the snapshot
+    required: true
+    schema:
+      type: string
+    example: ~BTCUSD
+responses:
+  200:
+    description: Get current state for a ticker
+    content:
+      application/json:
+        schema:
+          type: object
+          required: [ status, tickers ]
+          properties:
+            status:
+              type: string
+              example: OK
+              description: Status of this requests response
+            ticker:
+              $ref: "../../schemas/index.yml#/CryptoSnapshotTicker"
+  default:
+    $ref: "../../responses.yml#/DefaultError"

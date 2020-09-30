@@ -1,0 +1,50 @@
+summary: Grouped Daily ( Bars )
+description: |
+  Get the daily OHLC for entire markets.
+
+  ### *** Warning, may cause browser to hang ***
+  The response size is large, and sometimes will cause the browser prettyprint to crash.
+tags:
+  - Stocks / Equities
+  - Forex / Currencies
+  - Crypto
+parameters:
+  - name: locale
+    in: path
+    description: Locale of the aggregates ( See 'Locales' API )
+    required: true
+    schema:
+      type: string
+      enum: [ GLOBAL,US,GB,CA,NL,GR,SP,DE,BE,DK,FI,IE,PT,IN,MX,FR,CN,CH,SE ]
+    example: US
+  - name: market
+    in: path
+    description: Market of the aggregates ( See 'Markets' API )
+    required: true
+    schema:
+      type: string
+      enum: [ STOCKS, CRYPTO, BONDS, MF, MMF, INDICES, FX ]
+    example: STOCKS
+  - name: date
+    in: path
+    description: To date
+    required: true
+    schema:
+      type: string
+    example: "2019-02-01"
+  - name: unadjusted
+    in: query
+    description: |
+      Set to true if the results should NOT be adjusted for splits.
+    required: false
+    schema:
+      type: boolean
+responses:
+  200:
+    description: Previous day OHLC for ticker
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/index.yml#/AggResponse"
+  default:
+    $ref: "../../responses.yml#/DefaultError"

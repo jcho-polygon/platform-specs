@@ -1,0 +1,30 @@
+summary: Daily Open / Close
+description: |
+  Get the open, close and afterhours prices of a symbol on a certain date.
+tags:
+  - Stocks / Equities
+parameters:
+  - name: symbol
+    in: path
+    description: Symbol of the stock to get
+    required: true
+    schema:
+      type: string
+    example: AAPL
+  - name: date
+    in: path
+    description: Date of the requested open/close ( YYYY-MM-DD format )
+    required: true
+    schema:
+      type: string
+      format: date
+    example: "2020-06-03"
+responses:
+  200:
+    description: Open Close of this symbol
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/index.yml#/StocksOpenClose"
+  default:
+    $ref: "../../responses.yml#/DefaultError"

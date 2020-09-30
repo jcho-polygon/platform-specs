@@ -1,0 +1,45 @@
+summary: Ticker News
+description: |
+  Get news articles for this ticker.
+parameters:
+  - name: symbol
+    in: path
+    description: |
+      Ticker we want details for
+    required: true
+    schema:
+      type: string
+    example: AAPL
+  - name: perpage
+    in: query
+    description: |
+      How many items to be on each page during pagination. Max 50
+    required: false
+    schema:
+      type: integer
+    example: 50
+  - name: page
+    in: query
+    description: |
+      Which page of results to return
+    required: false
+    schema:
+      type: integer
+    example: 1
+tags:
+  - Reference
+responses:
+  200:
+    description: An array of news
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            $ref: '../../schemas/index.yml#/News'
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+  409:
+    $ref: '../../responses.yml#/Conflict'

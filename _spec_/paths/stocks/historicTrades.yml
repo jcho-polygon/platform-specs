@@ -1,0 +1,80 @@
+summary: Historic Trades
+description: |
+  Get historic trades for a ticker.
+tags:
+  - Stocks / Equities
+parameters:
+  - name: ticker
+    in: path
+    description: Ticker symbol we want ticks for
+    required: true
+    schema:
+      type: string
+    example: AAPL
+  - name: date
+    in: path
+    description: Date/Day of the historic ticks to retrieve ( YYYY-MM-DD )
+    required: true
+    schema:
+      type: string
+      format: date
+    example: "2018-02-02"
+  - name: timestamp
+    in: query
+    description: |
+      Timestamp offset, used for pagination. This is the offset at which to start the results. Using the `timestamp` of the last result as the offset will give you the next page of results.
+    required: false
+    schema:
+      type: integer
+  - name: timestampLimit
+    in: query
+    description: |
+      Maximum timestamp allowed in the results.
+    required: false
+    schema:
+      type: integer
+  - name: reverse
+    in: query
+    description: |
+      Reverse the order of the results. This is useful in combination with `timestamp` param.
+    required: false
+    schema:
+      type: boolean
+  - name: limit
+    in: query
+    description: Limit the size of response, Max 50000
+    required: false
+    schema:
+      type: integer
+    example: 10
+responses:
+  200:
+    description: An array of trades
+    content:
+      application/json:
+        schema:
+          type: object
+          required: [ ticker, success ]
+          properties:
+            results_count:
+              type: integer
+              description: Total number of results in this response
+              example: 10
+            db_latency:
+              type: integer
+              example: 2
+              description: Milliseconds of latency for the query results from DB
+            success:
+              type: boolean
+              example: true
+              description: If this query was executed successfully
+            ticker:
+              type: string
+              example: AAPL
+              description: Ticker symbol that was evaluated from the request
+            results:
+              type: array
+              items:
+                $ref: "../../schemas/index.yml#/StocksV2Trade"
+  default:
+    $ref: "../../responses.yml#/DefaultError"

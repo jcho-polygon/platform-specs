@@ -1,0 +1,83 @@
+summary: Historic Crypto Trades
+description: |
+  Get historic trade ticks for a crypto pair.
+tags:
+  - Crypto
+parameters:
+  - name: from
+    in: path
+    description: From Symbol of the crypto pair
+    required: true
+    schema:
+      type: string
+    example: BTC
+  - name: to
+    in: path
+    description: To Symbol of the crypto pair
+    required: true
+    schema:
+      type: string
+    example: USD
+  - name: date
+    in: path
+    description: Date/Day of the historic ticks to retrieve
+    required: true
+    schema:
+      type: string
+      format: date
+    example: "2018-5-9"
+  - name: offset
+    in: query
+    description: |
+      Timestamp offset, used for pagination. This is the offset at which to start the results. Using the `timestamp` of the last result as the offset will give you the next page of results.
+    required: false
+    schema:
+      type: integer
+  - name: limit
+    in: query
+    description: Limit the size of response, Max 10000
+    required: false
+    schema:
+      type: integer
+    example: 100
+responses:
+  200:
+    description: An array of crypto trade ticks
+    content:
+      application/json:
+        schema:
+          type: object
+          required: [ day, map, msLatency, status, symbol, ticks ]
+          properties:
+            day:
+              type: string
+              example: "2018-5-9"
+              description: Date that was evaluated from the request
+              format: date
+            map:
+              type: object
+              description: Map for shortened result keys
+              example:
+                c: conditions
+                p: price
+                s: size
+                x: exchange
+                t: timestamp
+            msLatency:
+              type: integer
+              example: 2
+              description: Milliseconds of latency for the query results
+            status:
+              type: string
+              example: success
+              description: Status of this requests response
+            symbol:
+              type: string
+              example: BTC-USD
+              description: Symbol that was evaluated from the request
+            ticks:
+              type: array
+              items:
+                $ref: "../../schemas/index.yml#/CryptoTickJson"
+  default:
+    $ref: "../../responses.yml#/DefaultError"

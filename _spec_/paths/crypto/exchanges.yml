@@ -1,0 +1,36 @@
+summary: Crypto Exchanges
+description: |
+  List of crypto currency exchanges which are supported by Polygon.io
+tags:
+  - Crypto
+responses:
+  200:
+    description: An array of crypto currency exchanges
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            $ref: '../../schemas/index.yml#/CryptoExchange'
+          example:
+            - id: 1
+              type: exchange
+              market: crypto
+              name: GDAX
+              url: 'https://www.gdax.com/'
+            - id: 2
+              type: exchange
+              market: crypto
+              name: BITFINEX
+              url: 'https://www.bitfinex.com/'
+            - id: 3
+              type: exchange
+              market: crypto
+              name: BitMEX
+              url: 'https://www.bitmex.com/'
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+  409:
+    $ref: '../../responses.yml#/Conflict'

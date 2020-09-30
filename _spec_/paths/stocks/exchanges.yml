@@ -1,0 +1,45 @@
+summary: Exchanges
+description: |
+  List of stock exchanges which are supported by Polygon.io
+tags:
+  - Stocks / Equities
+responses:
+  200:
+    description: An array of exchanges
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            $ref: '../../schemas/index.yml#/Exchange'
+          example:
+            - id: 1
+              type: exchange
+              market: equities
+              mic: XASE
+              name: NYSE American (AMEX)
+              tape: A
+            - id: 2
+              type: exchange
+              market: equities
+              mic: XBOS
+              name: NASDAQ OMX BX
+              tape: B
+            - id: 15
+              type: exchange
+              market: equities
+              mic: IEXG
+              name: IEX
+              tape: V
+            - id: 16
+              type: TRF
+              market: equities
+              mic: XCBO
+              name: Chicago Board Options Exchange
+              tape: W
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+  409:
+    $ref: '../../responses.yml#/Conflict'

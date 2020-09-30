@@ -1,4 +1,4 @@
-# Reference
+# Common
 LastTrade:
  $ref: 'common/lastTrade.yml'
 LastQuote:
@@ -29,8 +29,6 @@ ConditionTypeMap:
  $ref: 'common/conditionTypeMap.yml'
 SymbolTypeMap:
  $ref: 'common/symbolTypeMap.yml'
-Error:
- $ref: 'common/error.yml'
 MarketStatus:
  $ref: 'common/marketStatus.yml'
 MarketHoliday:
@@ -40,8 +38,9 @@ AnalystRatings:
 RatingSection:
  $ref: 'common/ratingSection.yml'
 
-#Ticker:
-#  $ref: 'reference/ticker.yml'
+# Reference
+Ticker:
+  $ref: 'reference/ticker.yml'
 TickerSymbol:
   $ref: 'reference/tickerSymbol.yml'
 Split:

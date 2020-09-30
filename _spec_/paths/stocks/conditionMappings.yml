@@ -1,0 +1,26 @@
+summary: Condition Mappings
+description: |
+  The mappings for conditions on trades and quotes.
+parameters:
+  - name: ticktype
+    in: path
+    description: |
+      Ticker type we want mappings for
+    required: true
+    schema:
+      type: string
+      enum: ['trades','quotes']
+    example: trades
+tags:
+  - Stocks / Equities
+responses:
+  200:
+    description: An array of condition maps
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/ConditionTypeMap'
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'

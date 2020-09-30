@@ -1,0 +1,38 @@
+summary: Stock Splits
+description: |
+  Get the historical splits for this symbol.
+parameters:
+  - name: symbol
+    in: path
+    description: |
+      Symbol we want details for
+    required: true
+    schema:
+      type: string
+    example: AAPL
+tags:
+  - Reference
+responses:
+  200:
+    description: An array of splits
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            status:
+              type: string
+              example: OK
+            count:
+              type: integer
+              example: 1
+            results:
+              type: array
+              items:
+                $ref: '../../schemas/index.yml#/Split'
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+  409:
+    $ref: '../../responses.yml#/Conflict'

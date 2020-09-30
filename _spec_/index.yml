@@ -6,12 +6,13 @@ info:
 servers:
   - url: 'https://api.polygon.io'
     description: 'Polygon Platform API'
+tags:
+  - name: Reference
+  - name: Stocks / Equities
+  - name: Forex / Currencies
+  - name: Crypto
 paths:
-  /idk:
-    get:
-      responses:
-        '200':
-          description: oh yeah
+  $ref: 'paths/index.yml'
 components:
   schemas:
     $ref: 'schemas/index.yml'
