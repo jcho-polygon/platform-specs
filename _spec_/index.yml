@@ -18,6 +18,8 @@ components:
     $ref: 'schemas/index.yml'
   responses:
     $ref: 'responses.yml'
+  parameters:
+    $ref: 'parameters.yml'
   securitySchemes:
     apiKey:
       type: apiKey

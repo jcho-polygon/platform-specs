@@ -1,0 +1,8 @@
+TickersQueryParam:
+  name: tickers
+  in: query
+  description: Comma separated list of tickers to get snapshots for.
+  schema:
+    type: array
+    items:
+      type: string

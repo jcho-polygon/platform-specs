@@ -6,6 +6,8 @@ description: |
   The response size is large, and sometimes will cause the browser prettyprint to crash.
 tags:
   - Forex / Currencies
+parameters:
+  - $ref: '../../parameters.yml#/TickersQueryParam'
 responses:
   200:
     description: Get current state for all tickers
