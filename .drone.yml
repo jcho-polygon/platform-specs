@@ -32,7 +32,7 @@ steps:
 - name: bundle spec
   image: polygonio/swagger-cli
   commands:
-  - swagger-cli bundle _spec_/index.yml --outfile -r _built_/spec.json --type json
+  - swagger-cli bundle _spec_/index.yml --dereference --outfile _built_/spec.json --type json
 
 - name: upload spec
   image: plugins/gcs
@@ -62,7 +62,7 @@ steps:
 - name: bundle spec
   image: polygonio/swagger-cli
   commands:
-  - swagger-cli bundle _spec_/index.yml --outfile -r _built_/spec.json --type json
+  - swagger-cli bundle _spec_/index.yml --dereference --outfile _built_/spec.json --type json
 
 - name: upload spec
   image: plugins/gcs

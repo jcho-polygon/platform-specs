@@ -7,5 +7,5 @@ set -eou pipefail
   docker run \
     -v $(pwd):/opt/workdir \
     polygonio/swagger-cli \
-    bundle "_spec_/index.yml" --outfile "_built_/spec.json" --type json
+    bundle "_spec_/index.yml" --dereference --outfile "_built_/spec.json" --type json
 )
