@@ -6,3 +6,86 @@ TickersQueryParam:
     type: array
     items:
       type: string
+StocksTickerPathParam:
+  name: stocksTicker
+  in: path
+  description: Ticker symbol of the request
+  required: true
+  schema:
+    type: string
+  example: AAPL
+ForexTickerPathParam:
+  name: forexTicker
+  in: path
+  description: Ticker symbol of the request
+  required: true
+  schema:
+    type: string
+  example: C:EURUSD
+CryptoTickerPathParam:
+  name: cryptoTicker
+  in: path
+  description: Ticker symbol of the request
+  required: true
+  schema:
+    type: string
+  example: X:BTCUSD
+AggregateMultiplier:
+  name: multiplier
+  in: path
+  description: Size of the timespan multiplier
+  required: true
+  schema:
+    type: integer
+  example: 1
+AggregateTimespan:
+  name: timespan
+  in: path
+  description: Size of the time window
+  required: true
+  schema:
+    type: string
+    enum: [ minute, hour, day, week, month, quarter, year ]
+  example: day
+AggregateTimeFrom:
+  name: from
+  in: path
+  description: From date
+  required: true
+  schema:
+    type: string
+  example: "2020-01-01"
+AggregateTimeTo:
+  name: to
+  in: path
+  description: To date
+  required: true
+  schema:
+    type: string
+  example: "2020-02-01"
+AggregateUnadjusted:
+  name: unadjusted
+  in: query
+  description: |
+    Set to true if the results should NOT be adjusted for splits.
+  required: false
+  schema:
+    type: boolean
+AggregateSort:
+  name: sort
+  schema:
+    enum:
+      - asc
+      - desc
+  in: query
+  example: asc
+  description: |
+    sort by timestamp
+AggregateDate:
+  name: date
+  in: path
+  description: To date
+  required: true
+  schema:
+    type: string
+  example: "2020-02-01"

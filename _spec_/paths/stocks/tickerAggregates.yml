@@ -1,0 +1,22 @@
+summary: Aggregates ( Bars )
+description: |
+  Get aggregates for a date range, in custom time window sizes.
+tags:
+  - "Stocks / Equities"
+parameters:
+  - $ref: '../../parameters.yml#/StocksTickerPathParam'
+  - $ref: '../../parameters.yml#/AggregateMultiplier'
+  - $ref: '../../parameters.yml#/AggregateTimespan'
+  - $ref: '../../parameters.yml#/AggregateTimeFrom'
+  - $ref: '../../parameters.yml#/AggregateTimeTo'
+  - $ref: '../../parameters.yml#/AggregateUnadjusted'
+  - $ref: '../../parameters.yml#/AggregateSort'
+responses:
+  200:
+    description: Previous day OHLC for ticker
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/index.yml#/AggResponse"
+  default:
+    $ref: "../../responses.yml#/DefaultError"

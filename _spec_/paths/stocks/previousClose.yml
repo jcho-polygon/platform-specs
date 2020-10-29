@@ -1,0 +1,19 @@
+summary: Previous Close
+description: |
+  Get the previous day close for the specified ticker
+tags:
+  - Stocks / Equities
+  - Forex / Currencies
+  - Crypto
+parameters:
+  - $ref: '../../parameters.yml#/StocksTickerPathParam'
+  - $ref: '../../parameters.yml#/AggregateUnadjusted'
+responses:
+  200:
+    description: Previous day OHLC for ticker
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/index.yml#/AggResponse"
+  default:
+    $ref: "../../responses.yml#/DefaultError"

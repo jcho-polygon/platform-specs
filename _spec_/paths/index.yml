@@ -1,13 +1,5 @@
 # Common
-/v2/aggs/ticker/{ticker}/prev:
-  get:
-    $ref: 'common/previousClose.yml'
-/v2/aggs/ticker/{ticker}/range/{multiplier}/{timespan}/{from}/{to}:
-  get:
-    $ref: 'common/tickerAggregates.yml'
-/v2/aggs/grouped/locale/{locale}/market/{market}/{date}:
-  get:
-    $ref: 'common/groupedDailyAggregates.yml'
+
 
 # Reference
 /v2/reference/tickers:
@@ -63,6 +55,15 @@
 /v1/open-close/{symbol}/{date}:
   get:
     $ref: 'stocks/openClose.yml'
+/v2/aggs/grouped/locale/us/market/stocks/{date}:
+  get:
+    $ref: 'stocks/groupedDailyAggregates.yml'
+/v2/aggs/ticker/{stocksTicker}/prev:
+  get:
+    $ref: 'stocks/previousClose.yml'
+/v2/aggs/ticker/{stocksTicker}/range/{multiplier}/{timespan}/{from}/{to}:
+  get:
+    $ref: 'stocks/tickerAggregates.yml'
 /v1/meta/conditions/{ticktype}:
   get:
     $ref: 'stocks/conditionMappings.yml'
@@ -86,6 +87,15 @@
 /v1/last_quote/currencies/{from}/{to}:
   get:
     $ref: 'forex/lastQuote.yml'
+/v2/aggs/grouped/locale/global/market/fx/{date}:
+  get:
+    $ref: 'forex/groupedDailyAggregates.yml'
+/v2/aggs/ticker/{forexTicker}/prev:
+  get:
+    $ref: 'forex/previousClose.yml'
+/v2/aggs/ticker/{forexTicker}/range/{multiplier}/{timespan}/{from}/{to}:
+  get:
+    $ref: 'forex/tickerAggregates.yml'
 /v2/snapshot/locale/global/markets/forex/tickers:
   get:
     $ref: 'forex/snapshotAllTickers.yml'
@@ -106,6 +116,15 @@
 /v1/historic/crypto/{from}/{to}/{date}:
   get:
     $ref: 'crypto/historicTrades.yml'
+/v2/aggs/grouped/locale/global/market/crypto/{date}:
+  get:
+    $ref: 'crypto/groupedDailyAggregates.yml'
+/v2/aggs/ticker/{cryptoTicker}/prev:
+  get:
+    $ref: 'forex/previousClose.yml'
+/v2/aggs/ticker/{cryptoTicker}/range/{multiplier}/{timespan}/{from}/{to}:
+  get:
+    $ref: 'crypto/tickerAggregates.yml'
 /v2/snapshot/locale/global/markets/crypto/tickers:
   get:
     $ref: 'crypto/snapshotAllTickers.yml'

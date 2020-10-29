@@ -2,24 +2,10 @@ summary: Previous Close
 description: |
   Get the previous day close for the specified ticker
 tags:
-  - Stocks / Equities
   - Forex / Currencies
-  - Crypto
 parameters:
-  - name: ticker
-    in: path
-    description: Ticker symbol of the request
-    required: true
-    schema:
-      type: string
-    example: AAPL
-  - name: unadjusted
-    in: query
-    description: |
-      Set to true if the results should NOT be adjusted for splits.
-    required: false
-    schema:
-      type: boolean
+  - $ref: '../../parameters.yml#/ForexTickerPathParam'
+  - $ref: '../../parameters.yml#/AggregateUnadjusted'
 responses:
   200:
     description: Previous day OHLC for ticker
