@@ -121,7 +121,7 @@
     $ref: 'crypto/groupedDailyAggregates.yml'
 /v2/aggs/ticker/{cryptoTicker}/prev:
   get:
-    $ref: 'forex/previousClose.yml'
+    $ref: 'crypto/previousClose.yml'
 /v2/aggs/ticker/{cryptoTicker}/range/{multiplier}/{timespan}/{from}/{to}:
   get:
     $ref: 'crypto/tickerAggregates.yml'

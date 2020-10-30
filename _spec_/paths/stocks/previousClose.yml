@@ -3,8 +3,6 @@ description: |
   Get the previous day close for the specified ticker
 tags:
   - Stocks / Equities
-  - Forex / Currencies
-  - Crypto
 parameters:
   - $ref: '../../parameters.yml#/StocksTickerPathParam'
   - $ref: '../../parameters.yml#/AggregateUnadjusted'
