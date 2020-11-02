@@ -2,7 +2,7 @@ Stocks:
   name: stocks
   description: Stocks data
 Forex:
-  name: forex
+  name: fx
   description: Forex data
 Crypto:
   name: crypto

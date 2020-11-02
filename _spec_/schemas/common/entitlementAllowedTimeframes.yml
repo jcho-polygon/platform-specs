@@ -1,0 +1,6 @@
+RealTime:
+  name: realtime
+  description: Real Time Data
+Delayed:
+  name: delayed
+  description: 15 minute delayed data
