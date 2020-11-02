@@ -51,3 +51,7 @@ responses:
                   example: 10
   default:
     $ref: "../../responses.yml#/DefaultError"
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Trades'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Crypto'

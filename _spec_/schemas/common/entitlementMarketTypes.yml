@@ -1,0 +1,9 @@
+Stocks:
+  name: stocks
+  description: Stocks data
+Forex:
+  name: forex
+  description: Forex data
+Crypto:
+  name: crypto
+  description: Crypto data

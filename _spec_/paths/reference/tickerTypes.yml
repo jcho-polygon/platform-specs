@@ -32,3 +32,5 @@ responses:
     $ref: '../../responses.yml#/NotFound'
   409:
     $ref: '../../responses.yml#/Conflict'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Reference'

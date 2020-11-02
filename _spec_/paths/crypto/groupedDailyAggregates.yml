@@ -18,3 +18,7 @@ responses:
           $ref: "../../schemas/index.yml#/AggResponse"
   default:
     $ref: "../../responses.yml#/DefaultError"
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Aggregates'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Crypto'

@@ -1,0 +1,12 @@
+Reference:
+  name: reference
+  description: Reference data
+Aggregates:
+  name: aggregates
+  description: Aggregate data
+Trades:
+  name: trades
+  description: Trade data
+NBBO:
+  name: nbbo
+  description: NBBO data
