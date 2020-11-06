@@ -1,6 +1,8 @@
 summary: Snapshot - Single Ticker
 description: |
-  See the current snapshot of a single ticker
+  Snapshot provides the current minute, day, and previous day’s aggregate, as well as the last trade and quote for a single traded ticker.
+
+  Note: Snapshot data is cleared at 12am EST and gets populated as data is received from the exchanges.
 tags:
   - Crypto
 parameters:

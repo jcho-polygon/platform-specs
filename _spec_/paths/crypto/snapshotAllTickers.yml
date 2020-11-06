@@ -1,6 +1,8 @@
 summary: Snapshot - All Tickers
 description: |
-  Snapshot allows you to see all tickers current minute aggregate, daily aggregate and last trade. As well as previous days aggregate and calculated change for today.
+  Snapshot provides the current minute, day, and previous day’s aggregate, as well as the last trade and quote for all traded tickers.
+
+  Note: Snapshot data is cleared at 12am EST and gets populated as data is received from the exchanges.
 
   ### *** Warning, may cause browser to hang ***
   The response size is large, and sometimes will cause the browser prettyprint to crash.

@@ -1,6 +1,8 @@
 summary: Snapshot - Single Ticker Full Book ( L2 )
 description: |
   See the current level 2 book of a single ticker. This is the combined book from all the exchanges.
+
+  Note: Snapshot data is cleared at 12am EST and gets populated as data is received from the exchanges.
 tags:
   - Crypto
 parameters:
