@@ -7,7 +7,14 @@ parameters:
   - name: type
     in: query
     description: |
-      Type of reports
+      Type of reports.
+
+      Y = Year
+      YA = Year annualized
+      Q = Quarter
+      QA = Quarter Annualized
+      T = Trailing twelve months
+      TA = trailing twelve months annualized
     required: false
     schema:
       type: string
