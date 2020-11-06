@@ -110,7 +110,7 @@ SnapshotDirection:
 LimitMax50000:
   name: limit
   in: query
-  description: Limit the size of response, Max 50000
+  description: Limit the size of response, Max 50000 and Default 5000
   required: false
   schema:
     type: integer
