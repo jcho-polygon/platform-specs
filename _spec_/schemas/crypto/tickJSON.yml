@@ -19,8 +19,13 @@ properties:
     type: array
     items:
       type: integer
-    example: [ 2, 0 ]
-    description: Conditions of this trade
+    example: [ 2 ]
+    description: |
+      Conditions of this trade.
+
+      empty: 0 (or empty array)
+      sellside: 1
+      buyside: 2
   t:
     type: integer
     example: 1525930460102
