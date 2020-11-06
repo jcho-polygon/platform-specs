@@ -77,7 +77,7 @@ properties:
     description: A description of the company and what they do/offer
   similar:
     type: array
-    example: ['MSFT','IBM','GOOGL']
+    example: ['MSFT','NOK','IBM','HPQ','GOOGL','BB','XLK']
     items:
       $ref: '../index.yml#/StockSymbol'
   tags:
