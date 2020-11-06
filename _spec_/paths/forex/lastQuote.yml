@@ -2,7 +2,7 @@ summary: Last Quote for a Currency Pair
 description: |
   Get Last Quote Tick for a Currency Pair.
 tags:
-  - Forex / Currencies
+  - Currencies / Forex
 parameters:
   - name: from
     in: path

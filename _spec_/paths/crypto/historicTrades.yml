@@ -2,7 +2,7 @@ summary: Historic Crypto Trades
 description: |
   Get historic trade ticks for a crypto pair.
 tags:
-  - Crypto
+  - Currencies / Crypto
 parameters:
   - name: from
     in: path

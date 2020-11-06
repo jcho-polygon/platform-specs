@@ -7,7 +7,7 @@ description: |
   ### *** Warning, may cause browser to hang ***
   The response size is large, and sometimes will cause the browser prettyprint to crash.
 tags:
-  - Crypto
+  - Currencies / Crypto
 parameters:
   - $ref: '../../parameters.yml#/TickersQueryParam'
 responses:

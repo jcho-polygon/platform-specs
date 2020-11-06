@@ -9,8 +9,8 @@ servers:
 tags:
   - name: Reference
   - name: Stocks / Equities
-  - name: Forex / Currencies
-  - name: Crypto
+  - name: Currencies / Forex
+  - name: Currencies / Crypto
 paths:
   $ref: 'paths/index.yml'
 components:
