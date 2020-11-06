@@ -35,13 +35,7 @@ parameters:
     schema:
       type: integer
   - $ref: '../../parameters.yml#/ReverseOrder'
-  - name: limit
-    in: query
-    description: Limit the size of response, Max 50000
-    required: false
-    schema:
-      type: integer
-    example: 10
+  - $ref: '../../parameters.yml#/LimitMax50000'
 responses:
   200:
     description: An array of trades

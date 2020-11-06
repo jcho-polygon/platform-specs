@@ -3,14 +3,7 @@ description: |
   Get the historical financials for this ticker.
 parameters:
   - $ref: '../../parameters.yml#/StocksTickerPathParam'
-  - name: limit
-    in: query
-    description: |
-      Limit the number of results
-    required: false
-    example: 5
-    schema:
-      type: integer
+  - $ref: '../../parameters.yml#/LimitNoMax'
   - name: type
     in: query
     description: |

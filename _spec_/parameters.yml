@@ -107,3 +107,28 @@ SnapshotDirection:
     type: string
     enum: [ "gainers", "losers" ]
   example: gainers
+LimitMax50000:
+  name: limit
+  in: query
+  description: Limit the size of response, Max 50000
+  required: false
+  schema:
+    type: integer
+  example: 10
+LimitMax10000:
+  name: limit
+  in: query
+  description: Limit the size of response, Max 10000
+  required: false
+  schema:
+    type: integer
+  example: 100
+LimitNoMax:
+  name: limit
+  in: query
+  description: |
+    Limit the number of results
+  required: false
+  example: 5
+  schema:
+    type: integer

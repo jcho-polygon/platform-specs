@@ -33,13 +33,7 @@ parameters:
     required: false
     schema:
       type: integer
-  - name: limit
-    in: query
-    description: Limit the size of response, Max 10000
-    required: false
-    schema:
-      type: integer
-    example: 100
+  - $ref: '../../parameters.yml#/LimitMax10000'
 responses:
   200:
     description: An array of crypto trade ticks
