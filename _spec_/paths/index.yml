@@ -8,10 +8,10 @@
 /v2/reference/types:
   get:
     $ref: 'reference/tickerTypes.yml'
-/v1/meta/symbols/{ticker}/company:
+/v1/meta/symbols/{stocksTicker}/company:
   get:
     $ref: 'reference/tickerDetails.yml'
-/v1/meta/symbols/{ticker}/news:
+/v1/meta/symbols/{stocksTicker}/news:
   get:
     $ref: 'reference/tickerNews.yml'
 /v2/reference/markets:
@@ -20,13 +20,13 @@
 /v2/reference/locales:
   get:
     $ref: 'reference/locales.yml'
-/v2/reference/splits/{ticker}:
+/v2/reference/splits/{stocksTicker}:
   get:
     $ref: 'reference/splits.yml'
-/v2/reference/dividends/{ticker}:
+/v2/reference/dividends/{stocksTicker}:
   get:
     $ref: 'reference/dividends.yml'
-/v2/reference/financials/{ticker}:
+/v2/reference/financials/{stocksTicker}:
   get:
     $ref: 'reference/financials.yml'
 /v1/marketstatus/upcoming:
