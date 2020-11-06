@@ -33,13 +33,7 @@ parameters:
     required: false
     schema:
       type: integer
-  - name: reverse
-    in: query
-    description: |
-      Reverse the order of the results. This is useful in combination with `timestamp` param.
-    required: false
-    schema:
-      type: boolean
+  - $ref: '../../parameters.yml#/ReverseOrder'
   - name: limit
     in: query
     description: Limit the size of response, Max 50000

@@ -89,3 +89,21 @@ AggregateDate:
   schema:
     type: string
   example: "2020-02-01"
+ReverseOrder:
+  name: reverse
+  in: query
+  description: |
+    Reverse the order of the results. This is useful in combination with `timestamp` param.
+  required: false
+  schema:
+    type: boolean
+SnapshotDirection:
+  name: direction
+  in: path
+  description: |
+    Direction we want
+  required: true
+  schema:
+    type: string
+    enum: [ "gainers", "losers" ]
+  example: gainers

@@ -4,15 +4,7 @@ description: |
 tags:
   - Stocks / Equities
 parameters:
-  - name: direction
-    in: path
-    description: |
-      Direction we want
-    required: true
-    schema:
-      type: string
-      enum: [ "gainers", "losers"]
-    example: gainers
+  - $ref: '../../parameters.yml#/SnapshotDirection'
 responses:
   200:
     description: Get the current tickers of the day
