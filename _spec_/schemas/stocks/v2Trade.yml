@@ -25,7 +25,8 @@ properties:
   i:
     type: string
     example: "00MGON"
-    description: Trade ID
+    description: |
+      Trade IDs are a unique identifier for a trade. These are unique per combination of ticker, exchange, and TRF. For example: A trade for AAPL executed on NYSE and a trade for AAPL executed on NASDAQ could potentially have the same Trade ID.
   x:
     type: integer
     example: 11
@@ -33,7 +34,7 @@ properties:
   s:
     type: integer
     example: 100
-    description: Size/Volume of the trade
+    description: The size of a trade ( also known as volume ) is the number of whole shares traded.
   c:
     type: array
     description: Conditions
@@ -49,4 +50,9 @@ properties:
   z:
     type: integer
     example: 1
-    description: Tape where trade occurred. ( 1,2 = CTA, 3 = UTP )
+    description: |
+      There are 3 tapes which define which exchange the ticker is listed on. These are integers in our objects which represent the letter of the alphabet. Eg: 1 = A, 2 = B, 3 = C.
+      * Tape A is NYSE listed securities
+      * Tape B is NYSE ARCA / NYSE American
+      * Tape C is NASDAQ
+
