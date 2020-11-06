@@ -10,7 +10,7 @@ parameters:
     required: true
     schema:
       type: string
-    example: ~BTCUSD
+    example: X:BTCUSD
 responses:
   200:
     description: Get current state for a ticker
