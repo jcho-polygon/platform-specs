@@ -10,6 +10,7 @@ properties:
   lastTrade:
     $ref: "../index.yml#/Forex"
   min:
+    description: Last available minute bar
     $ref: "../index.yml#/ForexSnapshotAgg"
   prevDay:
     $ref: "../index.yml#/ForexSnapshotAgg"

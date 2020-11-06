@@ -1,6 +1,8 @@
 summary: Aggregates ( Bars )
 description: |
   Get aggregates for a date range, in custom time window sizes.
+
+  If timespan = ‘minute’ and multiplier = ‘5’ then 5-minute bars will be returned.
 tags:
   - "Stocks / Equities"
 parameters:

@@ -20,7 +20,8 @@ properties:
   q:
     type: integer
     example: 23547
-    description: Sequence Number
+    description: |
+      The sequence number represents the sequence in which trade events happened. These are increasing and unique per ticker symbol, but will not always be sequential. Eg: 1, 2, 6, 9, 10, 11
   i:
     type: string
     example: "00MGON"
