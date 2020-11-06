@@ -25,7 +25,7 @@ parameters:
     schema:
       type: string
       format: date
-    example: "2018-2-2"
+    example: "2020-10-02"
   - name: offset
     in: query
     description: |
@@ -45,7 +45,7 @@ responses:
           properties:
             day:
               type: string
-              example: "2018-2-2"
+              example: "2020-10-02"
               description: Date that was evaluated from the request
               format: date
             map:
