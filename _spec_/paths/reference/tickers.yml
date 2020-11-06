@@ -1,6 +1,6 @@
 summary: Tickers
 description: |
-  Query all ticker symbols which are supported by Polygon.io. This API includes Indices, Crypto, FX, and Stocks/Equities.
+  Query all ticker symbols which are supported by Polygon.io. This API includes Crypto, FX, and Stocks/Equities.
 parameters:
   - name: sort
     in: query
@@ -33,11 +33,12 @@ parameters:
 
       **Example:**
       - `?market=stocks` to get all stock tickers
-      - `?market=indices` to get all index tickers
+      - `?market=crypto` to get all crypto tickers
+      - `?market=fx` to get all forex tickers
     required: false
     schema:
       type: string
-      enum: ["STOCKS","INDICES","CRYPTO","FX","BONDS","MF","MMF"]
+      enum: ["STOCKS","CRYPTO","FX"]
   - name: locale
     in: query
     description: |
