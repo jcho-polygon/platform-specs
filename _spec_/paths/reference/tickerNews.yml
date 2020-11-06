@@ -2,14 +2,7 @@ summary: Ticker News
 description: |
   Get news articles for this ticker.
 parameters:
-  - name: symbol
-    in: path
-    description: |
-      Ticker we want details for
-    required: true
-    schema:
-      type: string
-    example: AAPL
+  - $ref: '../../parameters.yml#/StocksTickerPathParam'
   - name: perpage
     in: query
     description: |

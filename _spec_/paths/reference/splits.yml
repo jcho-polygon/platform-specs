@@ -2,14 +2,7 @@ summary: Stock Splits
 description: |
   Get the historical splits for this symbol.
 parameters:
-  - name: symbol
-    in: path
-    description: |
-      Symbol we want details for
-    required: true
-    schema:
-      type: string
-    example: AAPL
+  - $ref: '../../parameters.yml#/StocksTickerPathParam'
 tags:
   - Reference
 responses:

@@ -2,14 +2,7 @@ summary: Stock Financials
 description: |
   Get the historical financials for this ticker.
 parameters:
-  - name: symbol
-    in: path
-    description: |
-      Symbol we want financials for
-    required: true
-    schema:
-      type: string
-    example: AAPL
+  - $ref: '../../parameters.yml#/StocksTickerPathParam'
   - name: limit
     in: query
     description: |

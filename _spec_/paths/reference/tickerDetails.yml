@@ -2,14 +2,7 @@ summary: Ticker Details
 description: |
   Get the details of the symbol company/entity. These are important details which offer an overview of the entity. Things like name, sector, description, logo and similar companies.
 parameters:
-  - name: symbol
-    in: path
-    description: |
-      Symbol we want details for
-    required: true
-    schema:
-      type: string
-    example: AAPL
+  - $ref: '../../parameters.yml#/StocksTickerPathParam'
 tags:
   - Reference
 responses:

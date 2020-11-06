@@ -8,10 +8,10 @@
 /v2/reference/types:
   get:
     $ref: 'reference/tickerTypes.yml'
-/v1/meta/symbols/{symbol}/company:
+/v1/meta/symbols/{ticker}/company:
   get:
     $ref: 'reference/tickerDetails.yml'
-/v1/meta/symbols/{symbol}/news:
+/v1/meta/symbols/{ticker}/news:
   get:
     $ref: 'reference/tickerNews.yml'
 /v2/reference/markets:
@@ -20,13 +20,13 @@
 /v2/reference/locales:
   get:
     $ref: 'reference/locales.yml'
-/v2/reference/splits/{symbol}:
+/v2/reference/splits/{ticker}:
   get:
     $ref: 'reference/splits.yml'
-/v2/reference/dividends/{symbol}:
+/v2/reference/dividends/{ticker}:
   get:
     $ref: 'reference/dividends.yml'
-/v2/reference/financials/{symbol}:
+/v2/reference/financials/{ticker}:
   get:
     $ref: 'reference/financials.yml'
 /v1/marketstatus/upcoming:
@@ -46,13 +46,13 @@
 /v2/ticks/stocks/nbbo/{ticker}/{date}:
   get:
     $ref: 'stocks/historicQuotes.yml'
-/v1/last/stocks/{symbol}:
+/v1/last/stocks/{ticker}:
   get:
     $ref: 'stocks/lastTrade.yml'
-/v1/last_quote/stocks/{symbol}:
+/v1/last_quote/stocks/{ticker}:
   get:
     $ref: 'stocks/lastQuote.yml'
-/v1/open-close/{symbol}/{date}:
+/v1/open-close/{ticker}/{date}:
   get:
     $ref: 'stocks/openClose.yml'
 /v2/aggs/grouped/locale/us/market/stocks/{date}:

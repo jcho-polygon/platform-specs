@@ -2,14 +2,7 @@ summary: Stock Dividends
 description: |
   Get the historical divdends for this ticker.
 parameters:
-  - name: symbol
-    in: path
-    description: |
-      Symbol we want dividends for
-    required: true
-    schema:
-      type: string
-    example: AAPL
+  - $ref: '../../parameters.yml#/StocksTickerPathParam'
 tags:
   - Reference
 responses:

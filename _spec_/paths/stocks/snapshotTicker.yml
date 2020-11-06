@@ -4,13 +4,7 @@ description: |
 tags:
   - Stocks / Equities
 parameters:
-  - name: ticker
-    in: path
-    description: Ticker of the snapshot
-    required: true
-    schema:
-      type: string
-    example: AAPL
+  - $ref: '../../parameters.yml#/StocksTickerPathParam'
 responses:
   200:
     description: Get current state for a ticker

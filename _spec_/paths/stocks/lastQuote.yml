@@ -4,13 +4,7 @@ description: |
 tags:
   - Stocks / Equities
 parameters:
-  - name: symbol
-    in: path
-    description: Symbol of the quote to get
-    required: true
-    schema:
-      type: string
-    example: AAPL
+  - $ref: '../../parameters.yml#/StocksTickerPathParam'
 responses:
   200:
     description: Last quote tick for this stock
