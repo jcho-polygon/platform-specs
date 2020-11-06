@@ -2,7 +2,7 @@ summary: Real-time Currency Conversion
 description: |
   Convert currencies using the latest market conversion rates. Note than you can convert in both directions. For example USD->CAD or CAD->USD.
 tags:
-  - Forex / Currencies
+  - Currencies / Forex
 parameters:
   - name: from
     in: path

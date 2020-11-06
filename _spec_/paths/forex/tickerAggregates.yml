@@ -2,7 +2,7 @@ summary: Aggregates ( Bars )
 description: |
   Get aggregates for a date range, in custom time window sizes.
 tags:
-  - "Forex / Currencies"
+  - "Currencies / Forex"
 parameters:
   - $ref: '../../parameters.yml#/ForexTickerPathParam'
   - $ref: '../../parameters.yml#/AggregateMultiplier'

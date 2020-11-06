@@ -4,7 +4,7 @@ description: |
 
   Note: Snapshot data is cleared at 12am EST and gets populated as data is received from the exchanges.
 tags:
-  - Crypto
+  - Currencies / Crypto
 parameters:
   - name: ticker
     in: path

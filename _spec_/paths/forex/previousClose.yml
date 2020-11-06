@@ -2,7 +2,7 @@ summary: Previous Close
 description: |
   Get the previous day close for the specified ticker
 tags:
-  - Forex / Currencies
+  - Currencies / Forex
 parameters:
   - $ref: '../../parameters.yml#/ForexTickerPathParam'
   - $ref: '../../parameters.yml#/AggregateUnadjusted'

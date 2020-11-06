@@ -2,7 +2,7 @@ summary: Previous Close
 description: |
   Get the previous day close for the specified ticker
 tags:
-  - Crypto
+  - Currencies / Crypto
 parameters:
   - $ref: '../../parameters.yml#/CryptoTickerPathParam'
   - $ref: '../../parameters.yml#/AggregateUnadjusted'

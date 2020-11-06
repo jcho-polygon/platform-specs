@@ -2,7 +2,7 @@ summary: Daily Open / Close
 description: |
   Get the open, close prices of a symbol on a certain day.
 tags:
-  - Crypto
+  - Currencies / Crypto
 parameters:
   - name: from
     in: path

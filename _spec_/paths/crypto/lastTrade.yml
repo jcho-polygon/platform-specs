@@ -2,7 +2,7 @@ summary: Last Trade for a Crypto Pair
 description: |
   Get Last Trade Tick for a Currency Pair.
 tags:
-  - Crypto
+  - Currencies / Crypto
 parameters:
   - name: from
     in: path
