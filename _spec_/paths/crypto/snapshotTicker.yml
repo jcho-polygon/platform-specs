@@ -1,4 +1,4 @@
-summary: Snapshot - Single Ticker
+summary: Snapshot - Ticker
 description: |
   Snapshot provides the current minute, day, and previous day’s aggregate, as well as the last trade and quote for a single traded ticker.
 
