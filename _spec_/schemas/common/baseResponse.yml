@@ -1,0 +1,13 @@
+type: object
+properties:
+  status:
+    type: string
+  requestID:
+    type: string
+    format: uuid
+  count:
+    type: integer
+  error:
+    type: string
+  message:
+    type: string

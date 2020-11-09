@@ -20,7 +20,9 @@ responses:
     content:
       application/json:
         schema:
-          $ref: "../../schemas/index.yml#/AggResponse"
+          allOf:
+            - $ref: "../../schemas/index.yml#/BaseResponse"
+            - $ref: "../../schemas/index.yml#/AggResponse"
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:
