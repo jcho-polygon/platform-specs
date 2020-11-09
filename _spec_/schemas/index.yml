@@ -1,4 +1,6 @@
 # Common
+BaseResponse:
+ $ref: 'common/baseResponse.yml'
 LastTrade:
  $ref: 'common/lastTrade.yml'
 LastQuote:
