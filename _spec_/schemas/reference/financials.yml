@@ -1,253 +1,341 @@
 type: object
-description: Financials
-required: [ ticker, exDate, paymentDate, ratio, tofactor, forfactor ]
 properties:
-  ticker:
-    $ref: '../index.yml#/TickerSymbol'
-  period:
-    type: string
-    example: "Q"
-    description: Reporting period.
-    enum: [ "Q", "T", "QA", "TA", "Y", "YA" ]
-  calendarDate:
-    type: string
-    format: date-time
-    example: "2019-03-31"
-  reportPeriod:
-    type: string
-    format: date-time
-    example: "2019-03-31"
-  updated:
-    type: string
-    format: date-time
-    example: "1999-03-28"
-  accumulatedOtherComprehensiveIncome:
-    type: integer
-  assets:
-    type: integer
-  assetsAverage:
-    type: integer
-  assetsCurrent:
-    type: integer
-  assetTurnover:
-    type: integer
-  assetsNonCurrent:
-    type: integer
-  bookValuePerShare:
-    type: number
-    format: double
-  capitalExpenditure:
-    type: integer
-  cashAndEquivalents:
-    type: integer
-  cashAndEquivalentsUSD:
-    type: integer
-  costOfRevenue:
-    type: integer
-  consolidatedIncome:
-    type: integer
-  currentRatio:
-    type: number
-    format: double
-  debtToEquityRatio:
-    type: number
-    format: double
-  debt:
-    type: integer
-  debtCurrent:
-    type: integer
-  debtNonCurrent:
-    type: integer
-  debtUSD:
-    type: integer
-  deferredRevenue:
-    type: integer
-  depreciationAmortizationAndAccretion:
-    type: integer
-  deposits:
-    type: integer
-  dividendYield:
-    type: integer
-  dividendsPerBasicCommonShare:
-    type: integer
-  earningBeforeInterestTaxes:
-    type: integer
-  earningsBeforeInterestTaxesDepreciationAmortization:
-    type: integer
-  EBITDAMargin:
-    type: number
-    format: double
-  earningsBeforeInterestTaxesDepreciationAmortizationUSD:
-    type: integer
-  earningBeforeInterestTaxesUSD:
-    type: integer
-  earningsBeforeTax:
-    type: integer
-  earningsPerBasicShare:
-    type: number
-    format: double
-  earningsPerDilutedShare:
-    type: number
-    format: double
-  earningsPerBasicShareUSD:
-    type: number
-    format: double
-  shareholdersEquity:
-    type: integer
-  averageEquity:
-    type: integer
-  shareholdersEquityUSD:
-    type: integer
-  enterpriseValue:
-    type: integer
-  enterpriseValueOverEBIT:
-    type: integer
-  enterpriseValueOverEBITDA:
-    type: number
-    format: double
-  freeCashFlow:
-    type: integer
-  freeCashFlowPerShare:
-    type: number
-    format: double
-  foreignCurrencyUSDExchangeRate:
-    type: integer
-  grossProfit:
-    type: integer
-  grossMargin:
-    type: number
-    format: double
-  goodwillAndIntangibleAssets:
-    type: integer
-  interestExpense:
-    type: integer
-  investedCapital:
-    type: integer
-  investedCapitalAverage:
-    type: integer
-  inventory:
-    type: integer
-  investments:
-    type: integer
-  investmentsCurrent:
-    type: integer
-  investmentsNonCurrent:
-    type: integer
-  totalLiabilities:
-    type: integer
-  currentLiabilities:
-    type: integer
-  liabilitiesNonCurrent:
-    type: integer
-  marketCapitalization:
-    type: integer
-  netCashFlow:
-    type: integer
-  netCashFlowBusinessAcquisitionsDisposals:
-    type: integer
-  issuanceEquityShares:
-    type: integer
-  issuanceDebtSecurities:
-    type: integer
-  paymentDividendsOtherCashDistributions:
-    type: integer
-  netCashFlowFromFinancing:
-    type: integer
-  netCashFlowFromInvesting:
-    type: integer
-  netCashFlowInvestmentAcquisitionsDisposals:
-    type: integer
-  netCashFlowFromOperations:
-    type: integer
-  effectOfExchangeRateChangesOnCash:
-    type: integer
-  netIncome:
-    type: integer
-  netIncomeCommonStock:
-    type: integer
-  netIncomeCommonStockUSD:
-    type: integer
-  netLossIncomeFromDiscontinuedOperations:
-    type: integer
-  netIncomeToNonControllingInterests:
-    type: integer
-  profitMargin:
-    type: number
-    format: double
-  operatingExpenses:
-    type: integer
-  operatingIncome:
-    type: integer
-  tradeAndNonTradePayables:
-    type: integer
-  payoutRatio:
-    type: integer
-  priceToBookValue:
-    type: number
-    format: double
-  priceEarnings:
-    type: number
-    format: double
-  priceToEarningsRatio:
-    type: number
-    format: double
-  propertyPlantEquipmentNet:
-    type: integer
-  preferredDividendsIncomeStatementImpact:
-    type: integer
-  sharePriceAdjustedClose:
-    type: number
-    format: double
-  priceSales:
-    type: number
-    format: double
-  priceToSalesRatio:
-    type: number
-    format: double
-  tradeAndNonTradeReceivables:
-    type: integer
-  accumulatedRetainedEarningsDeficit:
-    type: integer
-  revenues:
-    type: integer
-  revenuesUSD:
-    type: integer
-  researchAndDevelopmentExpense:
-    type: integer
-  returnOnAverageAssets:
-    type: integer
-  returnOnAverageEquity:
-    type: integer
-  returnOnInvestedCapital:
-    type: integer
-  returnOnSales:
-    type: number
-    format: double
-  shareBasedCompensation:
-    type: integer
-  sellingGeneralAndAdministrativeExpense:
-    type: integer
-  shareFactor:
-    type: integer
-  shares:
-    type: integer
-  weightedAverageShares:
-    type: integer
-  weightedAverageSharesDiluted:
-    type: integer
-  salesPerShare:
-    type: number
-    format: double
-  tangibleAssetValue:
-    type: integer
-  taxAssets:
-    type: integer
-  incomeTaxExpense:
-    type: integer
-  taxLiabilities:
-    type: integer
-  tangibleAssetsBookValuePerShare:
-    type: number
-    format: double
-  workingCapital:
-    type: integer
+  results:
+    type: array
+    items:
+      type: object
+      properties:
+        ticker:
+          $ref: '../index.yml#/TickerSymbol'
+        period:
+          type: string
+          description: Reporting period.
+        calendarDate:
+          type: string
+          format: date
+          description: NEEDS DESCRIPTION ***** ?? *****
+        reportPeriod:
+          type: string
+          format: date
+          description: NEEDS DESCRIPTION ***** ?? *****
+        updated:
+          type: string
+          format: date
+          description: NEEDS DESCRIPTION ***** ?? *****
+        dateKey:
+          type: string
+          format: date
+          description: NEEDS DESCRIPTION ***** ?? *****
+        accumulatedOtherComprehensiveIncome:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        assets:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        assetsAverage:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        assetsCurrent:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        assetsNonCurrent:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        bookValuePerShare:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        capitalExpenditure:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        cashAndEquivalents:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        cashAndEquivalentsUSD:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        costOfRevenue:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        consolidatedIncome:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        currentRatio:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        debtToEquityRatio:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        debt:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        debtCurrent:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        debtNonCurrent:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        debtUSD:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        deferredRevenue:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        depreciationAmortizationAndAccretion:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        deposits:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        dividendYield:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        dividendsPerBasicCommonShare:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        earningBeforeInterestTaxes:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        earningsBeforeInterestTaxesDepreciationAmortization:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        EBITDAMargin:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        earningsBeforeInterestTaxesDepreciationAmortizationUSD:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        earningBeforeInterestTaxesUSD:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        earningsBeforeTax:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        earningsPerBasicShare:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        earningsPerDilutedShare:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        earningsPerBasicShareUSD:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        shareholdersEquity:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        shareholdersEquityUSD:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        enterpriseValue:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        enterpriseValueOverEBIT:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        enterpriseValueOverEBITDA:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        freeCashFlow:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        freeCashFlowPerShare:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        foreignCurrencyUSDExchangeRate:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        grossProfit:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        grossMargin:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        goodwillAndIntangibleAssets:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        interestExpense:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        investedCapital:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        inventory:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        investments:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        investmentsCurrent:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        investmentsNonCurrent:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        totalLiabilities:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        currentLiabilities:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        liabilitiesNonCurrent:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        marketCapitalization:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        netCashFlow:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        netCashFlowBusinessAcquisitionsDisposals:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        issuanceEquityShares:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        issuanceDebtSecurities:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        paymentDividendsOtherCashDistributions:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        netCashFlowFromFinancing:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        netCashFlowFromInvesting:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        netCashFlowInvestmentAcquisitionsDisposals:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        netCashFlowFromOperations:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        effectOfExchangeRateChangesOnCash:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        netIncome:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        netIncomeCommonStock:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        netIncomeCommonStockUSD:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        netLossIncomeFromDiscontinuedOperations:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        netIncomeToNonControllingInterests:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        profitMargin:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        operatingExpenses:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        operatingIncome:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        tradeAndNonTradePayables:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        payoutRatio:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        priceToBookValue:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        priceEarnings:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        priceToEarningsRatio:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        propertyPlantEquipmentNet:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        preferredDividendsIncomeStatementImpact:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        sharePriceAdjustedClose:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        priceSales:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        priceToSalesRatio:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        tradeAndNonTradeReceivables:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        accumulatedRetainedEarningsDeficit:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        revenues:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        revenuesUSD:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        researchAndDevelopmentExpense:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        shareBasedCompensation:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        sellingGeneralAndAdministrativeExpense:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        shareFactor:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        shares:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        weightedAverageShares:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        weightedAverageSharesDiluted:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        salesPerShare:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        tangibleAssetValue:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        taxAssets:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        incomeTaxExpense:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        taxLiabilities:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        tangibleAssetsBookValuePerShare:
+          type: number
+          format: double
+          description: NEEDS DESCRIPTION ***** ?? *****
+        workingCapital:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
