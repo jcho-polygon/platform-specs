@@ -21,7 +21,7 @@ responses:
       application/json:
         schema:
           allOf:
-            - $ref: "../../schemas/index.yml#/BaseResponse"
+            - $ref: "../../schemas/index.yml#/V2AggsBase"
             - $ref: "../../schemas/index.yml#/AggResponse"
   default:
     $ref: "../../responses.yml#/DefaultError"

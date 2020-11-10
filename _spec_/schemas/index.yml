@@ -1,3 +1,7 @@
+# Base Responses
+V2AggsBase:
+  $ref: 'common/baseResponses/v2AggsBase.yml'
+
 # Common
 BaseResponse:
  $ref: 'common/baseResponse.yml'

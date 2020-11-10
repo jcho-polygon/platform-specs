@@ -5,15 +5,12 @@ properties:
     $ref: '../index.yml#/StockSymbol'
   name:
     type: string
-    example: Apple Inc
     description: Name of the item.
   type:
     type: string
-    example: cs
     description: Type of symbol this is. See symbol types.
   url:
     type: string
-    example: https://api.polygon.io/v1/meta/symbols/AAPL
     description: URL of this symbol. Use this to get this symbols endpoints.
   updated:
     type: string
@@ -21,5 +18,4 @@ properties:
     description: Last time this company record was updated.
   isOTC:
     type: boolean
-    example: false
     description: If the symbol is listed on the OTC Markets.

@@ -1,0 +1,14 @@
+type: object
+properties:
+ ticker: 
+  type: string
+ status: 
+  type: string
+ adjusted:
+  type: boolean
+ queryCount:
+  type: number
+ resultsCount:
+  type: number
+ request_id:
+  type: number

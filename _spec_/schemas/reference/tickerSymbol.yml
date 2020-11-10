@@ -1,3 +1,2 @@
 type: string
-example: AAPL
 description: An actual exchange traded ticker.
