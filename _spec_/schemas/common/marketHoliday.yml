@@ -1,32 +1,25 @@
-type: object
-required: [ exchange, name, status, date ]
-properties:
-  exchange:
-    type: string
-    example: NYSE
-    description: Which market this record is for
-    enum: [ "NYSE", "NASDAQ", "OTC" ]
-  name:
-    type: string
-    example: Thanksgiving Day
-    description: Human readable description of the holiday
-  status:
-    type: string
-    example: early-close
-    description: Status of the market on this holiday
-    enum: [ closed, early-close, late-close, early-open, late-open ]
-  date:
-    type: string
-    example: "2018-11-23T00:00:00.000Z"
-    format: date-time
-    description: Date of this holiday
-  open:
-    type: string
-    example: "2018-11-23T09:30:00.000Z"
-    format: date-time
-    description: Market open time on this holiday ( if it's not closed )
-  close:
-    type: string
-    example: "2018-11-23T13:00:00.000Z"
-    format: date-time
-    description: Market close time on this holiday ( if it's not closed )
+type: array
+items:
+  type: object
+  properties:
+    exchange:
+      type: string
+      description: Which market this record is for
+    name:
+      type: string
+      description: Human readable description of the holiday
+    status:
+      type: string
+      description: Status of the market on this holiday
+    date:
+      type: string
+      format: date
+      description: Date of this holiday
+    open:
+      type: string
+      format: date-time
+      description: Market open time on this holiday ( if it's not closed )
+    close:
+      type: string
+      format: date-time
+      description: Market close time on this holiday ( if it's not closed )

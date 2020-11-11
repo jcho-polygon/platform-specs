@@ -9,9 +9,32 @@ responses:
     content:
       application/json:
         schema:
-          type: array
-          items:
-            $ref: '../../schemas/index.yml#/MarketHoliday'
+          $ref: '../../schemas/index.yml#/MarketHoliday'
+        example:
+        - exchange: NYSE
+          name: Thanksgiving
+          date: "2020-11-26"
+          status: closed
+        - exchange: NASDAQ
+          name: Thanksgiving
+          date: "2020-11-26"
+          status: closed
+        - exchange: OTC
+          name: Thanksgiving
+          date: "2020-11-26"
+          status: closed
+        - exchange: NASDAQ
+          name: Thanksgiving
+          date: "2020-11-27"
+          status: early-close
+          open: "2020-11-27T14:30:00.000Z"
+          close: "2020-11-27T18:00:00.000Z"
+        - exchange: NYSE
+          name: Thanksgiving
+          date: "2020-11-27"
+          status: early-close
+          open: "2020-11-27T14:30:00.000Z"
+          close: "2020-11-27T18:00:00.000Z"
   401:
     $ref: '../../responses.yml#/Unauthorized'
   404:
