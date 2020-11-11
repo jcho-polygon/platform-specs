@@ -43,7 +43,7 @@ properties:
           description: URL of this ticker. Use this to get more information about the <a href="https://api.polygon.io/v2/reference/tickers/AAPL">ticker</a>.
         updated:
           type: string
-          format: date-time
+          format: date
           description: Last time this ticker record was updated.
         attrs:
           type: object
