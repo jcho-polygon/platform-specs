@@ -1,70 +1,25 @@
 type: object
-description: Company dividend
-required: [ symbol, type, exDate, amount ]
 properties:
-  symbol:
-    $ref: '../index.yml#/StockSymbol'
-  type:
-    type: string
-    example: Dividend income
-    description: |
-      Refers to the dividend payment type<br/>
-      - Dividend income<br/>
-      - Interest income<br/>
-      - Stock dividend<br/>
-      - Short term capital gain<br/>
-      - Medium term capital gain<br/>
-      - Long term capital gain<br/>
-      - Unspecified term capital gain<br/>
-  exDate:
-    type: string
-    format: date-time
-    example: "2016-11-03T04:00:00.000Z"
-    description: Execution date of the trade
-  paymentDate:
-    type: string
-    format: date-time
-    example: "2016-11-03T04:00:00.000Z"
-    description: Payment date of the trade
-  recordDate:
-    type: string
-    format: date-time
-    example: "2016-11-03T04:00:00.000Z"
-    description: Record date of the trade
-  declaredDate:
-    type: string
-    format: date-time
-    example: "2016-11-03T04:00:00.000Z"
-    description: Declared date of the trade
-  amount:
-    type: number
-    format: double
-    example: 0.57
-    description: Amount of the dividend
-  qualified:
-    type: string
-    example: Q
-    enum: ['P','Q','N','null']
-    description: |
-      Refers to the dividend income type<br/>
-      - P = Partially qualified income<br/>
-      - Q = Qualified income<br/>
-      - N = Unqualified income<br/>
-      - null = N/A or unknown
-  flag:
-    type: string
-    example: YE
-    description: |
-      Refers to the dividend flag, if set<br/>
-      FI = Final dividend, div ends or instrument ends<br/>
-      LI = Liquidation, instrument liquidates<br/>
-      PR = Proceeds of a sale of rights or shares<br/>
-      RE = Redemption of rights<br/>
-      AC = Accrued dividend<br/>
-      AR = Payment in arrears<br/>
-      AD = Additional payment<br/>
-      EX = Extra payment<br/>
-      SP = Special dividend<br/>
-      YE = Year end<br/>
-      UR = Unknown rate<br/>
-      SU = Regular dividend is suspended
+  results:
+    type: array
+    items: 
+      type: object
+      properties:
+        ticker:
+          $ref: '../index.yml#/StockSymbol'
+        exDate:
+          type: string
+          format: date
+          description: Execution date of the trade
+        paymentDate:
+          type: string
+          format: date
+          description: Payment date of the trade
+        recordDate:
+          type: string
+          format: date
+          description: Record date of the trade
+        amount:
+          type: number
+          format: double
+          description: Amount of the dividend
