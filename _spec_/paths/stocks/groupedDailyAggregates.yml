@@ -17,7 +17,7 @@ responses:
         schema:
           allOf:
             - $ref: '../../schemas/index.yml#/V2AggsBase'
-            - $ref: '../../schemas/index.yml#/V2AggsResultsItems'
+            - $ref: '../../schemas/index.yml#/V2AggsGroupedResults'
         example:
           status: OK
           queryCount: 3

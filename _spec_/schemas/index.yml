@@ -55,8 +55,10 @@ TradeDetailsMapItem:
   $ref: 'common/tradeDetailsMapItem.yml'
 Status:
   $ref: 'common/status.yml'
-V2AggsResultsItems:
-  $ref: 'common/v2AggsResultsItems.yml'
+V2AggsGroupedResults:
+  $ref: 'common/aggregators/v2AggsGroupedResults.yml'
+V2AggsTickerResults:
+  $ref: 'common/aggregators/v2AggsTickerResults.yml'
 
 # Reference
 Tickers:

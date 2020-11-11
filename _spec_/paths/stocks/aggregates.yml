@@ -23,7 +23,7 @@ responses:
           allOf:
             - $ref: '../../schemas/index.yml#/TickerBase'
             - $ref: '../../schemas/index.yml#/V2AggsBase'
-            - $ref: '../../schemas/index.yml#/V2AggsResultsItems'
+            - $ref: '../../schemas/index.yml#/V2AggsTickerResults'
         example:
           ticker: AAPL
           status: OK
