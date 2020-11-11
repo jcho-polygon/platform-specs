@@ -11,19 +11,21 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          required: [ status, symbol, last ]
-          properties:
-            status:
-              type: string
-              example: success
-              description: Status of this requests response
-            symbol:
-              type: string
-              example: AAPL
-              description: Symbol that was evaluated from the request
-            last:
-              $ref: "../../schemas/index.yml#/LastTrade"
+          allOf:
+            - $ref: '../../schemas/index.yml#/V1LastBase'
+            - $ref: '../../schemas/index.yml#/LastTrade'
+        example:
+          symbol: AAPL
+          status: success
+          request_id: fbb6074f249ea54a1ad924e4967c36af
+          last: 
+            cond1: 37
+            exchange: 4
+            price: 119.1802
+            size: 10
+            timestamp: 1605122370210
+
+
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:

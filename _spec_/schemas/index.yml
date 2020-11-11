@@ -3,6 +3,8 @@ StatusBase:
   $ref: 'common/baseResponses/statusBase.yml'
 StatusCountBase:
   $ref: 'common/baseResponses/statusCountBase.yml'
+V1LastBase:
+  $ref: 'common/baseResponses/v1LastBase.yml'
 V2TicksBase:
   $ref: 'common/baseResponses/v2TicksBase.yml'
 V2AggsBase:
