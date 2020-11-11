@@ -1,49 +1,38 @@
 type: object
-required: [ status, from, symbol, open, high, low, close, volume, preMarket, afterHours ]
 properties:
   status:
     type: string
-    example: "OK"
     description: Status of this response
   from:
     type: string
     format: date
-    example: "2020-06-03"
     description: Requested date
   symbol:
     type: string
-    example: "NVDA"
     description: Ticker symbol requested
   open:
     type: number
     format: double
-    example: 352.89
     description: Official open price
   high:
     type: number
     format: double
-    example: 352.89
     description: Official high price
   low:
     type: number
     format: double
-    example: 352.89
     description: Official low price
   close:
     type: number
     format: double
-    example: 352.89
     description: Official close price
   volume:
     type: integer
-    example: 9194990
     description: Volume of shares
   preMarket:
     type: integer
-    example: 355
     description: Open price in pre-market trading
   afterHours:
     type: number
     format: double
-    example: 350.24
     description: Close price after hours trading

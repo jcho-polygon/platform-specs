@@ -19,7 +19,18 @@ responses:
     content:
       application/json:
         schema:
-          $ref: "../../schemas/index.yml#/StocksOpenClose"
+          $ref: '../../schemas/index.yml#/StocksOpenClose'
+        example:
+          status: OK
+          from: '2020-06-03'
+          symbol: AAPL
+          open: 324.66
+          high: 326.2
+          low: 322.3
+          close: 325.12
+          volume: 26122646
+          afterHours: 322.1
+          preMarket: 324.5
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:
