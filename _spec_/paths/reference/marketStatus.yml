@@ -10,6 +10,16 @@ responses:
       application/json:
         schema:
           $ref: '../../schemas/index.yml#/MarketStatus'
+        example:
+          market: extended-hours
+          serverTime: "2020-11-10T17:37:37-05:00"
+          exchanges:
+            nyse: extended-hours
+            nasdaq: extended-hours
+            otc: closed
+          currencies:
+            fx: open
+            crypto: open
   401:
     $ref: '../../responses.yml#/Unauthorized'
   404:
