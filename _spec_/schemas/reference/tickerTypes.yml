@@ -1,0 +1,110 @@
+type: object
+properties:
+  results:
+    type: object
+    properties:
+      types:
+        type: object
+        properties:
+          CS:
+            type: string
+            description: Common Stock
+          ADR:
+            type: string
+            description: American Depository Receipt
+          NVDR:
+            type: string
+            description: Non-Voting Depository Receipt
+          GDR:
+            type: string
+            description: Global Depositary Receipt
+          SDR:
+            type: string
+            description: Special Drawing Right
+          CEF:
+            type: string
+            description: Closed-End Fund
+          ETP:
+            type: string
+            description: Exchange Traded Product/Fund
+          REIT:
+            type: string
+            description: Real Estate Investment Trust
+          MLP:
+            type: string
+            description: Master Limited Partnership
+          WRT:
+            type: string
+            description: Equity WRT
+          PUB:
+            type: string
+            description: Public
+          NYRS:
+            type: string
+            description: New York Registry Shares
+          UNIT:
+            type: string
+            description: Unit
+          RIGHT:
+            type: string
+            description: Right
+          TRAK:
+            type: string
+            description: Tracking stock or targeted stock
+          LTDP:
+            type: string
+            description: Limited Partnership
+          RYLT:
+            type: string
+            description: Royalty Trust
+          MF:
+            type: string
+            description: Mutual Fund
+          PFD:
+            type: string
+            description: Preferred Stock
+          FDR:
+            type: string
+            description: Foreign Ordinary Shares
+          OST:
+            type: string
+            description: Other Security Type
+          FUND:
+            type: string
+            description: Fund
+          SP:
+            type: string
+            description: Structured Product
+          SI:
+            type: string
+            description: Secondary Issue
+      indexType:
+        properties:
+          INDEX:
+            type: string
+            description: Index
+          ETF:
+            type: string
+            description: Exchange Traded Fund (ETF)
+          ETN:
+            type: string
+            description: Exchange Traded Note (ETN)
+          ETMF:
+            type: string
+            description: Exchange Traded Managed Fund (ETMF)
+          SETTLEMENT:
+            type: string
+            description: Settlement
+          SPOT:
+            type: string
+            description: Spot
+          SUBPROD:
+            type: string
+            description: Subordinated product
+          WC:
+            type: string
+            description: World Currency
+          ALPHAINDEX:
+            type: string
+            description: Alpha Index
+

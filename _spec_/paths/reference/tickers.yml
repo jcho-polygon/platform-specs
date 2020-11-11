@@ -91,7 +91,7 @@ responses:
     content:
       application/json:
         schema:
-          $ref: '../../schemas/reference/ticker.yml'
+          $ref: '../../schemas/index.yml#/Tickers'
         example: 
           page: 1
           perPage: 50
@@ -136,3 +136,5 @@ responses:
     $ref: '../../responses.yml#/Conflict'
 x-polygon-entitlement-data-type:
   $ref: '../../schemas/common/entitlementDataTypes.yml#/Reference'
+
+  
