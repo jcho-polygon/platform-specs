@@ -1,44 +1,32 @@
-type: object
-required: [ symbols, title, url, source, summary, timestamp ]
-properties:
-  symbols:
-    type: array
-    example: ['MSFT', 'AAPL', 'IBM']
-    items:
-      $ref: '../index.yml#/StockSymbol'
-  title:
-    type: string
-    example: Goldman in talks to finance iPhones - WSJ
-    description: Name of the article
-  url:
-    type: string
-    example: "https://seekingalpha.com/news/3328826-goldman-talks-finance-iphones-wsj"
-    description: URL of this article
-  source:
-    type: string
-    example: SeekingAlpha
-    description: Source of this article
-  summary:
-    type: string
-    description: Short summary of the article
-    example: "Continuing its push into more traditional areas of consumer finance, Goldman Sachs (NYSE:GS) is reportedly in talks with Apple (NASDAQ:AAPL) to finance iPhone purchases.Buyers theoretically would be a..."
-  image:
-    type: string
-    example: "https://static.seekingalpha.com/assets/og_image_410-b8960ce31ec84f7f12dba11a09fc1849b69b234e0f5f39d7c62f46f8692e58a5.png"
-    description: URL of the image for this article, if found
-  timestamp:
-    type: string
-    format: date-time
-    example: "2018-02-07T12:48:47.000Z"
-    description: Timestamp of the article
-  keywords:
-    type: array
-    example:
-      - financial services
-      - aapl
-      - investing
-      - bsiness news
-      - mobile
-    items:
+type: array
+items: 
+  type: object
+  properties:
+    symbols:
+      type: array
+      items:
+        $ref: '../index.yml#/StockSymbol'
+    title:
       type: string
-      description: common keywords of this article
+      description: Name of the article
+    url:
+      type: string
+      description: URL of this article
+    source:
+      type: string
+      description: Source of this article
+    summary:
+      type: string
+      description: Summary of article
+    image:
+      type: string
+      description: URL of the image for this article, if found
+    timestamp:
+      type: string
+      format: date-time
+      description: Timestamp of the article
+    keywords:
+      type: array
+      items:
+        type: string
+        description: common keywords of this article
