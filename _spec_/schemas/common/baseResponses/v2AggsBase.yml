@@ -1,14 +1,16 @@
 type: object
 properties:
- ticker: 
-  type: string
  status: 
-  type: string
+  $ref: '../../../schemas/index.yml#/Status'
  adjusted:
   type: boolean
+  description: NEEDS DESCRIPTION ***** ?? *****
  queryCount:
-  type: number
+  type: integer
+  description: NEEDS DESCRIPTION ***** ?? *****
  resultsCount:
-  type: number
+  type: integer
+  description: NEEDS DESCRIPTION ***** ?? *****
  request_id:
   type: number
+  description: NEEDS DESCRIPTION ***** ?? *****

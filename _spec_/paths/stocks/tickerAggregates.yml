@@ -21,6 +21,7 @@ responses:
       application/json:
         schema:
           allOf:
+            - $ref: "../../schemas/index.yml#/TickerBase"
             - $ref: "../../schemas/index.yml#/V2AggsBase"
             - $ref: "../../schemas/index.yml#/AggResponse"
   default:
