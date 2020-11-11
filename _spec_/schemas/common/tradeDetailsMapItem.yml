@@ -1,0 +1,8 @@
+type: object
+properties:
+  type:
+    type: string
+    description: Actual type of the trade detail item
+  name:
+    type: string
+    description: Name of the trade detail item

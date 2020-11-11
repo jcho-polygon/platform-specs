@@ -3,6 +3,8 @@ StatusBase:
   $ref: 'common/baseResponses/statusBase.yml'
 StatusCountBase:
   $ref: 'common/baseResponses/statusCountBase.yml'
+V2TicksBase:
+  $ref: 'common/baseResponses/v2TicksBase.yml'
 V2AggsBase:
   $ref: 'common/baseResponses/v2AggsBase.yml'
 
@@ -45,6 +47,8 @@ AnalystRatings:
  $ref: 'common/analystRatings.yml'
 RatingSection:
  $ref: 'common/ratingSection.yml'
+TradeDetailsMapItem:
+  $ref: 'common/tradeDetailsMapItem.yml'
 
 # Reference
 Tickers:

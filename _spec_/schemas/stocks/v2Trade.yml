@@ -1,58 +1,79 @@
 type: object
-required: [ t, q, i, x, s, c, p, z ]
 properties:
-  T:
-    type: string
-    example: AAPL
-    description: Ticker of the object
-  t:
-    type: integer
-    example: 1547787608999125754
-    description: Nanosecond accuracy SIP Unix Timestamp
-  y:
-    type: integer
-    example: 1547787608999125754
-    description: Nanosecond accuracy Participant/Exchange Unix Timestamp
-  f:
-    type: integer
-    example: 1547787608999125754
-    description: Nanosecond accuracy TRF(Trade Reporting Facility) Unix Timestamp
-  q:
-    type: integer
-    example: 23547
-    description: |
-      The sequence number represents the sequence in which trade events happened. These are increasing and unique per ticker symbol, but will not always be sequential. Eg: 1, 2, 6, 9, 10, 11
-  i:
-    type: string
-    example: "00MGON"
-    description: |
-      Trade IDs are a unique identifier for a trade. These are unique per combination of ticker, exchange, and TRF. For example: A trade for AAPL executed on NYSE and a trade for AAPL executed on NASDAQ could potentially have the same Trade ID.
-  x:
-    type: integer
-    example: 11
-    description: Exchange ID
-  s:
-    type: integer
-    example: 100
-    description: The size of a trade ( also known as volume ) is the number of whole shares traded.
-  c:
+  results:
     type: array
-    description: Conditions
     items:
-      type: integer
-      description: Condition code
-      example: 14
-  p:
-    type: number
-    format: double
-    example: 223.001
-    description: Price of the trade
-  z:
-    type: integer
-    example: 1
-    description: |
-      There are 3 tapes which define which exchange the ticker is listed on. These are integers in our objects which represent the letter of the alphabet. Eg: 1 = A, 2 = B, 3 = C.
-      * Tape A is NYSE listed securities
-      * Tape B is NYSE ARCA / NYSE American
-      * Tape C is NASDAQ
-
+      type: object
+      properties:
+        I:
+          type: integer
+          description: NEEDS DESCRIPTION ***** ?? *****
+        t:
+          type: integer
+          description: Nanosecond accuracy SIP Unix Timestamp
+        y:
+          type: integer
+          description: Nanosecond accuracy Participant/Exchange Unix Timestamp
+        f:
+          type: integer
+          description: Nanosecond accuracy TRF(Trade Reporting Facility) Unix Timestamp
+        q:
+          type: integer
+          description: |
+            The sequence number represents the sequence in which trade events happened. These are increasing and unique per ticker symbol, but will not always be sequential. Eg: 1, 2, 6, 9, 10, 11
+        i:
+          type: string
+          description: |
+            Trade IDs are a unique identifier for a trade. These are unique per combination of ticker, exchange, and TRF. For example: A trade for AAPL executed on NYSE and a trade for AAPL executed on NASDAQ could potentially have the same Trade ID.
+        x:
+          type: integer
+          description: Exchange ID
+        s:
+          type: integer
+          description: The size of a trade ( also known as volume ) is the number of whole shares traded.
+        c:
+          type: array
+          description: Conditions
+          items:
+            type: integer
+            description: Condition code
+        p:
+          type: number
+          format: double
+          description: Price of the trade
+        z:
+          type: integer
+          description: |
+            There are 3 tapes which define which exchange the ticker is listed on. These are integers in our objects which represent the letter of the alphabet. Eg: 1 = A, 2 = B, 3 = C.
+            * Tape A is NYSE listed securities
+            * Tape B is NYSE ARCA / NYSE American
+            * Tape C is NASDAQ
+  map:
+    type: object
+    properties:
+      I:
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      x:
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      p:
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      i:
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      e:
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      r:
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      t:
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      y:
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      f:
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      q:
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      c:
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      s:
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      Z:
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'

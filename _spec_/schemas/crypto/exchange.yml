@@ -1,25 +1,19 @@
-type: object
-required: [ id, type, market, name, url ]
-properties:
-  id:
-    type: integer
-    example: 2
-    description: ID of the exchange
-  type:
-    type: string
-    example: exchange
-    enum: ['exchange']
-    description: Type of exchange feed
-  market:
-    type: string
-    example: crypto
-    enum: ['crypto']
-    description: Market data type this exchange contains ( crypto only currently )
-  name:
-    type: string
-    example: GDAX
-    description: Name of the exchange
-  url:
-    type: string
-    example: https://www.gdax.com/
-    description: URL of this exchange
+type: array
+items:
+  type: object
+  properties:
+    id:
+      type: integer
+      description: ID of the exchange
+    type:
+      type: string
+      description: Type of exchange feed
+    market:
+      type: string
+      description: Market data type this exchange contains ( crypto only currently )
+    name:
+      type: string
+      description: Name of the exchange
+    url:
+      type: string
+      description: URL of this exchange

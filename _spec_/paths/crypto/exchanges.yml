@@ -9,25 +9,28 @@ responses:
     content:
       application/json:
         schema:
-          type: array
-          items:
-            $ref: '../../schemas/index.yml#/CryptoExchange'
-          example:
-            - id: 1
-              type: exchange
-              market: crypto
-              name: GDAX
-              url: 'https://www.gdax.com/'
-            - id: 2
-              type: exchange
-              market: crypto
-              name: BITFINEX
-              url: 'https://www.bitfinex.com/'
-            - id: 3
-              type: exchange
-              market: crypto
-              name: BitMEX
-              url: 'https://www.bitmex.com/'
+          $ref: '../../schemas/index.yml#/CryptoExchange'
+        example:
+          - id: 1
+            type: exchange
+            market: crypto
+            name: GDAX
+            url: 'https://www.gdax.com/'
+          - id: 2
+            type: exchange
+            market: crypto
+            name: BITFINEX
+            url: 'https://www.bitfinex.com/'
+          - id: 3
+            type: exchange
+            market: crypto
+            name: BitMEX
+            url: 'https://www.bitmex.com/'
+          - id: 4
+            type: exchange
+            market: crypto
+            name: Binance
+            url: 'https://www.binance.com/'
   401:
     $ref: '../../responses.yml#/Unauthorized'
   404:
