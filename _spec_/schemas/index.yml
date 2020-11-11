@@ -1,6 +1,8 @@
 # Base Responses
 StatusBase:
   $ref: 'common/baseResponses/statusBase.yml'
+StatusCountBase:
+  $ref: 'common/baseResponses/statusCountBase.yml'
 V2AggsBase:
   $ref: 'common/baseResponses/v2AggsBase.yml'
 

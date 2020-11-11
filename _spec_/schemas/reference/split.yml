@@ -1,44 +1,36 @@
 type: object
-description: Symbol split
-required: [ ticker, exDate, paymentDate, ratio, tofactor, forfactor ]
 properties:
-  ticker:
-    $ref: '../index.yml#/TickerSymbol'
-  exDate:
-    type: string
-    format: date-time
-    example: "1999-03-28"
-    description: Execution date of the split
-  paymentDate:
-    type: string
-    format: date-time
-    example: "1999-03-28"
-    description: Payment date of the split
-  recordDate:
-    type: string
-    format: date-time
-    example: "1999-03-28"
-    description: Payment date of the split
-  declaredDate:
-    type: string
-    format: date-time
-    example: "1999-03-28"
-    description: Payment date of the split
-  ratio:
-    type: number
-    format: double
-    example: 0.142857
-    description: |
-      refers to the split ratio. The split ratio is an inverse of the number of shares that a holder of the stock would have after the split divided by the number of shares that the holder had before.
-      <br/>
-      For example: Split ratio of .5 = 2 for 1 split.
-  tofactor:
-    type: integer
-    example: 7
-    description: |
-      To factor of the split. Used to calculate the split ratio forfactor/tofactor = ratio (eg ½ = 0.5)
-  forfactor:
-    type: integer
-    example: 1
-    description: |
-      For factor of the split. Used to calculate the split ratio forfactor/tofactor = ratio (eg ½ = 0.5)
+  results:
+    type: array
+    items:
+      type: object
+      properties:
+        ticker:
+          $ref: '../index.yml#/TickerSymbol'
+        exDate:
+          type: string
+          format: date
+          description: Execution date of the split
+        paymentDate:
+          type: string
+          format: date
+          description: Payment date of the split
+        declaredDate:
+          type: string
+          format: date
+          description: Payment date of the split
+        ratio:
+          type: number
+          format: double
+          description: |
+            refers to the split ratio. The split ratio is an inverse of the number of shares that a holder of the stock would have after the split divided by the number of shares that the holder had before.
+            <br/>
+            For example: Split ratio of .5 = 2 for 1 split.
+        tofactor:
+          type: integer
+          description: |
+            To factor of the split. Used to calculate the split ratio forfactor/tofactor = ratio (eg ½ = 0.5)
+        forfactor:
+          type: integer
+          description: |
+            For factor of the split. Used to calculate the split ratio forfactor/tofactor = ratio (eg ½ = 0.5)
