@@ -9,22 +9,50 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            status:
-              type: string
-              example: OK
-            results:
-              type: array
-              example:
-                - locale: US
-                  name: United States
-                - locale: GB
-                  name: Great Britain / UK
-                - locale: CA
-                  name: Canada
-              items:
-                type: string
+          allOf:
+           - $ref: '../../schemas/index.yml#/StatusBase'
+           - $ref: '../../schemas/index.yml#/Locales'
+        example:
+          status: OK
+          results: 
+            - locale: G
+              name: Global
+            - locale: US
+              name: United States of America
+            - locale: GB
+              name: Great Britain
+            - locale: CA
+              name: Canada
+            - locale: NL
+              name: Netherlands
+            - locale: GR
+              name: Greece
+            - locale: SP
+              name: Spain
+            - locale: DE
+              name: Germany
+            - locale: BE
+              name: Belgium
+            - locale: DK
+              name: Denmark
+            - locale: FI
+              name: Finland
+            - locale: IE
+              name: Ireland
+            - locale: PT
+              name: Portugal
+            - locale: IN
+              name: India
+            - locale: MX
+              name: Mexico
+            - locale: FR
+              name: France
+            - locale: CN
+              name: China
+            - locale: CH
+              name: Switzerland
+            - locale: SE
+              name: Sweden
   401:
     $ref: '../../responses.yml#/Unauthorized'
   404:

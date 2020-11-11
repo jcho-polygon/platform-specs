@@ -57,6 +57,8 @@ Financials:
   $ref: 'reference/financials.yml'
 Markets:
   $ref: 'reference/markets.yml'
+Locales:
+  $ref: 'reference/locales.yml'
 
 # Stocks
 Trade:
