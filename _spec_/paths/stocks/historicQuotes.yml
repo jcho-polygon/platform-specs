@@ -42,29 +42,77 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          required: [ ticker, success ]
-          properties:
-            results_count:
-              type: integer
-              description: Total number of results in this response
-              example: 10
-            db_latency:
-              type: integer
-              example: 2
-              description: Milliseconds of latency for the query results from DB
-            success:
-              type: boolean
-              example: true
-              description: If this query was executed successfully
-            ticker:
-              type: string
-              example: AAPL
-              description: Ticker symbol that was evaluated from the request
-            results:
-              type: array
-              items:
-                $ref: "../../schemas/index.yml#/StocksV2NBBO"
+          allOf:
+            - $ref: '../../schemas/index.yml#/V2TicksBase'
+            - $ref: '../../schemas/index.yml#/StocksV2NBBO'
+        example:
+          ticker: AAPL
+          success: true
+          results_count: 2
+          db_latency: 43
+          results:
+            - t: 1517562000065700260
+              y: 1517562000065321216
+              q: 2060
+              c: [1]
+              z: 3
+              p: 102.7
+              s: 60
+              x: 11
+              P: 0
+              S: 0
+              X: 0
+            - t: 1517562000065791515
+              y: 1517562000065408256
+              q: 2061
+              c: [1]
+              z: 3
+              p: 170
+              s: 2
+              x: 11
+              P: 0
+              S: 0
+              X: 0
+          map: 
+            t: 
+              name: sip_timestamp
+              type: int64
+            y: 
+              name: participant_timestamp
+              type: int64
+            i: 
+              name: indicators
+              type: int
+            P: 
+              name: ask_price
+              type: float64
+            X: 
+              name: ask_exchange
+              type: int
+            f: 
+              name: trf_timestamp
+              type: int64
+            q: 
+              name: sequence_number
+              type: int
+            c: 
+              name: conditions
+              type: int
+            p: 
+              name: bid_price
+              type: float64
+            s: 
+              name: bid_size
+              type: int
+            x: 
+              name: bid_exchange
+              type: int
+            S: 
+              name: ask_size
+              type: int
+            z: 
+              name: tape
+              type: int
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:

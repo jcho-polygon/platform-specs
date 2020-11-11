@@ -1,71 +1,83 @@
 type: object
-required: [ t, q, p, s, x, P, S, X, z ]
 properties:
-  T:
-    type: string
-    example: AAPL
-    description: Ticker of the object
-  t:
-    type: integer
-    example: 1547787608999125754
-    description: Nanosecond accuracy SIP Unix Timestamp
-  y:
-    type: integer
-    example: 1547787608999125754
-    description: Nanosecond accuracy Participant/Exchange Unix Timestamp
-  f:
-    type: integer
-    example: 1547787608999125754
-    description: Nanosecond accuracy TRF(Trade Reporting Facility) Unix Timestamp
-  q:
-    type: integer
-    example: 23547
-    description: Sequence Number
-  c:
+  results:
     type: array
-    description: Conditions
     items:
-      type: integer
-      description: Condition code
-      example: 14
-  i:
-    type: array
-    description: Indicators
-    items:
-      type: integer
-      description: Indicator code
-      example: 2
-
-  p:
-    type: number
-    format: double
-    example: 223.001
-    description: BID Price
-  x:
-    type: integer
-    example: 11
-    description: BID Exchange ID
-  s:
-    type: integer
-    example: 100
-    description: BID Size ( In round lots )
-
-  P:
-    type: number
-    format: double
-    example: 223.001
-    description: ASK Price
-  X:
-    type: integer
-    example: 11
-    description: ASK Exchange ID
-  S:
-    type: integer
-    example: 100
-    description: ASK Size ( In round lots )
-
-
-  z:
-    type: integer
-    example: 1
-    description: Tape where trade occurred. ( 1,2 = CTA, 3 = UTP )
+      type: object
+      properties:
+        t:
+          type: integer
+          description: Nanosecond accuracy SIP Unix Timestamp
+        y:
+          type: integer
+          description: Nanosecond accuracy Participant/Exchange Unix Timestamp
+        f:
+          type: integer
+          description: Nanosecond accuracy TRF(Trade Reporting Facility) Unix Timestamp
+        q:
+          type: integer
+          description: Sequence Number
+        c:
+          type: array
+          description: Conditions
+          items:
+            type: integer
+            description: Condition code
+        i:
+          type: array
+          description: Indicators
+          items:
+            type: integer
+            description: Indicator code
+        p:
+          type: number
+          format: double
+          description: BID Price
+        x:
+          type: integer
+          description: BID Exchange ID
+        s:
+          type: integer
+          description: BID Size ( In round lots )
+        P:
+          type: number
+          format: double
+          description: ASK Price
+        X:
+          type: integer
+          description: ASK Exchange ID
+        S:
+          type: integer
+          description: ASK Size ( In round lots )
+        z:
+          type: integer
+          description: Tape where trade occurred. ( 1,2 = CTA, 3 = UTP )
+  map:
+    type: object
+    properties:
+      t: 
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      y: 
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      i: 
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      P: 
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      X: 
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      f: 
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      q: 
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      c: 
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      p: 
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      s: 
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      x: 
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      S: 
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      z: 
+        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
