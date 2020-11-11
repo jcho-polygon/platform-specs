@@ -9,22 +9,27 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            status:
-              type: string
-              example: OK
-            results:
-              type: array
-              example:
-                - market: STOCKS
-                  desc: Stocks / Equities / ETFs
-                - market: INDICES
-                  desc: Indices
-                - market: MF
-                  desc: Mutual Funds
-              items:
-                type: string
+          allOf:
+            - $ref: '../../schemas/index.yml#/StatusBase'
+            - $ref: '../../schemas/index.yml#/Markets'
+        example:
+          status: OK
+          results: 
+            - market: STOCKS
+              desc: Stocks / Equities / ETFs
+            - market: INDICES
+              desc: Indices
+            - market: MF
+              desc: Mutual Funds
+            - market: MMF
+              desc: Money Market Funds
+            - market: CRYPTO
+              desc: Crypto
+            - market: FX
+              desc: Forex / Currencies
+            - market: BONDS
+              desc: Bonds
+          
   401:
     $ref: '../../responses.yml#/Unauthorized'
   404:

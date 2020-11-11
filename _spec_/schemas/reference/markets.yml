@@ -1,0 +1,13 @@
+type: object
+properties:
+  results:
+    type: array
+    items:
+      type: object
+      properties:
+        market:
+          type: string
+          description: Name of the market
+        desc:
+          type: string
+          description: Description of market
