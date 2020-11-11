@@ -20,8 +20,8 @@ responses:
             - $ref: '../../schemas/index.yml#/V2AggsResultsItems'
         example:
           status: OK
-          queryCount: 8533
-          resultsCount: 8533
+          queryCount: 3
+          resultsCount: 3
           adjusted: true
           results:
             - T: PTE,

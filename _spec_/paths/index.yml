@@ -63,7 +63,7 @@
     $ref: 'stocks/previousClose.yml'
 /v2/aggs/ticker/{stocksTicker}/range/{multiplier}/{timespan}/{from}/{to}:
   get:
-    $ref: 'stocks/tickerAggregates.yml'
+    $ref: 'stocks/aggregates.yml'
 /v1/meta/conditions/{ticktype}:
   get:
     $ref: 'stocks/conditionMappings.yml'
@@ -95,7 +95,7 @@
     $ref: 'forex/previousClose.yml'
 /v2/aggs/ticker/{forexTicker}/range/{multiplier}/{timespan}/{from}/{to}:
   get:
-    $ref: 'forex/tickerAggregates.yml'
+    $ref: 'forex/aggregates.yml'
 /v2/snapshot/locale/global/markets/forex/tickers:
   get:
     $ref: 'forex/snapshotAllTickers.yml'
@@ -124,7 +124,7 @@
     $ref: 'crypto/previousClose.yml'
 /v2/aggs/ticker/{cryptoTicker}/range/{multiplier}/{timespan}/{from}/{to}:
   get:
-    $ref: 'crypto/tickerAggregates.yml'
+    $ref: 'crypto/aggregates.yml'
 /v2/snapshot/locale/global/markets/crypto/tickers:
   get:
     $ref: 'crypto/snapshotAllTickers.yml'
