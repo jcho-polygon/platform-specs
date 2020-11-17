@@ -32,39 +32,35 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          required: [ status, symbol, last ]
-          properties:
-            symbol:
-              type: string
-              example: BTC-USD
-              description: Symbol Pair that was evaluated from the request
-            isUTC:
-              type: boolean
-              description: If the timestamps are in UTC timezone
-              example: true
-            day:
-              type: string
-              format: date
-              example: 2020-10-09
-            open:
-              type: number
-              format: double
-              description: Opening trade price
-              example: 9228.1801
-            close:
-              type: number
-              format: double
-              description: Closing trade price
-              example: 9300.40000001
-            openTrades:
-              type: array
-              items:
-                $ref: "../../schemas/index.yml#/CryptoTickJson"
-            closingTrades:
-              type: array
-              items:
-                $ref: "../../schemas/index.yml#/CryptoTickJson"
+          $ref: '../../schemas/index.yml#/CryptoOpenClose'
+        example:
+          symbol: BTC-USD
+          isUTC: true
+          day: 2020-10-09
+          open: 10932.44
+          close: 11050.64
+          openTrades:
+            - s: 0.002
+              p: 10932.44
+              x: 1
+              t: 1602201600056
+              c: [ 2 ]
+            - s: 0.02
+              p: 10923.76
+              x: 4
+              t: 1602201600141
+              c: [ 2 ]
+          closingTrades: 
+            - s: 0.006128
+              p: 11050.64
+              x: 4
+              t: 1602287999795
+              c: [ 2 ]
+            - s: 0.014
+              p: 11049.4
+              x: 17
+              t: 1602287999659
+              c: [ 1 ]
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:

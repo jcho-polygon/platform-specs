@@ -1,0 +1,8 @@
+type: object
+properties:
+  tickers:
+    type: array
+    items:
+      type: object
+      properties:
+        $ref: './props.yml'

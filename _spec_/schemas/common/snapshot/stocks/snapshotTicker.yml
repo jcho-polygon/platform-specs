@@ -1,0 +1,7 @@
+type: object
+properties:
+  ticker:
+    type: object
+    properties:
+      $ref: './props.yml'
+    

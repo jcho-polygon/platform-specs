@@ -112,7 +112,7 @@ responses:
                 scfigi: BBG001S5N8V8
                 cfigi: BBG000B9XRY4
                 figi: BBG000B9Y5X2
-              updated: "2019-01-15"
+              updated: 2019-01-15
               url: https://api.polygon.io/v2/reference/tickers/AAPL
             - ticker: $AEDAUD
               name: United Arab Emirates dirham - Australian dollar
@@ -121,7 +121,7 @@ responses:
               currency: AUD
               active: true
               primaryExch: FX
-              updated: "2019-01-25"
+              updated: 2019-01-25
               attrs:
                 currencyName: Australian dollar,
                 currency: AUD,

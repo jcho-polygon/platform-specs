@@ -1,8 +1,0 @@
-type: object
-properties:
-  results:
-    type: array
-    items:
-      type: object
-      properties:
-        $ref: './resultsItems.yml'

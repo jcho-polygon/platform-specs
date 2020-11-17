@@ -1,34 +1,23 @@
 type: object
 properties:
   status:
-    type: string
-    description: Status of this response
+    $ref: '../index.yml#/Status'
   from:
     type: string
     format: date
     description: Requested date
   symbol:
-    type: string
-    description: Ticker symbol requested
+    $ref: '../index.yml#/StockSymbol'
   open:
-    type: number
-    format: double
-    description: Official open price
+    $ref: '../index.yml#/Open'
   high:
-    type: number
-    format: double
-    description: Official high price
+    $ref: '../index.yml#/High'
   low:
-    type: number
-    format: double
-    description: Official low price
+    $ref: '../index.yml#/Low'
   close:
-    type: number
-    format: double
-    description: Official close price
+    $ref: '../index.yml#/Close'
   volume:
-    type: integer
-    description: Volume of shares
+    $ref: '../index.yml#/Volume'
   preMarket:
     type: integer
     description: Open price in pre-market trading

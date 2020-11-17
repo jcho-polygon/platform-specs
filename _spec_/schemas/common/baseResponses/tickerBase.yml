@@ -1,4 +1,4 @@
 type: object
 properties:
   ticker: 
-    $ref: '../../../schemas/index.yml#/StockSymbol'
+    $ref: '../../index.yml#/StockSymbol'

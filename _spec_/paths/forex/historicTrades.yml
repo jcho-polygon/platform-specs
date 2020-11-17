@@ -40,37 +40,33 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          required: [ day, map, msLatency, status, pair, ticks ]
-          properties:
-            day:
-              type: string
-              example: "2020-10-02"
-              description: Date that was evaluated from the request
-              format: date
-            map:
-              type: object
-              description: Map for shortened result keys
-              example:
-                a: ask
-                b: bid
-                t: timestamp
-            msLatency:
-              type: integer
-              example: 2
-              description: Milliseconds of latency for the query results
-            status:
-              type: string
-              example: success
-              description: Status of this requests response
-            pair:
-              type: string
-              example: AUD/USD
-              description: Currency Pair that was evaluated from the request
-            ticks:
-              type: array
-              items:
-                $ref: "../../schemas/index.yml#/Forex"
+          allOf:
+            - $ref: '../../schemas/index.yml#/StatusBase'
+            - $ref: '../../schemas/index.yml#/ForexHistoricTrades'
+            
+        example:
+          day: 2020-10-02
+          map:
+            a: ask
+            b: bid
+            t: timestamp
+          msLatency: 3
+          pair: AUD/USD
+          status: success
+          ticks:
+            - b: 0.7177
+              a: 0.7182
+              x: 48
+              t: 1601596801000
+            - b: 0.71804
+              a: 0.71816
+              x: 48
+              t: 1601596802000
+            - b: 0.7178
+              a: 0.7183
+              x: 48
+              t: 1601596803000
+          type: forex
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:

@@ -1,0 +1,27 @@
+type: object
+properties:
+  ticker:
+    $ref: '../../../index.yml#/StockSymbol'
+  bids:
+    type: array
+    items:
+      $ref: './bookItem.yml'
+  asks:
+    type: array
+    items:
+      $ref: './bookItem.yml'
+  bidCount:
+    type: number
+    format: double
+    description: Combined total number of bids in the book
+  askCount:
+    type: number
+    format: double
+    description: Combined total number of asks in the book
+  spread:
+    type: number
+    format: double
+    description: Difference between the best bid and the best ask price accross exchanges
+  updated:
+    $ref: '../../../index.yml#/Updated'
+

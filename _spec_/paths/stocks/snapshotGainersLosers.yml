@@ -16,17 +16,51 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          required: [ status, tickers ]
-          properties:
-            status:
-              type: string
-              example: OK
-              description: Status of this requests response
-            tickers:
-              type: array
-              items:
-                $ref: "../../schemas/index.yml#/StocksSnapshotTicker"
+          allOf:
+            - $ref: '../../schemas/index.yml#/StatusBase'
+            - $ref: '../../schemas/index.yml#/StocksSnapshotTickers'
+        example:
+          status: OK
+          tickers: 
+            - day: 
+                c: 14.2284
+                h: 15.09
+                l: 14.2
+                o: 14.33
+                v: 133963
+                vw: 14.5311
+              lastQuote: 
+                P: 14.44
+                S: 11
+                p: 14.2
+                s: 25
+                t: 1605195929997325568
+              lastTrade: 
+                c: [ 63 ]
+                i: "79372124707124"
+                p: 14.2284
+                s: 536
+                t: 1605195848258266112
+                x: 4
+              min: 
+                av: 133963
+                c: 14.2284
+                h: 14.325
+                l: 14.2
+                o: 14.28
+                v: 6108
+                vw: 14.2426
+              prevDay: 
+                c: 0.73
+                h: 0.799
+                l: 0.73
+                o: 0.75
+                v: 1568097
+                vw: 0.7721
+              ticker: PDS
+              todaysChange: 13.498
+              todaysChangePerc: 1849.096
+              updated: 1605195848258266112
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:

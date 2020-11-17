@@ -1,0 +1,18 @@
+type: array
+items:
+  type: object
+  properties:
+    id:
+      $ref: '../index.yml#/ExchangeId'
+    type:
+      type: string
+      description: Type of exchange feed
+    market:
+      type: string
+      description: Market data type this exchange contains ( crypto only currently )
+    name:
+      type: string
+      description: Name of the exchange
+    url:
+      type: string
+      description: URL of this exchange

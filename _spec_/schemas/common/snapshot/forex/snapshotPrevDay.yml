@@ -1,0 +1,14 @@
+type: object
+properties:
+  o: 
+    $ref: '../../../index.yml#/Open'
+  h: 
+    $ref: '../../../index.yml#/High'
+  l: 
+    $ref: '../../../index.yml#/Low'
+  c: 
+    $ref: '../../../index.yml#/Close'
+  v:
+    $ref: '../../../index.yml#/Volume'
+  vw:
+    $ref: '../../../index.yml#/VolumeWeight'

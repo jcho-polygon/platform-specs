@@ -16,17 +16,41 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          required: [ status, tickers ]
-          properties:
-            status:
-              type: string
-              example: OK
-              description: Status of this requests response
-            tickers:
-              type: array
-              items:
-                $ref: "../../schemas/index.yml#/ForexSnapshotTicker"
+          allOf:
+            - $ref: '../../schemas/index.yml#/StatusBase'
+            - $ref: '../../schemas/index.yml#/ForexSnapshotTickers'
+        example:
+          status: OK
+          tickers: 
+            - day: 
+                c: 0.11778221
+                h: 0.11812263
+                l: 0.11766631
+                o: 0.11797149
+                v: 77794
+              lastQuote: 
+                a: 0.11780678
+                b: 0.11777952
+                i: 0
+                t: 1605280919000
+                x: 48
+              min: 
+                c: 0.117769
+                h: 0.11779633
+                l: 0.11773698
+                o: 0.11778
+                v: 202
+              prevDay: 
+                c: 0.11797258
+                h: 0.11797258
+                l: 0.11797149
+                o: 0.11797149
+                v: 2
+                vw: 0
+              ticker: C:HKDCHF
+              todaysChange: -0.00019306
+              todaysChangePerc: -0.1636482
+              updated: 1605280919000
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:

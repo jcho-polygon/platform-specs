@@ -1,0 +1,23 @@
+type: object
+properties:
+  symbol:
+    $ref: '../index.yml#/SymbolPair'
+  isUTC:
+    type: boolean
+    description: If the timestamps are in UTC timezone
+  day:
+    type: string
+    format: date
+    description: Date requested
+  open:
+    $ref: '../index.yml#/Open'
+  close:
+    $ref: '../index.yml#/Close'
+  openTrades:
+    type: array
+    items:
+      $ref: '../index.yml#/CryptoTick'
+  closingTrades:
+    type: array
+    items:
+      $ref: '../index.yml#/CryptoTick'

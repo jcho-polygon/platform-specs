@@ -1,0 +1,28 @@
+type: object
+properties:
+  day:
+    type: string
+    format: date
+    description: Date that was evaluated from the request
+  map:
+    type: object
+    description: Map for shortened result keys
+    properties:
+      c: 
+        type: string
+      p: 
+        type: string
+      s: 
+        type: string
+      t: 
+        type: string
+      x: 
+        type: string
+  msLatency:
+    $ref: '../index.yml#/MsLatency'
+  symbol:
+    $ref: '../index.yml#/SymbolPair'
+  ticks:
+    type: array
+    items:
+      $ref: "../../schemas/index.yml#/CryptoTick"

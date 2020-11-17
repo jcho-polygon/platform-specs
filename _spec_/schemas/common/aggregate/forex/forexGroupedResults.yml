@@ -1,0 +1,21 @@
+type: object
+properties:
+  results:
+    type: array
+    items:
+      type: object
+      properties:
+        T: 
+          $ref: '../../../index.yml#/StockSymbol'
+        o: 
+          $ref: '../../../index.yml#/Open'
+        h: 
+          $ref: '../../../index.yml#/High'
+        l: 
+          $ref: '../../../index.yml#/Low'
+        c: 
+          $ref: '../../../index.yml#/Close'
+        v:
+          $ref: '../../../index.yml#/Volume'
+        t:
+          $ref: '../../../index.yml#/Timestamp'

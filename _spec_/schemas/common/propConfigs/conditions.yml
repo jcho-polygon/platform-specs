@@ -1,0 +1,9 @@
+type: array
+items:
+  type: integer
+  description: |
+    Conditions of this trade.
+
+    empty: 0 (or empty array)
+    sellside: 1
+    buyside: 2

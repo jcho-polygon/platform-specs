@@ -5,6 +5,8 @@ StatusBase:
   $ref: 'common/baseResponses/statusBase.yml'
 StatusCountBase:
   $ref: 'common/baseResponses/statusCountBase.yml'
+RequestIdBase:
+  $ref: 'common/baseResponses/requestIdBase.yml'
 V1LastBase:
   $ref: 'common/baseResponses/v1LastBase.yml'
 V2TicksBase:
@@ -13,52 +15,132 @@ V2AggsBase:
   $ref: 'common/baseResponses/v2AggsBase.yml'
 
 # Common
-LastTrade:
- $ref: 'common/lastTrade.yml'
-LastQuote:
- $ref: 'common/lastQuote.yml'
-HistTrade:
- $ref: 'common/historicTrade.yml'
-Quote:
- $ref: 'common/quote.yml'
-Aggregate:
- $ref: 'common/aggregate.yml'
-Company:
- $ref: 'common/company.yml'
-Symbol:
- $ref: 'common/symbol.yml'
 Dividend:
  $ref: 'common/dividend.yml'
 News:
  $ref: 'common/news.yml'
-Earning:
- $ref: 'common/earning.yml'
 Financial:
  $ref: 'common/financial.yml'
 Exchange:
  $ref: 'common/exchange.yml'
-StockSymbol:
- $ref: 'common/stockSymbol.yml'
 ConditionTypeMap:
  $ref: 'common/conditionTypeMap.yml'
-SymbolTypeMap:
- $ref: 'common/symbolTypeMap.yml'
 MarketStatus:
  $ref: 'common/marketStatus.yml'
 MarketHoliday:
  $ref: 'common/marketHoliday.yml'
-AnalystRatings:
- $ref: 'common/analystRatings.yml'
 RatingSection:
  $ref: 'common/ratingSection.yml'
 TradeDetailsMapItem:
   $ref: 'common/tradeDetailsMapItem.yml'
+Company:
+ $ref: 'common/company.yml'
+
+# PropConfigs
+Adjusted:
+  $ref: 'common/propConfigs/adjusted.yml'
+AskPrice:
+  $ref: 'common/propConfigs/askPrice.yml'
+BidPrice:
+  $ref: 'common/propConfigs/bidPrice.yml'
+Close:
+  $ref: 'common/propConfigs/close.yml'
+Conditions:
+  $ref: 'common/propConfigs/conditions.yml'
+Count:
+  $ref: 'common/propConfigs/count.yml'
+ExchangeId:
+  $ref: 'common/propConfigs/exchangeId.yml'
+High:
+  $ref: 'common/propConfigs/high.yml'
+Low:
+  $ref: 'common/propConfigs/low.yml'
+MsLatency:
+  $ref: 'common/propConfigs/msLatency.yml'
+NumberOfItems:
+  $ref: 'common/propConfigs/numberOfItems.yml'
+Open:
+  $ref: 'common/propConfigs/open.yml'
+Price:
+  $ref: 'common/propConfigs/price.yml'
+QueryCount:
+  $ref: 'common/propConfigs/queryCount.yml'
+Size:
+  $ref: 'common/propConfigs/size.yml'
+RequestID:
+  $ref: 'common/propConfigs/requestId.yml'
 Status:
-  $ref: 'common/status.yml'
-V2AggsGroupedResults:
-  $ref: 'common/aggregators/v2AggsGroupedResults.yml'
-V2AggsTickerResults:
-  $ref: 'common/aggregators/v2AggsTickerResults.yml'
+  $ref: 'common/propConfigs/status.yml'
+StockSymbol:
+ $ref: 'common/propConfigs/stockSymbol.yml'
+SymbolPair:
+ $ref: 'common/propConfigs/symbolPair.yml'
+Timestamp:
+  $ref: 'common/propConfigs/timestamp.yml'
+TodaysChange:
+  $ref: 'common/propConfigs/todaysChange.yml'
+TodaysChangePerc:
+  $ref: 'common/propConfigs/todaysChangePerc.yml'
+TradeExchange:
+  $ref: 'common/propConfigs/tradeExchange.yml'
+TradeId:
+  $ref: 'common/propConfigs/tradeId.yml'
+Updated:
+  $ref: 'common/propConfigs/updated.yml'
+Volume:
+  $ref: 'common/propConfigs/volume.yml'
+VolumeWeight:
+  $ref: 'common/propConfigs/volumeWeight.yml'
+
+# Aggregates
+# - Common
+TickerResults:
+  $ref: 'common/aggregate/common/tickerResults.yml'
+# - Stocks
+StocksGroupedResults:
+  $ref: 'common/aggregate/stocks/stocksGroupedResults.yml'
+# - Forex
+ForexGroupedResults:
+  $ref: 'common/aggregate/forex/forexGroupedResults.yml'
+ForexTickerResults:
+  $ref: 'common/aggregate/forex/forexTickerResults.yml'
+# - Crypto
+CryptoGroupedResults:
+  $ref: 'common/aggregate/crypto/cryptoGroupedResults.yml'
+
+# Snapshot
+# - Common
+SnapshotLastTrade:
+  $ref: 'common/snapshot/common/snapshotLastTrade.yml'
+SnapshotOHLCV:
+  $ref: 'common/snapshot/common/snapshotOHLCV.yml'
+SnapshotOHLCVVW:
+  $ref: 'common/snapshot/common/snapshotOHLCVVW.yml'
+# - Stocks
+StocksSnapshotLastQuote:
+  $ref: 'common/snapshot/stocks/snapshotLastQuote.yml'
+StocksSnapshotMinute:
+  $ref: 'common/snapshot/stocks/snapshotMinute.yml'
+StocksSnapshotTickers:
+  $ref: 'common/snapshot/stocks/snapshotTickers.yml'
+StocksSnapshotTicker:
+  $ref: 'common/snapshot/stocks/snapshotTicker.yml'
+# - Forex
+ForexSnapshotLastQuote:
+  $ref: 'common/snapshot/forex/snapshotLastQuote.yml'
+ForexSnapshotPrevDay:
+  $ref: 'common/snapshot/forex/snapshotPrevDay.yml'
+ForexSnapshotTickers:
+  $ref: 'common/snapshot/forex/snapshotTickers.yml'
+# - Crypto
+CryptoSnapshotMinute:
+  $ref: 'common/snapshot/crypto/snapshotMinute.yml'
+CryptoSnapshotTicker:
+  $ref: 'common/snapshot/crypto/snapshotTicker.yml'
+CryptoSnapshotTickers:
+  $ref: 'common/snapshot/crypto/snapshotTickers.yml'
+CryptoSnapshotTickerFullBook:
+  $ref: 'common/snapshot/crypto/snapshotTickerFullBook.yml'
 
 # Reference
 Tickers:
@@ -77,57 +159,37 @@ Locales:
   $ref: 'reference/locales.yml'
 
 # Stocks
-Trade:
-  $ref: 'stocks/trade.yml'
-StocksSnapshotTicker:
-  $ref: 'stocks/snapshotTicker.yml'
-StocksSnapshotBookItem:
-  $ref: 'stocks/snapshotBookItem.yml'
 StocksOpenClose:
   $ref: 'stocks/openClose.yml'
-StocksSnapshotTickerBook:
-  $ref: 'stocks/snapshotTickerBook.yml'
+StocksLastQuote:
+  $ref: 'stocks/stocksLastQuote.yml'
+StocksLastTrade:
+  $ref: 'stocks/stocksLastTrade.yml'
 StocksV2Trade:
   $ref: 'stocks/v2Trade.yml'
 StocksV2NBBO:
   $ref: 'stocks/v2NBBO.yml'
-StocksSnapshotAgg:
-  $ref: 'stocks/snapshotAggregate.yml'
-StocksSnapshotQuote:
-  $ref: 'stocks/snapshotQuote.yml'
-Aggv2:
-  $ref: 'stocks/aggV2.yml'
-AggResponse:
-  $ref: 'stocks/aggResponse.yml'
 
 # Forex
-Forex:
-  $ref: 'forex/forex.yml'
-LastForexTrade:
-  $ref: 'forex/lastTrade.yml'
-LastForexQuote:
-  $ref: 'forex/lastQuote.yml'
-ForexAggregate:
-  $ref: 'forex/aggregate.yml'
-ForexSnapshotTicker:
-  $ref: 'forex/snapshotTrade.yml'
-ForexSnapshotAgg:
-  $ref: 'forex/snapshotAggregate.yml'
+ForexConversion:
+  $ref: 'forex/forexConversion.yml'
+ForexHistoricTrades:
+  $ref: 'forex/forexHistoricTrades.yml'
+ForexPairLastQuote:
+  $ref: 'forex/forexPairLastQuote.yml'
+ForexPreviousClose:
+  $ref: 'forex/forexPreviousClose.yml'
 
 # Crypto
-CryptoTick:
- $ref: 'crypto/tick.yml'
-CryptoTickJson:
- $ref: 'crypto/tickJSON.yml'
 CryptoExchange:
- $ref: 'crypto/exchange.yml'
-CryptoSnapshotTicker:
- $ref: 'crypto/snapshotTicker.yml'
-CryptoSnapshotBookItem:
- $ref: 'crypto/snapshotBookItem.yml'
-CryptoSnapshotTickerBook:
- $ref: 'crypto/snapshotTickerBook.yml'
-CryptoSnapshotAgg:
- $ref: 'crypto/snapshotAggregate.yml'
+ $ref: 'crypto/cryptoExchange.yml'
+CryptoHistoricTrades:
+ $ref: 'crypto/cryptoHistoricTrades.yml'
+CryptoLastTrade:
+ $ref: 'crypto/cryptoLastTrade.yml'
+CryptoOpenClose:
+ $ref: 'crypto/cryptoOpenClose.yml'
+CryptoTick:
+ $ref: 'crypto/cryptoTick.yml'
 
  

@@ -13,7 +13,7 @@ responses:
         schema:
           allOf:
             - $ref: '../../schemas/index.yml#/V1LastBase'
-            - $ref: '../../schemas/index.yml#/LastTrade'
+            - $ref: '../../schemas/index.yml#/StocksLastTrade'
         example:
           symbol: AAPL
           status: success

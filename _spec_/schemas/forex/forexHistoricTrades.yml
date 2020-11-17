@@ -1,0 +1,36 @@
+type: object
+properties:
+  day:
+    type: string
+    format: date
+    description: Date that was evaluated from the request
+  map:
+    type: object
+    description: Map for shortened result keys
+    properties:
+      a:
+        type: string
+      b:
+        type: string
+      x:
+        type: string
+      t:
+        type: string
+  msLatency:
+    $ref: '../index.yml#/MsLatency'
+  pair:
+    type: string
+    description: Currency Pair that was evaluated from the request
+  ticks:
+    type: array
+    items:
+      type: object
+      properties:
+        a:
+          $ref: '../index.yml#/AskPrice'
+        b:
+          $ref: '../index.yml#/BidPrice'
+        x:
+          $ref: '../index.yml#/ExchangeId'
+        t:
+          $ref: '../index.yml#/Timestamp'

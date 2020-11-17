@@ -1,0 +1,2 @@
+type: integer
+description: Unix Msec Timestamp ( Start of Aggregate window )

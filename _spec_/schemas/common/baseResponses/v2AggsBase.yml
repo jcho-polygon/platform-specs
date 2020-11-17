@@ -1,16 +1,12 @@
 type: object
 properties:
  status: 
-  $ref: '../../../schemas/index.yml#/Status'
+  $ref: '../../index.yml#/Status'
  adjusted:
-  type: boolean
-  description: NEEDS DESCRIPTION ***** ?? *****
+  $ref: '../../index.yml#/Adjusted'
  queryCount:
-  type: integer
-  description: NEEDS DESCRIPTION ***** ?? *****
+  $ref: '../../index.yml#/QueryCount'
  resultsCount:
-  type: integer
-  description: NEEDS DESCRIPTION ***** ?? *****
+  $ref: '../../index.yml#/Count'
  request_id:
-  type: number
-  description: NEEDS DESCRIPTION ***** ?? *****
+  $ref: '../../index.yml#/RequestID'

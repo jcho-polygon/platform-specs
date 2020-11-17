@@ -22,7 +22,7 @@ responses:
           $ref: '../../schemas/index.yml#/StocksOpenClose'
         example:
           status: OK
-          from: '2020-06-03'
+          from: 2020-06-03
           symbol: AAPL
           open: 324.66
           high: 326.2

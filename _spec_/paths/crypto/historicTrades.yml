@@ -40,39 +40,32 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          required: [ day, map, msLatency, status, symbol, ticks ]
-          properties:
-            day:
-              type: string
-              example: "2018-5-9"
-              description: Date that was evaluated from the request
-              format: date
-            map:
-              type: object
-              description: Map for shortened result keys
-              example:
-                c: conditions
-                p: price
-                s: size
-                x: exchange
-                t: timestamp
-            msLatency:
-              type: integer
-              example: 2
-              description: Milliseconds of latency for the query results
-            status:
-              type: string
-              example: success
-              description: Status of this requests response
-            symbol:
-              type: string
-              example: BTC-USD
-              description: Symbol that was evaluated from the request
-            ticks:
-              type: array
-              items:
-                $ref: "../../schemas/index.yml#/CryptoTickJson"
+          allOf:
+            - $ref: '../../schemas/index.yml#/Status'
+            - $ref: '../../schemas/index.yml#/CryptoHistoricTrades'
+        example:
+          day: 2018-05-09
+          map:
+              c: conditions
+              p: price
+              s: size
+              t: timestamp
+              x: exchange
+          msLatency: 1
+          status: success
+          symbol: BTC-USD
+          ticks:
+            - s: 0.00188217
+              p: 15482.89
+              x: 1
+              t: 1604880000067
+              c: [ 2 ]
+            - s: 0.00161739
+              p: 15482.11
+              x: 1
+              t: 1604880000167
+              c: [ 2 ]
+          type: crypto
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:

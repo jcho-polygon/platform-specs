@@ -12,7 +12,24 @@ responses:
     content:
       application/json:
         schema:
-          $ref: "../../schemas/index.yml#/AggResponse"
+          allOf:
+            - $ref: '../../schemas/index.yml#/TickerBase'
+            - $ref: '../../schemas/index.yml#/V2AggsBase'
+            - $ref: '../../schemas/index.yml#/ForexPreviousClose'
+        example:
+          ticker: C:EURUSD
+          status: OK
+          queryCount: 1
+          resultsCount: 1
+          adjusted: true
+          results:
+            - T: C:EURUSD
+              v: 14500
+              o: 1.18421
+              c: 1.18522
+              h: 1.18545
+              l: 1.18341
+              t: 1605416400000
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:

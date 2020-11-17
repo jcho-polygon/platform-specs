@@ -1,6 +1,6 @@
 type: object
 properties:
   status: 
-    type: string
+    $ref: '../../index.yml#/Status'
   count: 
-    type: number
+    $ref: '../../index.yml#/Count'

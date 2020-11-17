@@ -1,0 +1,12 @@
+type: object
+properties:
+  p:
+    $ref: '../index.yml#/Price'
+  s:
+    $ref: '../index.yml#/Size'
+  x:
+    $ref: '../index.yml#/TradeExchange'
+  c:
+    $ref: '../index.yml#/Conditions'
+  t:
+    $ref: '../index.yml#/Timestamp'

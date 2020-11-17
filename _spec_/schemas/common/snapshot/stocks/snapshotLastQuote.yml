@@ -1,0 +1,14 @@
+type: object
+properties:
+  p:
+    $ref: '../../../index.yml#/BidPrice'
+  s:
+    type: integer
+    description: Bid size in lots
+  P:
+    $ref: '../../../index.yml#/AskPrice'
+  S:
+    type: integer
+    description: Ask size in lots
+  t:
+    $ref: '../../../index.yml#/Timestamp'

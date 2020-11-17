@@ -8,11 +8,9 @@ properties:
     type: number
     description: Number of results per page
   count:
-    type: number
-    description: Total count for requested query
+    $ref: '../index.yml#/Count'
   status:
-    type: string
-    description: Response status
+    $ref: '../index.yml#/Status'
   tickers:
     type: array
     items: 

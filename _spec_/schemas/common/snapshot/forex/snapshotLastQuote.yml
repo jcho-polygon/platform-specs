@@ -1,0 +1,14 @@
+type: object
+properties:
+  a:  
+    $ref: '../../../index.yml#/AskPrice'
+  b:
+    $ref: '../../../index.yml#/BidPrice'
+  i:
+    type: integer
+    description: NEEDS DESCRIPTION ***** ?? *****
+  t: 
+    $ref: '../../../index.yml#/Timestamp'
+  X:
+    type: integer
+    description: NEEDS DESCRIPTION ***** ?? *****

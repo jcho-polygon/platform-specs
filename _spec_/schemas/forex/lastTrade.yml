@@ -1,16 +1,8 @@
 type: object
-required: [ price, exchange, timestamp ]
 properties:
   price:
-    type: number
-    format: double
-    example: 0.78131
-    description: Price of the trade
+    $ref: '../index.yml#/Price'
   exchange:
-    type: integer
-    example: 20
-    description: Exchange this trade happened on
+    $ref: '../index.yml#/TradeExchange'
   timestamp:
-    type: integer
-    example: 1518086429487
-    description: Timestamp of this trade
+    $ref: '../index.yml#/Timestamp'

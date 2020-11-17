@@ -1,0 +1,6 @@
+type: object
+properties:
+  last:
+    $ref: './lastQuote.yml'
+  symbol:
+    $ref: '../index.yml#/SymbolPair'

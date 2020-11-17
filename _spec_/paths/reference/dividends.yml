@@ -19,14 +19,14 @@ responses:
           count: 2
           results:
             - ticker: AAPL
-              exDate: "2020-05-08"
-              paymentDate: "2020-05-14"
-              recordDate: "2020-05-11"
+              exDate: 2020-05-08
+              paymentDate: 2020-05-14
+              recordDate: 2020-05-11
               amount: 0.82
             - ticker: AAPL
-              exDate: "2020-02-07"
-              paymentDate: "2020-02-13"
-              recordDate: "2020-02-10"
+              exDate: 2020-02-07
+              paymentDate: 2020-02-13
+              recordDate: 2020-02-10
               amount: 0.77
   401:
     $ref: '../../responses.yml#/Unauthorized'

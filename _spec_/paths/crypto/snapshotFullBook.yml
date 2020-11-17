@@ -19,15 +19,28 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          required: [ status, tickers ]
-          properties:
-            status:
-              type: string
-              example: OK
-              description: Status of this requests response
-            data:
-              $ref: "../../schemas/index.yml#/CryptoSnapshotTickerBook"
+          allOf:
+            - $ref: '../../schemas/index.yml#/Status'
+            - $ref: '../../schemas/index.yml#/CryptoSnapshotTickerFullBook'
+        example:
+          status: OK
+          data:
+              ticker: X:BTCUSD
+              bids:
+                - p: 16303.17
+                  x: { "1": 2 }
+                - p: 16302.94
+                  x: { "1": 0.02859424, "6": 0.023455 }
+              asks:
+                - p: 11454
+                  x: { "2": 1 }
+                - p: 11455
+                  x: { "2": 1 }
+              bidCount: 694.951789670001
+              askCount: 593.1412981600005
+              spread: -4849.17
+              updated: 1605295074162
+
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:

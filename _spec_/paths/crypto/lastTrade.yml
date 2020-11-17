@@ -24,31 +24,21 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          required: [ status, symbol, last ]
-          properties:
-            status:
-              type: string
-              example: success
-              description: Status of this requests response
-            symbol:
-              type: string
-              example: BTC-USD
-              description: Symbol Pair that was evaluated from the request
-            last:
-              $ref: "../../schemas/index.yml#/CryptoTick"
-            lastAverage:
-              type: object
-              properties:
-                avg:
-                  type: number
-                  format: double
-                  description: Average of the trades analyzed
-                  example: 9348.727
-                tradesAveraged:
-                  type: integer
-                  description: Number of trades that were analyzed to get the average.
-                  example: 10
+          allOf:
+            - $ref: '../../schemas/index.yml#/StatusBase'
+            - $ref: '../../schemas/index.yml#/RequestIdBase'
+            - $ref: '../../schemas/index.yml#/CryptoLastTrade'
+        example:
+          last:
+            conditions: [ 1 ]
+            exchange: 4
+            price: 16835.42
+            size: 0.006909
+            timestamp: 1605560885027
+          request_id: d2d779df015fe2b7fbb8e58366610ef7
+          status: success
+          symbol: BTC-USD
+
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:

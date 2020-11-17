@@ -1,0 +1,17 @@
+day:
+  $ref: '../../../index.yml#/SnapshotOHLCV'
+lastQuote:
+  $ref: '../../../index.yml#/ForexSnapshotLastQuote'
+min:
+  description: Last available minute bar
+  $ref: '../../../index.yml#/SnapshotOHLCV'
+prevDay:
+  $ref: '../../../index.yml#/ForexSnapshotPrevDay'
+ticker:
+  $ref: '../../../index.yml#/StockSymbol'
+todaysChange:
+  $ref: '../../../index.yml#/TodaysChange'
+todaysChangePerc:
+  $ref: '../../../index.yml#/TodaysChangePerc'
+updated:
+  $ref: '../../../index.yml#/Updated'

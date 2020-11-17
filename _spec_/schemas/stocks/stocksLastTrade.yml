@@ -1,0 +1,25 @@
+type: object
+properties:
+  last:
+    type: object
+    properties:
+      price:
+        $ref: '../index.yml#/Price'
+      size:
+        $ref: '../index.yml#/Size'
+      exchange:
+        $ref: '../index.yml#/TradeExchange'
+      cond1:
+        type: integer
+        description: Condition 1 of the trade
+      cond2:
+        type: integer
+        description: Condition 2 of the trade
+      cond3:
+        type: integer
+        description: Condition 3 of the trade
+      cond4:
+        type: integer
+        description: Condition 4 of the trade
+      timestamp:
+        $ref: '../index.yml#/Timestamp'

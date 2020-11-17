@@ -39,37 +39,21 @@ responses:
     content:
       application/json:
         schema:
-          type: object
-          required: [ status, from, to, initialAmount, converted, lastTrade ]
-          properties:
-            status:
-              type: string
-              example: success
-              description: Status of this requests response
-            from:
-              type: string
-              example: AUD
-              description: From currency symbol
-            to:
-              type: string
-              example: USD
-              description: To currency symbol
-            initialAmount:
-              type: number
-              format: double
-              example: 100.00
-              description: The amount we are to convert
-            converted:
-              type: number
-              format: double
-              example: 78.76
-              description: To currency symbol
-            lastTrade:
-              $ref: "../../schemas/index.yml#/LastForexTrade"
-            symbol:
-              type: string
-              example: AUD/USD
-              description: Symbol Pair that was evaluated from the request
+          allOf:
+            - $ref: '../../schemas/index.yml#/StatusBase'
+            - $ref: '../../schemas/index.yml#/ForexConversion'
+        example:
+          status: success
+          last:
+            bid: 1.3672596
+            ask: 1.3673344
+            exchange: 48
+            timestamp: 1605555313000
+          from: AUD
+          to: USD
+          initialAmount: 100
+          converted: 73.14
+
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:

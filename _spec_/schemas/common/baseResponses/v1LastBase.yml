@@ -1,10 +1,8 @@
 type: object
 properties:
   symbol: 
-    $ref: '../../../schemas/index.yml#/StockSymbol'
+    $ref: '../../index.yml#/StockSymbol'
   status: 
-    type: string
-    description: Status of this requests response
+    $ref: '../../index.yml#/Status'
   request_id:
-    type: string
-    description: Request id assigned by server
+    $ref: '../../index.yml#/RequestID'

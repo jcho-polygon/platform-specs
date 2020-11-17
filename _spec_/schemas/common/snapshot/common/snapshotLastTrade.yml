@@ -1,0 +1,18 @@
+type: object
+properties:
+  c:
+    type: array
+    description: Conditions
+    items:
+      type: string
+  i:
+    $ref: '../../../index.yml#/TradeId'
+  p:
+    $ref: '../../../index.yml#/Price'
+  s:
+    type: integer
+    description: Size (Volume)
+  t:
+    $ref: '../../../index.yml#/Timestamp'
+  x:
+    $ref: '../../../index.yml#/ExchangeId'

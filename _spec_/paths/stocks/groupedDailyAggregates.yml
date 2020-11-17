@@ -17,41 +17,34 @@ responses:
         schema:
           allOf:
             - $ref: '../../schemas/index.yml#/V2AggsBase'
-            - $ref: '../../schemas/index.yml#/V2AggsGroupedResults'
+            - $ref: '../../schemas/index.yml#/StocksGroupedResults'
         example:
           status: OK
           queryCount: 3
           resultsCount: 3
           adjusted: true
-          results:
-            - T: PTE,
-              v: 209899,
-              vw: 0.9717,
-              o: 1,
-              c: 1,
-              h: 1.03,
-              l: 0.9414,
-              t: 1585857600000,
-              n: 1430
-            - T: RUSHA,
-              v: 191082,
-              vw: 29.6702,
-              o: 29.6,
-              c: 29.92,
-              h: 30.4561,
-              l: 28.9,
-              t: 1585857600000,
-              n: 2828
-            - T: QLTA,
-              v: 292901,
-              vw: 54.489,
-              o: 54.56,
-              c: 54.43,
-              h: 54.69,
-              l: 54.27,
-              t: 1585857600000,
-              n: 1276
-
+          results: 
+            - T: C:AUDCHF
+              v: 160131
+              o: 0.6618886
+              c: 0.6619247
+              h: 0.6643625
+              l: 0.6596
+              t: 1599796800000
+            - T: C:AUDCAD
+              v: 92488
+              o: 0.9584955
+              c: 0.9598082
+              h: 0.9620029
+              l: 0.9575
+              t: 1599796800000
+            - T: C:AUDBGN
+              v: 87209
+              o: 1.2023558
+              c: 1.2009374
+              h: 1.2055938
+              l: 1.199437
+              t: 1599796800000
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:

@@ -1,4 +1,4 @@
 type: object
 properties:
   status: 
-    $ref: '../../../schemas/index.yml#/Status'
+    $ref: '../../index.yml#/Status'

@@ -1,0 +1,2 @@
+type: string
+description: Symbol Pair that was evaluated from the request
