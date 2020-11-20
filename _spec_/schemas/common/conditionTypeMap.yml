@@ -2,5 +2,9 @@ type: object
 properties:
   condition:
     type: string
-    description: NEEDS DESCRIPTION ***** ?? *****
+    description: |
+      Polygon.io's unified numerical mapping for condition codes.
+      Each feed/exchange uses its own set of codes to identify conditions, so the same
+      condition may have a different code depending on the originator of the data. 
+      Polygon.io defines its own mapping to allow for uniformly identifying a condition across feeds/exchanges.
 

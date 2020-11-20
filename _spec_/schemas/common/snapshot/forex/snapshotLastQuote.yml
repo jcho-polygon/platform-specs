@@ -9,6 +9,6 @@ properties:
     description: NEEDS DESCRIPTION ***** ?? *****
   t: 
     $ref: '../../../index.yml#/Timestamp'
-  X:
+  x:
     type: integer
-    description: NEEDS DESCRIPTION ***** ?? *****
+    description: The exchange ID on which this quote happened

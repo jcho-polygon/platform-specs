@@ -15,4 +15,4 @@ properties:
   converted:
     type: number
     format: double
-    description: NEEDS DESCRIPTION ***** ?? *****
+    description: The result of the conversion

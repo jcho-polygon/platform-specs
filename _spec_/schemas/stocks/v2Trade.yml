@@ -7,7 +7,7 @@ properties:
       properties:
         I:
           type: integer
-          description: NEEDS DESCRIPTION ***** ?? *****
+          description: The original ID of the trade.  Used when there is a trade correction to indicate the ID of the corrected trade.
         t:
           type: integer
           description: Nanosecond accuracy SIP Unix Timestamp

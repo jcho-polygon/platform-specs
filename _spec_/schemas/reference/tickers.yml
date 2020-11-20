@@ -48,16 +48,16 @@ properties:
           properties:
             currencyName: 
               type: string
-              description: Actual name of currency traded
+              description: Name of the variable/quote currency
             currency:
               type: string
-              description: Type of currency
+              description: Currency code of the variable/quote currency
             baseName:
               type: string
-              description: NEEDS DESCRIPTION ***** ?? ****
+              description: Name of the base currency
             base:
               type: string
-              description: NEEDS DESCRIPTION ***** ?? ****
+              description: Currency code of the base currency
         codes:
           type: object
           properties:

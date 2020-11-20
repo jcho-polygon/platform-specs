@@ -5,13 +5,13 @@ properties:
     description: URL of the entities logo.
   exchange:
     type: string
-    description: Symbols primary exchange
+    description: Symbol's primary exchange
   exchangeSymbol:
     type: string
-    description: NEED DETAIL ***** ?? ****
+    description: Exchange code (id) of the symbol's primary exchange
   type:
     type: string
-    description: NEED DESCRIPTION ***** ?? ****
+    description: Type or class of the security.  The full list can be found here <a alt="Ticker Types" href="https://polygon.io/docs/get_v2_reference_types_anchor">https://polygon.io/docs/get_v2_reference_types_anchor</a>)
   name:
     type: string
     description: Name of the company/entity
@@ -29,13 +29,13 @@ properties:
     description: Bloomberg guid for this symbol
   figi:
     type: string
-    description: guid for the OpenFigi project ( https://openfigi.com/ )
+    description: guid for the OpenFigi project (<a rel="nofollow" target="_blank" href="https://openfigi.com/">https://openfigi.com/</a>)
   lei:
     type: string
-    description: Legal Entity Identifier (LEI) guid for symbol ( https://en.wikipedia.org/wiki/Legal_Entity_Identifier )
+    description: Legal Entity Identifier (LEI) guid for symbol (<a rel="nofollow" target="_blank" href="https://en.wikipedia.org/wiki/Legal_Entity_Identifier">https://en.wikipedia.org/wiki/Legal_Entity_Identifier</a>)
   sic:
     type: integer
-    description: Standard Industrial Classification (SIC) id for symbol ( https://en.wikipedia.org/wiki/Standard_Industrial_Classification )
+    description: Standard Industrial Classification (SIC) id for symbol (<a rel="nofollow" target="_blank" href="https://en.wikipedia.org/wiki/Standard_Industrial_Classification">https://en.wikipedia.org/wiki/Legal_Entity_Identifier</a>)
   country:
     type: string
     description: Country in which this company is registered
@@ -87,4 +87,4 @@ properties:
     description: Last time this company record was updated.
   active: 
     type: boolean
-    description: NEED DESCRIPTION ***** ?? ****
+    description: Indicates if the security is actively listed.  If false, this means the company is no longer listed and cannot be traded.
