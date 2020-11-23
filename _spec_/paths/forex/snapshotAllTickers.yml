@@ -31,7 +31,6 @@ responses:
               lastQuote: 
                 a: 0.11780678
                 b: 0.11777952
-                i: 0
                 t: 1605280919000
                 x: 48
               min: 
