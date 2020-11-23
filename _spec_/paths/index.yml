@@ -46,13 +46,13 @@
 /v2/ticks/stocks/nbbo/{ticker}/{date}:
   get:
     $ref: 'stocks/historicQuotes.yml'
-/v1/last/stocks/{ticker}:
+/v1/last/stocks/{stocksTicker}:
   get:
     $ref: 'stocks/lastTrade.yml'
-/v1/last_quote/stocks/{ticker}:
+/v1/last_quote/stocks/{stocksTicker}:
   get:
     $ref: 'stocks/lastQuote.yml'
-/v1/open-close/{ticker}/{date}:
+/v1/open-close/{stocksTicker}/{date}:
   get:
     $ref: 'stocks/openClose.yml'
 /v2/aggs/grouped/locale/us/market/stocks/{date}:
@@ -70,7 +70,7 @@
 /v2/snapshot/locale/us/markets/stocks/tickers:
   get:
     $ref: 'stocks/snapshotAllTickers.yml'
-/v2/snapshot/locale/us/markets/stocks/tickers/{ticker}:
+/v2/snapshot/locale/us/markets/stocks/tickers/{stocksTicker}:
   get:
     $ref: 'stocks/snapshotTicker.yml'
 /v2/snapshot/locale/us/markets/stocks/{direction}:
