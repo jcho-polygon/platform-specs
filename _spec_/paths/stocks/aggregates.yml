@@ -13,7 +13,7 @@ parameters:
   - $ref: '../../parameters.yml#/AggregateTimeTo'
   - $ref: '../../parameters.yml#/AggregateUnadjusted'
   - $ref: '../../parameters.yml#/AggregateSort'
-  - $ref: '../../parameters.yml#/LimitMax50000'
+  - $ref: '../../parameters.yml#/AggregateLimitMax50000'
 responses:
   200:
     description: Previous day OHLC for ticker

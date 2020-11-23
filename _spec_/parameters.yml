@@ -115,6 +115,14 @@ LimitMax50000:
   schema:
     type: integer
   example: 10
+AggregateLimitMax50000:
+  name: limit
+  in: query
+  description: Limits the number of base aggregates queried to create the aggregate results. Max 50000 and Default 5000
+  required: false
+  schema:
+    type: integer
+  example: 10
 LimitMax10000:
   name: limit
   in: query
