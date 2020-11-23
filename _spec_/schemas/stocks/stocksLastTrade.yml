@@ -8,18 +8,18 @@ properties:
       size:
         $ref: '../index.yml#/Size'
       exchange:
-        $ref: '../index.yml#/TradeExchange'
+        $ref: '../index.yml#/ExchangeId'
       cond1:
         type: integer
-        description: Condition 1 of the trade
+        description: Condition 1 of the trade. A mapping of Polygon.io conditions to exchange descriptions can be found here ( https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor ).
       cond2:
         type: integer
-        description: Condition 2 of the trade
+        description: Condition 2 of the trade. A mapping of Polygon.io conditions to exchange descriptions can be found here ( https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor ).
       cond3:
         type: integer
-        description: Condition 3 of the trade
+        description: Condition 3 of the trade. A mapping of Polygon.io conditions to exchange descriptions can be found here ( https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor ).
       cond4:
         type: integer
-        description: Condition 4 of the trade
+        description: Condition 4 of the trade. A mapping of Polygon.io conditions to exchange descriptions can be found here ( https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor ).
       timestamp:
         $ref: '../index.yml#/Timestamp'

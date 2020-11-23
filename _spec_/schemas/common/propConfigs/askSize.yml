@@ -1,0 +1,2 @@
+type: integer
+description: Ask Size. The ask size is the number of round lot orders at the given ask price. The normal round lot size 100 shares. So an ask size of 2, means there are 200 shares available to purchase at the given ask price.

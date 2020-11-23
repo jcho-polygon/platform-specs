@@ -1,0 +1,3 @@
+type: integer
+description: |
+  The sequence number represents the sequence in which message events happened. These are increasing and unique per ticker symbol, but will not always be sequential. Eg: 1, 2, 6, 9, 10, 11.

@@ -6,23 +6,19 @@ properties:
       type: object
       properties:
         t:
-          type: integer
-          description: Nanosecond accuracy SIP Unix Timestamp
+          $ref: '../index.yml#/TimestampSIP'
         y:
-          type: integer
-          description: Nanosecond accuracy Participant/Exchange Unix Timestamp
+          $ref: '../index.yml#/TimestampExchange'
         f:
-          type: integer
-          description: Nanosecond accuracy TRF(Trade Reporting Facility) Unix Timestamp
+          $ref: '../index.yml#/TimestampTRF'
         q:
-          type: integer
-          description: Sequence Number
+          $ref: '../index.yml#/SequenceNumber'
         c:
           type: array
           description: Conditions
           items:
             type: integer
-            description: Condition code
+            description: Condition code. These are the conditions of this message. You can find the mapping to exchange descriptions here ( https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor )
         i:
           type: array
           description: Indicators
@@ -30,28 +26,21 @@ properties:
             type: integer
             description: Indicator code
         p:
-          type: number
-          format: double
-          description: BID Price
+          $ref: '../index.yml#/BidPrice'
         x:
           type: integer
           description: BID Exchange ID
         s:
-          type: integer
-          description: BID Size ( In round lots )
+          $ref: '../index.yml#/BidSize'
         P:
-          type: number
-          format: double
-          description: ASK Price
+          $ref: '../index.yml#/AskPrice'
         X:
           type: integer
           description: ASK Exchange ID
         S:
-          type: integer
-          description: ASK Size ( In round lots )
+          $ref: '../index.yml#/AskSize'
         z:
-          type: integer
-          description: Tape where trade occurred. ( 1,2 = CTA, 3 = UTP )
+          $ref: '../index.yml#/Tape'
   map:
     type: object
     properties:

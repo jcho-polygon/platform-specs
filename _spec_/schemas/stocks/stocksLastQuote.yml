@@ -6,18 +6,16 @@ properties:
       askprice:
         $ref: '../index.yml#/AskPrice'
       asksize:
-        type: integer
-        description: Ask Size
+        $ref: '../index.yml#/AskSize'
       askexchange:
         type: integer
-        description: Exchange the ask happened on
+        description: Exchange ID this liquidity is available on. The Polygon.io exchange ID mapping can be found here ( https://polygon.io/docs/get_v1_meta_exchanges_anchor ).
       bidprice:
         $ref: '../index.yml#/BidPrice'
       bidsize:
-        type: integer
-        description: Bid Size
+        $ref: '../index.yml#/BidSize'
       bidexchange:
         type: integer
-        description: Exchange the bid happened on
+        description: Exchange ID this liquidity is available on. The Polygon.io exchange ID mapping can be found here ( https://polygon.io/docs/get_v1_meta_exchanges_anchor ).
       timestamp:
         $ref: '../index.yml#/Timestamp'

@@ -41,8 +41,12 @@ Adjusted:
   $ref: 'common/propConfigs/adjusted.yml'
 AskPrice:
   $ref: 'common/propConfigs/askPrice.yml'
+AskSize:
+  $ref: 'common/propConfigs/askSize.yml'
 BidPrice:
   $ref: 'common/propConfigs/bidPrice.yml'
+BidSize:
+  $ref: 'common/propConfigs/bidSize.yml'
 Close:
   $ref: 'common/propConfigs/close.yml'
 Conditions:
@@ -67,6 +71,8 @@ QueryCount:
   $ref: 'common/propConfigs/queryCount.yml'
 Size:
   $ref: 'common/propConfigs/size.yml'
+SequenceNumber:
+  $ref: 'common/propConfigs/sequenceNumber.yml'
 RequestID:
   $ref: 'common/propConfigs/requestId.yml'
 Status:
@@ -77,6 +83,14 @@ SymbolPair:
  $ref: 'common/propConfigs/symbolPair.yml'
 Timestamp:
   $ref: 'common/propConfigs/timestamp.yml'
+TimestampSIP:
+  $ref: 'common/propConfigs/timestampSIP.yml'
+TimestampExchange:
+  $ref: 'common/propConfigs/timestampExchange.yml'
+TimestampTRF:
+  $ref: 'common/propConfigs/timestampTRF.yml'
+Tape:
+  $ref: 'common/propConfigs/tape.yml'
 TodaysChange:
   $ref: 'common/propConfigs/todaysChange.yml'
 TodaysChangePerc:

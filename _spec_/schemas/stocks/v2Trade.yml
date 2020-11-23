@@ -7,16 +7,13 @@ properties:
       properties:
         I:
           type: integer
-          description: The original ID of the trade.  Used when there is a trade correction to indicate the ID of the corrected trade.
+          description: The original ID of the trade. Used when there is a trade correction to indicate the ID of the corrected trade.
         t:
-          type: integer
-          description: Nanosecond accuracy SIP Unix Timestamp
+          $ref: '../index.yml#/TimestampSIP'
         y:
-          type: integer
-          description: Nanosecond accuracy Participant/Exchange Unix Timestamp
+          $ref: '../index.yml#/TimestampExchange'
         f:
-          type: integer
-          description: Nanosecond accuracy TRF(Trade Reporting Facility) Unix Timestamp
+          $ref: '../index.yml#/TimestampTRF'
         q:
           type: integer
           description: |
@@ -26,28 +23,22 @@ properties:
           description: |
             Trade IDs are a unique identifier for a trade. These are unique per combination of ticker, exchange, and TRF. For example: A trade for AAPL executed on NYSE and a trade for AAPL executed on NASDAQ could potentially have the same Trade ID.
         x:
-          type: integer
-          description: Exchange ID
+          $ref: '../index.yml#/ExchangeId'
         s:
           type: integer
           description: The size of a trade ( also known as volume ) is the number of whole shares traded.
         c:
           type: array
-          description: Conditions
+          description: Conditions. These are the conditions of this message. You can find the mapping to exchange descriptions here ( https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor )
           items:
             type: integer
             description: Condition code
         p:
           type: number
           format: double
-          description: Price of the trade
+          description: Price of the trade. This is the actual dollar value per whole share of this trade. So a trade of 100 shares, with a price of $2.00 would be worth a total dollar value of $200.00. 
         z:
-          type: integer
-          description: |
-            There are 3 tapes which define which exchange the ticker is listed on. These are integers in our objects which represent the letter of the alphabet. Eg: 1 = A, 2 = B, 3 = C.
-            * Tape A is NYSE listed securities
-            * Tape B is NYSE ARCA / NYSE American
-            * Tape C is NASDAQ
+          $ref: '../index.yml#/Tape'
   map:
     type: object
     properties:

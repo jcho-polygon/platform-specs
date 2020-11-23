@@ -1,0 +1,6 @@
+type: integer
+description: |
+  There are 3 tapes which define which exchange the ticker is listed on. These are integers in our objects which represent the letter of the alphabet. Eg: 1 = A, 2 = B, 3 = C.
+  * Tape A is NYSE listed securities
+  * Tape B is NYSE ARCA / NYSE American
+  * Tape C is NASDAQ
