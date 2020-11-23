@@ -1,26 +1,26 @@
 summary: Last Quote for a Currency Pair
 description: |
-  Get Last Quote Tick for a Currency Pair.
+  Get the last quote tick for a forex currency pair.
 tags:
   - Currencies / Forex
 parameters:
   - name: from
     in: path
-    description: From Symbol of the pair
+    description: The "from" symbol of the pair.
     required: true
     schema:
       type: string
     example: AUD
   - name: to
     in: path
-    description: To Symbol of the pair
+    description: The "to" symbol of the pair.
     required: true
     schema:
       type: string
     example: USD
 responses:
   200:
-    description: Last quote tick for this currency pair
+    description: The last quote tick for this currency pair.
     content:
       application/json:
         schema:

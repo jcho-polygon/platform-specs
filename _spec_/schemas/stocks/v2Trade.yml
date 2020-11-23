@@ -7,7 +7,7 @@ properties:
       properties:
         I:
           type: integer
-          description: The original ID of the trade. Used when there is a trade correction to indicate the ID of the corrected trade.
+          description: The original ID of the trade.  This is used when there is a trade correction to indicate the ID of the corrected trade.
         t:
           $ref: '../index.yml#/TimestampSIP'
         y:
@@ -17,54 +17,41 @@ properties:
         q:
           type: integer
           description: |
-            The sequence number represents the sequence in which trade events happened. These are increasing and unique per ticker symbol, but will not always be sequential. Eg: 1, 2, 6, 9, 10, 11
+            The sequence number representing the sequence in which trade events happened. These are increasing and unique per ticker symbol, but will not always be sequential (e.g., 1, 2, 6, 9, 10, 11).
         i:
           type: string
           description: |
-            Trade IDs are a unique identifier for a trade. These are unique per combination of ticker, exchange, and TRF. For example: A trade for AAPL executed on NYSE and a trade for AAPL executed on NASDAQ could potentially have the same Trade ID.
+            The Trade ID which uniquely identifies a trade. These are unique per combination of ticker, exchange, and TRF. For example: A trade for AAPL executed on NYSE and a trade for AAPL executed on NASDAQ could potentially have the same Trade ID.
         x:
           $ref: '../index.yml#/ExchangeId'
         s:
           type: integer
-          description: The size of a trade ( also known as volume ) is the number of whole shares traded.
+          description: The size of a trade (also known as volume) as a number of whole shares traded.
         c:
           type: array
-          description: Conditions. These are the conditions of this message. You can find the mapping to exchange descriptions here ( https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor )
+          description: The trade conditions.  These are the conditions of this message.  See <a href="https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor" alt="Condition Mappings">Condition Mappings</a> for a mapping to exchange conditions.
           items:
             type: integer
-            description: Condition code
+            description: The condition code for this trade condition.
         p:
           type: number
           format: double
-          description: Price of the trade. This is the actual dollar value per whole share of this trade. So a trade of 100 shares, with a price of $2.00 would be worth a total dollar value of $200.00. 
+          description: The price of the trade. This is the actual dollar value per whole share of this trade.  A trade of 100 shares with a price of $2.00 would be worth a total dollar value of $200.00. 
         z:
           $ref: '../index.yml#/Tape'
   map:
     type: object
+    description: A mapping of the keys returned in the results to their descriptive name and data types.
     properties:
-      I:
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      x:
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      p:
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      i:
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      e:
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      r:
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      t:
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      y:
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      f:
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      q:
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      c:
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      s:
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      Z:
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+      key:
+        type: object
+        description: A dynamic key from the results set
+        properties:
+          name:
+            type: string
+            description: The descriptive name of this results key
+          type:
+            type: string
+            description: The data type of this results key
+            enum: ["string", "int", "int64", "float64"]
+

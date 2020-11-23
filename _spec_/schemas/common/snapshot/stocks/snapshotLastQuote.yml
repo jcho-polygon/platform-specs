@@ -4,11 +4,11 @@ properties:
     $ref: '../../../index.yml#/BidPrice'
   s:
     type: integer
-    description: Bid size in lots
+    description: The bid size in lots.
   P:
     $ref: '../../../index.yml#/AskPrice'
   S:
     type: integer
-    description: Ask size in lots
+    description: The ask size in lots.
   t:
     $ref: '../../../index.yml#/Timestamp'

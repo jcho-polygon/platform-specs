@@ -1,6 +1,9 @@
-summary: Aggregates ( Bars )
+summary: Aggregates (Bars)
 description: |
-  Get aggregates for a date range, in custom time window sizes.
+  Get aggregate bars for a forex pair over a given date range in custom time window sizes.
+  <br />
+  <br />
+  For example, if timespan = ‘minute’ and multiplier = ‘5’ then 5-minute bars will be returned.
 tags:
   - "Currencies / Forex"
 parameters:
@@ -14,7 +17,7 @@ parameters:
   - $ref: '../../parameters.yml#/AggregateLimitMax50000'
 responses:
   200:
-    description: Previous day OHLC for ticker
+    description: Forex Aggregates.
     content:
       application/json:
         schema:

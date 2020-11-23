@@ -1,26 +1,26 @@
 summary: Last Trade for a Crypto Pair
 description: |
-  Get Last Trade Tick for a Currency Pair.
+  Get the last trade tick for a cryptocurrency pair.
 tags:
   - Currencies / Crypto
 parameters:
   - name: from
     in: path
-    description: From Symbol of the pair
+    description: The "from" symbol of the pair.
     required: true
     schema:
       type: string
     example: BTC
   - name: to
     in: path
-    description: To Symbol of the pair
+    description: The "to" symbol of the pair.
     required: true
     schema:
       type: string
     example: USD
 responses:
   200:
-    description: Last tick for this currency pair
+    description: The last tick for this currency pair.
     content:
       application/json:
         schema:

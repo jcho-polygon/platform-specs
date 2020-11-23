@@ -1,2 +1,2 @@
 type: boolean
-description: If this response was adjusted for splits
+description: Whether or not this response was adjusted for splits.

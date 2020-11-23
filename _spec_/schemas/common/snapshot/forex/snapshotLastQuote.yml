@@ -8,4 +8,4 @@ properties:
     $ref: '../../../index.yml#/Timestamp'
   x:
     type: integer
-    description: The exchange ID on which this quote happened
+    description: The exchange ID on which this quote happened.

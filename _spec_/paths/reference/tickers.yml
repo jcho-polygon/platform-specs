@@ -1,7 +1,9 @@
 summary: Tickers
-description: |
-  Query all ticker symbols which are supported by Polygon.io. This API includes Crypto, FX, and Stocks/Equities.
-parameters:
+description: | 
+  Query all ticker symbols which are supported by Polygon.io.
+  Returns basic reference data for each matched ticker symbol.
+  This API includes Crypto, Forex, and Stocks/Equities.
+parameters: 
   - name: sort
     in: query
     description: |
@@ -18,18 +20,19 @@ parameters:
   - name: type
     in: query
     description: |
-      If you want the results to only container a certain type.
+      Get tickers of a certain type.
+      See <a href="https://polygon.io/docs/get_v2_reference_types_anchor" alt="Ticker Types">Ticker Types</a> for available types.
 
-      **Example:**
+      **Example**
       - `?type=etp` to get all ETFs
-      - `?type=cs` to get all Common Stock's
+      - `?type=cs` to get all Common Stocks
     required: false
     schema:
       type: string
   - name: market
     in: query
     description: |
-      Get tickers for a specific market
+      Get tickers for a specific market.
 
       **Example:**
       - `?market=stocks` to get all stock tickers
@@ -42,7 +45,7 @@ parameters:
   - name: locale
     in: query
     description: |
-      Get tickers for a specific region/locale
+      Get tickers for a specific region/locale.  See <a href="https://polygon.io/docs/get_v2_reference_locales_anchor" alt="Locales">Locales</a> for a list of possible values.
 
       **Example:**
       - `?locale=us` to get all US tickers
@@ -53,7 +56,7 @@ parameters:
   - name: search
     in: query
     description: |
-      Search the name of tickers
+      Search for specific tickers by name or ticker symbol.
 
       **Example:**
       - `?search=microsoft` Search tickers for microsoft
@@ -63,7 +66,7 @@ parameters:
   - name: perpage
     in: query
     description: |
-      How many items to be on each page during pagination. Max 50
+      The maximum number of results to be returned on each page, max 50 and default 50.
     required: false
     schema:
       type: integer
@@ -71,7 +74,7 @@ parameters:
   - name: page
     in: query
     description: |
-      Which page of results to return
+      Which page of results to return.
     required: false
     schema:
       type: integer
@@ -79,7 +82,7 @@ parameters:
   - name: active
     in: query
     description: |
-      Filter for only active or inactive symbols
+      Filter for only active or inactive symbols.
     required: false
     schema:
       type: boolean

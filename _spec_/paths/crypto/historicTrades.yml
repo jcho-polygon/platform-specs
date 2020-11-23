@@ -1,26 +1,26 @@
 summary: Historic Crypto Trades
 description: |
-  Get historic trade ticks for a crypto pair.
+  Get historic trade ticks for a cryptocurrency pair.
 tags:
   - Currencies / Crypto
 parameters:
   - name: from
     in: path
-    description: From Symbol of the crypto pair
+    description: The "from" symbol of the crypto pair.
     required: true
     schema:
       type: string
     example: BTC
   - name: to
     in: path
-    description: To Symbol of the crypto pair
+    description: The "to" symbol of the crypto pair.
     required: true
     schema:
       type: string
     example: USD
   - name: date
     in: path
-    description: Date/Day of the historic ticks to retrieve
+    description: The date/day of the historic ticks to retrieve.
     required: true
     schema:
       type: string
@@ -29,14 +29,14 @@ parameters:
   - name: offset
     in: query
     description: |
-      Timestamp offset, used for pagination. This is the offset at which to start the results. Using the `timestamp` of the last result as the offset will give you the next page of results.
+      The timestamp offset, used for pagination. This is the offset at which to start the results. Using the `timestamp` of the last result as the offset will give you the next page of results.
     required: false
     schema:
       type: integer
   - $ref: '../../parameters.yml#/LimitMax10000'
 responses:
   200:
-    description: An array of crypto trade ticks
+    description: An array of crypto trade ticks.
     content:
       application/json:
         schema:

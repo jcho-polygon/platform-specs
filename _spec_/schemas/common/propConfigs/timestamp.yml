@@ -1,2 +1,2 @@
 type: integer
-description: Unix Msec Timestamp ( Start of Aggregate window )
+description: The Unix Msec timestamp for the start of the aggregate window.

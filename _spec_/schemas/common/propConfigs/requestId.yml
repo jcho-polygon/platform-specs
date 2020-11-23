@@ -1,2 +1,2 @@
 type: string
-description: Request id assigned by server
+description: A request id assigned by the server.

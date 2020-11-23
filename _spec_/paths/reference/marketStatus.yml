@@ -1,6 +1,6 @@
 summary: Market Status
 description: |
-  Current status of each market
+  Get the current trading status of the exchanges and overall financial markets.
 tags:
   - Reference
 responses:

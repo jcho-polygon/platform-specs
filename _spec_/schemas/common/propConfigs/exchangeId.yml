@@ -1,2 +1,2 @@
 type: integer
-description: Exchange ID. The Polygon.io exchange ID mapping can be found here ( https://polygon.io/docs/get_v1_meta_exchanges_anchor ).
+description: The exchange ID. See <a href="https://polygon.io/docs/get_v1_meta_exchanges_anchor" alt="Exchanges">Exchanges</a> for Polygon.io's mapping of exchange IDs.

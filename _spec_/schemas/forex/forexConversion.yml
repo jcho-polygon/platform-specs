@@ -4,15 +4,15 @@ properties:
     $ref: './lastQuote.yml'
   from:
     type: string
-    description: From currency symbol
+    description: The "from" currency symbol.
   to:
     type: string
-    description: To currency symbol
+    description: The "to" currency symbol.
   initialAmount:
     type: number
     format: double
-    description: The amount we are to convert
+    description: The amount to convert.
   converted:
     type: number
     format: double
-    description: The result of the conversion
+    description: The result of the conversion.

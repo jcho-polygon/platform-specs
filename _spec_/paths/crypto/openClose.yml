@@ -1,26 +1,26 @@
-summary: Daily Open / Close
+summary: Daily Open/Close
 description: |
-  Get the open, close prices of a symbol on a certain day.
+  Get the open, close prices of a cryptocurrency symbol on a certain day.
 tags:
   - Currencies / Crypto
 parameters:
   - name: from
     in: path
-    description: From Symbol of the pair
+    description: The "from" symbol of the pair.
     required: true
     schema:
       type: string
     example: BTC
   - name: to
     in: path
-    description: To Symbol of the pair
+    description: The "to" symbol of the pair.
     required: true
     schema:
       type: string
     example: USD
   - name: date
     in: path
-    description: Date of the requested open/close
+    description: The date of the requested open/close in the format YYYY-MM-DD.
     required: true
     schema:
       type: string
@@ -28,7 +28,7 @@ parameters:
     example: "2020-10-09"
 responses:
   200:
-    description: Open Close of this symbol
+    description: The open/close of this symbol.
     content:
       application/json:
         schema:

@@ -11,15 +11,15 @@ properties:
         $ref: '../index.yml#/ExchangeId'
       cond1:
         type: integer
-        description: Condition 1 of the trade. A mapping of Polygon.io conditions to exchange descriptions can be found here ( https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor ).
+        description: Condition 1 of the trade. See Polygon.io's <a href="https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor" alt="Mapping of conditions to exchange descriptions">mapping of conditions to exchange descriptions</a>.
       cond2:
         type: integer
-        description: Condition 2 of the trade. A mapping of Polygon.io conditions to exchange descriptions can be found here ( https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor ).
+        description: Condition 2 of the trade. See Polygon.io's <a href="https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor" alt="Mapping of conditions to exchange descriptions">mapping of conditions to exchange descriptions</a>.
       cond3:
         type: integer
-        description: Condition 3 of the trade. A mapping of Polygon.io conditions to exchange descriptions can be found here ( https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor ).
+        description: Condition 3 of the trade. See Polygon.io's <a href="https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor" alt="Mapping of conditions to exchange descriptions">mapping of conditions to exchange descriptions</a>.
       cond4:
         type: integer
-        description: Condition 4 of the trade. A mapping of Polygon.io conditions to exchange descriptions can be found here ( https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor ).
+        description: Condition 4 of the trade. See Polygon.io's <a href="https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor" alt="Mapping of conditions to exchange descriptions">mapping of conditions to exchange descriptions</a>.
       timestamp:
         $ref: '../index.yml#/Timestamp'

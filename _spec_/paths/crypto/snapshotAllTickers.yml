@@ -1,11 +1,9 @@
 summary: Snapshot - All Tickers
 description: |
-  Snapshot provides the current minute, day, and previous day’s aggregate, as well as the last trade and quote for all traded tickers.
-
-  Note: Snapshot data is cleared at 12am EST and gets populated as data is received from the exchanges.
-
-  ### *** Warning, may cause browser to hang ***
-  The response size is large, and sometimes will cause the browser prettyprint to crash.
+  Get the current minute, day, and previous day’s aggregate, as well as the last trade and quote for all traded cryptocurrency symbols.
+  <br />
+  <br />
+  Note: Snapshot data is cleared at 12am EST and gets populated as data is received from the exchanges. This can happen as early as 4am EST.
 tags:
   - Currencies / Crypto
 parameters:

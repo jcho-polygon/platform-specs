@@ -1,35 +1,41 @@
 summary: Historic Forex Ticks
 description: |
-  Get historic ticks for a currency pair. Example for **USD/JPY** thefrom would be **USD** and to would be **JPY**. The date formatted like **2017-6-22**
+  Get historic ticks for a forex currency pair.
 tags:
   - Currencies / Forex
 parameters:
   - name: from
     in: path
-    description: From Symbol of the currency pair
+    description: |
+      The "from" symbol of the currency pair.
+      
+      Example: For **USD/JPY** the `from` would be **USD**.
     required: true
     schema:
       type: string
     example: AUD
   - name: to
     in: path
-    description: To Symbol of the currency pair
+    description: | 
+      The "to" symbol of the currency pair.
+
+      Example: For **USD/JPY** the `to` would be **JPY**.
     required: true
     schema:
       type: string
     example: USD
   - name: date
     in: path
-    description: Date/Day of the historic ticks to retrieve
+    description: The date/day of the historic ticks to retrieve.
     required: true
     schema:
       type: string
       format: date
-    example: "2020-10-02"
+    example: "2020-10-14"
   - name: offset
     in: query
     description: |
-      Timestamp offset, used for pagination. This is the offset at which to start the results. Using the `timestamp` of the last result as the offset will give you the next page of results.
+      The timestamp offset, used for pagination. This is the offset at which to start the results. Using the `timestamp` of the last result as the offset will give you the next page of results.
     required: false
     schema:
       type: integer

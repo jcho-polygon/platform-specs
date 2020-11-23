@@ -1,6 +1,6 @@
 summary: Previous Close
 description: |
-  Get the previous day close for the specified ticker
+  Get the previous day's open, high, low, and close (OHLC) for the specified cryptocurrency pair.
 tags:
   - Currencies / Crypto
 parameters:
@@ -8,7 +8,7 @@ parameters:
   - $ref: '../../parameters.yml#/AggregateUnadjusted'
 responses:
   200:
-    description: Previous day OHLC for ticker
+    description: The previous day OHLC for a ticker.
     content:
       application/json:
         schema:

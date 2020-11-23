@@ -4,22 +4,22 @@ items:
   properties:
     exchange:
       type: string
-      description: Which market this record is for
+      description: Which market the record is for.
     name:
       type: string
-      description: Human readable description of the holiday
+      description: The name of the holiday.
     status:
       type: string
-      description: Status of the market on this holiday
+      description: The status of the market on the holiday.
     date:
       type: string
       format: date
-      description: Date of this holiday
+      description: The date of the holiday.
     open:
       type: string
       format: date-time
-      description: Market open time on this holiday ( if it's not closed )
+      description: The market open time on the holiday (if it's not closed).
     close:
       type: string
       format: date-time
-      description: Market close time on this holiday ( if it's not closed )
+      description: The market close time on the holiday (if it's not closed).

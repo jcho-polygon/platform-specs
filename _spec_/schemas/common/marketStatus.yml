@@ -2,29 +2,29 @@ type: object
 properties:
   market:
     type: string
-    description: Status of the market as a whole
+    description: The status of the market as a whole.
   serverTime:
     type: string
     format: date-time
-    description: Current time of the server
+    description: The current time of the server.
   exchanges:
     type: object
     properties:
       nyse:
         type: string
-        description: Status of the market as a whole
+        description: The status of the NYSE market.
       nasdaq:
         type: string
-        description: Status of the market as a whole
+        description: The status of the Nasdaq market.
       otc:
         type: string
-        description: Status of the market as a whole
+        description: The status of the OTC market.
   currencies:
     type: object
     properties:
       fx:
         type: string
-        description: Status of the forex market
+        description: The status of the forex market.
       crypto:
         type: string
-        description: Status of the crypto market
+        description: The status of the crypto market.

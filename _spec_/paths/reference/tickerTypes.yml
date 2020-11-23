@@ -1,6 +1,6 @@
 summary: Ticker Types
 description: |
-  Get the mapping of ticker types to descriptions / long names
+  Get a mapping of ticker types to their descriptive names.
 tags:
   - Reference
 responses:

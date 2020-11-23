@@ -1,3 +1,3 @@
 type: number
 format: double
-description: Percentage change since previous day
+description: The percentage change since the previous day.

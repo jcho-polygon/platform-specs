@@ -9,13 +9,13 @@ properties:
         $ref: '../index.yml#/AskSize'
       askexchange:
         type: integer
-        description: Exchange ID this liquidity is available on. The Polygon.io exchange ID mapping can be found here ( https://polygon.io/docs/get_v1_meta_exchanges_anchor ).
+        description: The exchange ID that this liquidity is available on. See <a href="https://polygon.io/docs/get_v1_meta_exchanges_anchor" alt="Exchanges">Exchanges</a> for Polygon.io's mapping of exchange IDs.
       bidprice:
         $ref: '../index.yml#/BidPrice'
       bidsize:
         $ref: '../index.yml#/BidSize'
       bidexchange:
         type: integer
-        description: Exchange ID this liquidity is available on. The Polygon.io exchange ID mapping can be found here ( https://polygon.io/docs/get_v1_meta_exchanges_anchor ).
+        description: The exchange ID that this liquidity is available on. See <a href="https://polygon.io/docs/get_v1_meta_exchanges_anchor" alt="Exchanges">Exchanges</a> for Polygon.io's mapping of exchange IDs.
       timestamp:
         $ref: '../index.yml#/Timestamp'

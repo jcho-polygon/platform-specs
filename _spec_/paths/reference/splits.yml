@@ -1,13 +1,13 @@
 summary: Stock Splits
 description: |
-  Get the historical splits for this symbol.
+  Get a list of historical stock splits for a ticker symbol, including the execution and payment dates of the stock split, and the split ratio.
 parameters:
   - $ref: '../../parameters.yml#/StocksTickerPathParam'
 tags:
   - Reference
 responses:
   200:
-    description: An array of splits
+    description: A list of stock splits.
     content:
       application/json:
         schema:

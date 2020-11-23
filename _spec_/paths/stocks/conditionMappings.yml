@@ -1,11 +1,11 @@
 summary: Condition Mappings
 description: |
-  The mappings for conditions on trades and quotes.
+  Get a unified numerical mapping for conditions on trades and quotes.  Each feed/exchange uses its own set of codes to identify conditions, so the same condition may have a different code depending on the originator of the data. Polygon.io defines its own mapping to allow for uniformly identifying a condition across feeds/exchanges.
 parameters:
   - name: ticktype
     in: path
     description: |
-      Ticker type we want mappings for
+      The type of ticks to return mappings for.
     required: true
     schema:
       type: string
@@ -15,7 +15,7 @@ tags:
   - Stocks / Equities
 responses:
   200:
-    description: An array of condition maps
+    description: A list of condition mappings.
     content:
       application/json:
         schema:

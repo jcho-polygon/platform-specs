@@ -3,10 +3,10 @@ required: [ ticker, name, market, locale, updated ]
 properties:
   page: 
     type: number
-    description: Number of pages returned in response
+    description: The page number of the current response.
   perPage:
     type: number
-    description: Number of results per page
+    description: The number of results per page.
   count:
     $ref: '../index.yml#/Count'
   status:
@@ -20,59 +20,59 @@ properties:
           $ref: '../index.yml#/StockSymbol'
         name:
           type: string
-          description: Name of the item.
+          description: The name of the item.
         market:
           type: string
-          description: The market in which this ticker participates
+          description: The market in which this ticker participates.
         locale:
           type: string
-          description: Locale of where this ticker is traded
+          description: The locale of where this ticker is traded.
         currency:
           type: string
-          description: Currency this ticker is traded in
+          description: The currency this ticker is traded in.
         active:
           type: boolean
-          description: If the ticker is active. False means the ticker has been delisted
+          description: Whether or not the ticker is active. False means the ticker has been delisted.
         primaryExch:
           type: string
-          description: The listing exchange for this ticker
+          description: The listing exchange for this ticker.
         url:
           type: string
-          description: URL of this ticker. Use this to get more information about the <a href="https://api.polygon.io/v2/reference/tickers/AAPL">ticker</a>.
+          description: A URL that can be used to get more detailed information about the ticker.
         updated:
           type: string
           format: date
-          description: Last time this ticker record was updated.
+          description: The last time this ticker record was updated.
         attrs:
           type: object
           properties:
             currencyName: 
               type: string
-              description: Name of the variable/quote currency
+              description: The name of the variable/quote currency.
             currency:
               type: string
-              description: Currency code of the variable/quote currency
+              description: The currency code of the variable/quote currency.
             baseName:
               type: string
-              description: Name of the base currency
+              description: The name of the base currency.
             base:
               type: string
-              description: Currency code of the base currency
+              description: The currency code of the base currency.
         codes:
           type: object
           properties:
             cik:
               type: string
-              description: CIK number for this ticker
+              description: The CIK number for this ticker.
             figi:
               type: string
-              description: OpenFIGI number for this ticker
+              description: The OpenFIGI number for this ticker.
             cfigi:
               type: string
-              description: Composite OpenFIGI number for this ticker
+              description: The composite OpenFIGI number for this ticker.
             scfigi:
               type: string
-              description: Shared Class OpenFIGI number for this ticker
+              description: The shared Class OpenFIGI number for this ticker.
             figiuid:
               type: string
-              description: Unique OpenFIGI ID number for this ticker
+              description: The unique OpenFIGI ID number for this ticker.

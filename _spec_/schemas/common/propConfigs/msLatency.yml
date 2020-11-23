@@ -1,2 +1,2 @@
 type: integer
-description: Milliseconds of latency for the query results
+description: The milliseconds of latency for the query results.

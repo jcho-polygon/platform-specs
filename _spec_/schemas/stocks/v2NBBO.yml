@@ -15,28 +15,28 @@ properties:
           $ref: '../index.yml#/SequenceNumber'
         c:
           type: array
-          description: Conditions
+          description: A list of condition codes.
           items:
             type: integer
-            description: Condition code. These are the conditions of this message. You can find the mapping to exchange descriptions here ( https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor )
+            description: The condition code. These are the conditions of this message.  See <a href="https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor" alt="Condition Mappings">Condition Mappings</a> for a mapping to exchange conditions.
         i:
           type: array
-          description: Indicators
+          description: The indicators.  For more information, see our glossary of <a href="https://polygon.io/glossary/us/stocks/trade-conditions" alt="Conditions and Indicators Glossary" target="_blank">Conditions and Indicators</a>.
           items:
             type: integer
-            description: Indicator code
+            description: The indicator code.
         p:
           $ref: '../index.yml#/BidPrice'
         x:
           type: integer
-          description: BID Exchange ID
+          description: The bid Exchange ID.
         s:
           $ref: '../index.yml#/BidSize'
         P:
           $ref: '../index.yml#/AskPrice'
         X:
           type: integer
-          description: ASK Exchange ID
+          description: The ask Exchange ID.
         S:
           $ref: '../index.yml#/AskSize'
         z:

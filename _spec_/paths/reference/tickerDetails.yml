@@ -1,6 +1,8 @@
 summary: Ticker Details
 description: |
-  Get the details of the symbol company/entity. These are important details which offer an overview of the entity. Things like name, sector, description, logo and similar companies.
+  Get details for a ticker symbol's company/entity.  This provides 
+  a general overview of the entity with information such as name, 
+  sector, exchange, logo and similar companies.
 parameters:
   - $ref: '../../parameters.yml#/StocksTickerPathParam'
 tags:

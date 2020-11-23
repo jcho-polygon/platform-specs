@@ -1,10 +1,12 @@
-summary: Snapshot - Gainers / Losers
+summary: Snapshot - Gainers/Losers
 description: |
-  Provides the current snapshot of the top 20 gainers or losers of the day.
-
+  Get the current top 20 gainers or losers of the day in cryptocurrency markets.
+  <br />
+  <br />
   Top gainers are those tickers whose price has increased by the highest percentage since the previous day's close.
   Top losers are those tickers whose price has decreased by the highest percentage since the previous day's close.
-
+  <br />
+  <br />
   Note: Snapshot data is cleared at 12am EST and gets populated as data is received from the exchanges.
 tags:
   - Currencies / Crypto

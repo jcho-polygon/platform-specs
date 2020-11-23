@@ -1,35 +1,35 @@
-summary: Historic Trades
+summary: Trades
 description: |
-  Get historic trades for a ticker.
+  Get trades for a given ticker symbol on a specified date.
 tags:
   - Stocks / Equities
 parameters:
   - name: ticker
     in: path
-    description: Ticker symbol we want ticks for
+    description: The ticker symbol we want trades for.
     required: true
     schema:
       type: string
     example: AAPL
   - name: date
     in: path
-    description: Date/Day of the historic ticks to retrieve ( YYYY-MM-DD )
+    description: The date/day of the trades to retrieve in the format YYYY-MM-DD.
     required: true
     schema:
       type: string
       format: date
-    example: "2018-02-02"
+    example: "2020-10-14"
   - name: timestamp
     in: query
     description: |
-      Timestamp offset, used for pagination. This is the offset at which to start the results. Using the `timestamp` of the last result as the offset will give you the next page of results.
+      The timestamp offset, used for pagination. This is the offset at which to start the results. Using the `timestamp` of the last result as the offset will give you the next page of results.
     required: false
     schema:
       type: integer
   - name: timestampLimit
     in: query
     description: |
-      Maximum timestamp allowed in the results.
+      The maximum timestamp allowed in the results.
     required: false
     schema:
       type: integer
@@ -37,7 +37,7 @@ parameters:
   - $ref: '../../parameters.yml#/LimitMax50000'
 responses:
   200:
-    description: An array of trades
+    description: A list of trades.
     content:
       application/json:
         schema:

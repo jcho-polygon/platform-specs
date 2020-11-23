@@ -2,12 +2,13 @@ type: object
 properties:
   results:
     type: array
+    description: A list of supported markets.
     items:
       type: object
       properties:
         market:
           type: string
-          description: Name of the market
+          description: The name of the market.
         desc:
           type: string
-          description: Description of market
+          description: A description of the market.

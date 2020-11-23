@@ -1,7 +1,7 @@
 TickersQueryParam:
   name: tickers
   in: query
-  description: Comma separated list of tickers to get snapshots for.
+  description: A comma separated list of tickers to get snapshots for.
   schema:
     type: array
     items:
@@ -9,7 +9,7 @@ TickersQueryParam:
 StocksTickerPathParam:
   name: stocksTicker
   in: path
-  description: Ticker symbol of the request
+  description: The ticker symbol of the stock/equity.
   required: true
   schema:
     type: string
@@ -17,7 +17,7 @@ StocksTickerPathParam:
 ForexTickerPathParam:
   name: forexTicker
   in: path
-  description: Ticker symbol of the request
+  description: The ticker symbol of the currency pair.
   required: true
   schema:
     type: string
@@ -25,7 +25,7 @@ ForexTickerPathParam:
 CryptoTickerPathParam:
   name: cryptoTicker
   in: path
-  description: Ticker symbol of the request
+  description: The ticker symbol of the currency pair.
   required: true
   schema:
     type: string
@@ -33,7 +33,7 @@ CryptoTickerPathParam:
 AggregateMultiplier:
   name: multiplier
   in: path
-  description: Size of the timespan multiplier
+  description: The size of the timespan multiplier.
   required: true
   schema:
     type: integer
@@ -41,7 +41,7 @@ AggregateMultiplier:
 AggregateTimespan:
   name: timespan
   in: path
-  description: Size of the time window
+  description: The size of the time window.
   required: true
   schema:
     type: string
@@ -50,7 +50,7 @@ AggregateTimespan:
 AggregateTimeFrom:
   name: from
   in: path
-  description: From date
+  description: The start of the aggregate time window.
   required: true
   schema:
     type: string
@@ -58,7 +58,7 @@ AggregateTimeFrom:
 AggregateTimeTo:
   name: to
   in: path
-  description: To date
+  description: The end of the aggregate time window.
   required: true
   schema:
     type: string
@@ -67,7 +67,8 @@ AggregateUnadjusted:
   name: unadjusted
   in: query
   description: |
-    Set to true if the results should NOT be adjusted for splits.
+    Whether or not the results are adjusted for splits.  By default, results are adjusted.
+    Set this to true to get results that are NOT adjusted for splits.
   required: false
   schema:
     type: boolean
@@ -80,20 +81,22 @@ AggregateSort:
   in: query
   example: asc
   description: |
-    sort by timestamp
+    Sort the results by timestamp.
+    `asc` will return results in ascending order (oldest at the top),
+    `desc` will return results in descending order (newest at the top).
 AggregateDate:
   name: date
   in: path
-  description: To date
+  description: The beginning date for the aggregate window.
   required: true
   schema:
     type: string
-  example: "2020-02-01"
+  example: "2020-10-14"
 ReverseOrder:
   name: reverse
   in: query
   description: |
-    Reverse the order of the results. This is useful in combination with `timestamp` param.
+    Reverse the order of the results.
   required: false
   schema:
     type: boolean
@@ -101,7 +104,7 @@ SnapshotDirection:
   name: direction
   in: path
   description: |
-    Direction we want
+    The direction of the snapshot results to return.
   required: true
   schema:
     type: string
@@ -110,7 +113,7 @@ SnapshotDirection:
 LimitMax50000:
   name: limit
   in: query
-  description: Limit the size of response, Max 50000 and Default 5000
+  description: Limit the size of the response, max 50000 and default 5000.
   required: false
   schema:
     type: integer
@@ -126,7 +129,7 @@ AggregateLimitMax50000:
 LimitMax10000:
   name: limit
   in: query
-  description: Limit the size of response, Max 10000
+  description: Limit the size of the response, max 10000.
   required: false
   schema:
     type: integer
@@ -135,7 +138,7 @@ LimitNoMax:
   name: limit
   in: query
   description: |
-    Limit the number of results
+    Limit the number of results.
   required: false
   example: 5
   schema:

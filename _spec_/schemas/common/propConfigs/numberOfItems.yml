@@ -1,2 +1,2 @@
 type: number
-description: Number of items in aggregate window
+description: The number of items in the aggregate window.

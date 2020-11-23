@@ -3,21 +3,10 @@ properties:
   day:
     type: string
     format: date
-    description: Date that was evaluated from the request
+    description: The date that was evaluated from the request.
   map:
     type: object
-    description: Map for shortened result keys
-    properties:
-      c: 
-        type: string
-      p: 
-        type: string
-      s: 
-        type: string
-      t: 
-        type: string
-      x: 
-        type: string
+    description: A map for shortened result keys.
   msLatency:
     $ref: '../index.yml#/MsLatency'
   symbol:

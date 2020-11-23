@@ -1,13 +1,13 @@
 summary: Last Quote for a Symbol
 description: |
-  Get the last quote tick for a given stock.
+  Get the most recent quote tick for a given stock.
 tags:
   - Stocks / Equities
 parameters:
   - $ref: '../../parameters.yml#/StocksTickerPathParam'
 responses:
   200:
-    description: Last quote tick for this stock
+    description: The last quote tick for this stock.
     content:
       application/json:
         schema:

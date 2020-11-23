@@ -1,33 +1,33 @@
 summary: Real-time Currency Conversion
 description: |
-  Convert currencies using the latest market conversion rates. Note than you can convert in both directions. For example USD->CAD or CAD->USD.
+  Get currency conversions using the latest market conversion rates. Note than you can convert in both directions. For example USD to CAD or CAD to USD.
 tags:
   - Currencies / Forex
 parameters:
   - name: from
     in: path
-    description: From Symbol of the pair
+    description: The "from" symbol of the pair.
     required: true
     schema:
       type: string
     example: AUD
   - name: to
     in: path
-    description: To Symbol of the pair
+    description: The "to" symbol of the pair.
     required: true
     schema:
       type: string
     example: USD
   - name: amount
     in: query
-    description: Amount we want to convert. With decimal
+    description: The amount to convert, with a decimal.
     required: false
     schema:
       type: integer
     example: 100
   - name: precision
     in: query
-    description: Decimal precision of the conversion. Defaults to 2 which is 2 decimal places accuracy.
+    description: The decimal precision of the conversion. Defaults to 2 which is 2 decimal places accuracy.
     required: false
     schema:
       type: integer
@@ -35,7 +35,7 @@ parameters:
     example: 2
 responses:
   200:
-    description: Last tick for this currency pair, plus the converted amount for the requested amount.
+    description: The last tick for this currency pair, plus the converted amount for the requested amount.
     content:
       application/json:
         schema:

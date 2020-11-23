@@ -1,2 +1,2 @@
 type: integer
-description: Bid Size. The bid size is the number of round lot orders at the given bid price. The normal round lot size is 100 shares. So a bid size of 2 means there are 200 for purchase at the given bid price.
+description: The bid size. This represents the number of round lot orders at the given bid price. The normal round lot size is 100 shares. A bid size of 2 means there are 200 shares for purchase at the given bid price.

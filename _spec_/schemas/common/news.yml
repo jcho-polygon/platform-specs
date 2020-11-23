@@ -4,29 +4,31 @@ items:
   properties:
     symbols:
       type: array
+      description: A list of ticker symbols relating to the article.
       items:
         $ref: '../index.yml#/StockSymbol'
     title:
       type: string
-      description: Name of the article
+      description: The title of the news article.
     url:
       type: string
-      description: URL of this article
+      description: A direct link to the news article from its source publication.
     source:
       type: string
-      description: Source of this article
+      description: The publication source of the article.
     summary:
       type: string
-      description: Summary of article
+      description: A summary of the news article.
     image:
       type: string
-      description: URL of the image for this article, if found
+      description: A URL of the image for the news article, if found.
     timestamp:
       type: string
       format: date-time
-      description: Timestamp of the article
+      description: The timestamp of the news article.
     keywords:
       type: array
+      description: A list of common keywords related to the news article.
       items:
         type: string
-        description: common keywords of this article
+        description: Common keywords of the news article.

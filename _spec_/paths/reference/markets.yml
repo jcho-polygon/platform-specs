@@ -1,11 +1,11 @@
 summary: Markets
 description: |
-  Get the list of currently supported markets
+  Get a list of markets that are currently supported by Polygon.io.
 tags:
   - Reference
 responses:
   200:
-    description: An array of markets
+    description: A list of supported markets.
     content:
       application/json:
         schema:

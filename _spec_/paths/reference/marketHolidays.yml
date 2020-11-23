@@ -1,11 +1,11 @@
 summary: Market Holidays
 description: |
-  Get upcoming market holidays and their open/close times
+  Get upcoming market holidays and their open/close times.
 tags:
   - Reference
 responses:
   200:
-    description: Holidays for each market in the near future
+    description: Holidays for each market in the near future.
     content:
       application/json:
         schema:

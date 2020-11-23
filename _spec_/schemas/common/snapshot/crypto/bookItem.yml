@@ -3,18 +3,23 @@ properties:
   p:
     type: number
     format: double
-    description: Price of this book level
+    description: The price of this book level.
   x:
     type: object
     description: |
-      A map of the exchange id to number of shares at this price level.
+      A map of the exchange ID to number of shares at this price level.
+      <br />
+      <br />
       **Example:**
+      <br />
       `{
         "p": 16302.94,
         "x": {
           "1": 0.02859424,
           "6": 0.023455
-        }  
+        }
       }`
+      <br />
+      <br />
       In this example, exchange ID 1 has 0.02859424 shares available at $16,302.94,
       and exchange ID 6 has 0.023455 shares at the same price level.

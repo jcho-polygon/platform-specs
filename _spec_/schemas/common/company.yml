@@ -2,89 +2,90 @@ type: object
 properties:
   logo:
     type: string
-    description: URL of the entities logo.
+    description: The URL of the entity's logo.
   exchange:
     type: string
-    description: Symbol's primary exchange
+    description: The symbol's primary exchange.
   exchangeSymbol:
     type: string
-    description: Exchange code (id) of the symbol's primary exchange
+    description: The exchange code (id) of the symbol's primary exchange.
   type:
     type: string
-    description: Type or class of the security.  The full list can be found here <a alt="Ticker Types" href="https://polygon.io/docs/get_v2_reference_types_anchor">https://polygon.io/docs/get_v2_reference_types_anchor</a>)
+    description: The type or class of the security.  (<a alt="Full List of Ticker Types" href="https://polygon.io/docs/get_v2_reference_types_anchor">Full List of Ticker Types</a>)
   name:
     type: string
-    description: Name of the company/entity
+    description: The name of the company/entity.
   symbol:
     $ref: '../index.yml#/StockSymbol'
   listdate:
     type: string
     format: date
-    description: Date this symbol was listed on the exchange.
+    description: The date that the symbol was listed on the exchange.
   cik:
     type: string
-    description: Official CIK guid used for SEC database / filings.
+    description: The official CIK guid used for SEC database/filings.
   bloomberg:
     type: string
-    description: Bloomberg guid for this symbol
+    description: The Bloomberg guid for the symbol.
   figi:
     type: string
-    description: guid for the OpenFigi project (<a rel="nofollow" target="_blank" href="https://openfigi.com/">https://openfigi.com/</a>)
+    description: The OpenFigi project guid for the symbol. (<a rel="nofollow" target="_blank" href="https://openfigi.com/">https://openfigi.com/</a>)
   lei:
     type: string
-    description: Legal Entity Identifier (LEI) guid for symbol (<a rel="nofollow" target="_blank" href="https://en.wikipedia.org/wiki/Legal_Entity_Identifier">https://en.wikipedia.org/wiki/Legal_Entity_Identifier</a>)
+    description: The Legal Entity Identifier (LEI) guid for the symbol. (<a rel="nofollow" target="_blank" href="https://en.wikipedia.org/wiki/Legal_Entity_Identifier">https://en.wikipedia.org/wiki/Legal_Entity_Identifier</a>)
   sic:
     type: integer
-    description: Standard Industrial Classification (SIC) id for symbol (<a rel="nofollow" target="_blank" href="https://en.wikipedia.org/wiki/Standard_Industrial_Classification">https://en.wikipedia.org/wiki/Legal_Entity_Identifier</a>)
+    description: Standard Industrial Classification (SIC) id for the symbol. (<a rel="nofollow" target="_blank" href="https://en.wikipedia.org/wiki/Standard_Industrial_Classification">https://en.wikipedia.org/wiki/Legal_Entity_Identifier</a>)
   country:
     type: string
-    description: Country in which this company is registered
+    description: The country in which the company is registered.
   industry:
     type: string
-    description: Industry this company operates in
+    description: The industry in which the company operates.
   sector:
     type: string
-    description: Sector of the indsutry in which this symbol operates in
+    description: The sector of the indsutry in which the symbol operates.
   marketcap:
     type: integer
-    description: Current market cap for this company
+    description: The current market cap for the company.
   employees:
     type: integer
-    description: Approximate number of employees
+    description: The approximate number of employees for the company.
   phone:
     type: string
-    description: Phone number for this company. Usually corporate contact number.
+    description: The phone number for the company. This is usually a corporate contact number.
   ceo:
     type: string
-    description: Name of the companies current CEO
+    description: The name of the company's current CEO.
   url:
     type: string
-    description: URL of the companies website
+    description: The URL of the company's website
   description:
     type: string
-    description: A description of the company and what they do/offer
+    description: A description of the company and what they do/offer.
   hq_address:
     type: string
-    description: Headquarters street address
+    description: The street address for the company's headquarters.
   hq_state:
     type: string
-    description: Headquarters state address
+    description: The state in which the company's headquarters is located.
   hq_country:
     type: string
-    description: Headquarters country address
+    description: The country in which the company's headquarters is located.
   similar:
     type: array
+    description: A list of ticker symbols for similar companies.
     items:
       $ref: '../index.yml#/StockSymbol'
   tags:
     type: array
     items:
       type: string
-      description: Tag word related to the company
+      description: A list of words related to the company.
   updated:
     type: string
     format: date
-    description: Last time this company record was updated.
+    description: The last time this company record was updated.
   active: 
     type: boolean
     description: Indicates if the security is actively listed.  If false, this means the company is no longer listed and cannot be traded.

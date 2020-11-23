@@ -1,11 +1,11 @@
 summary: Crypto Exchanges
 description: |
-  List of crypto currency exchanges which are supported by Polygon.io
+  Get a list of cryptocurrency exchanges which are supported by Polygon.io.
 tags:
   - Currencies / Crypto
 responses:
   200:
-    description: An array of crypto currency exchanges
+    description: A list of crypto currency exchanges.
     content:
       application/json:
         schema:

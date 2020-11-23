@@ -3,7 +3,7 @@ day:
 lastTrade:
   $ref: '../../../index.yml#/SnapshotLastTrade'
 min:
-  description: Last available minute bar
+  description: The last available minute bar.
   $ref: '../../../index.yml#/CryptoSnapshotMinute'
 prevDay:
   $ref: '../../../index.yml#/SnapshotOHLCVVW'

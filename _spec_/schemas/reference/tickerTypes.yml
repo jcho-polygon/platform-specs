@@ -78,7 +78,8 @@ properties:
           SI:
             type: string
             description: Secondary Issue
-      indexType:
+      indexTypes:
+        type: object
         properties:
           INDEX:
             type: string

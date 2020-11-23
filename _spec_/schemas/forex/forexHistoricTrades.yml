@@ -3,24 +3,15 @@ properties:
   day:
     type: string
     format: date
-    description: Date that was evaluated from the request
+    description: The date that was evaluated from the request.
   map:
     type: object
-    description: Map for shortened result keys
-    properties:
-      a:
-        type: string
-      b:
-        type: string
-      x:
-        type: string
-      t:
-        type: string
+    description: A map for shortened result keys.
   msLatency:
     $ref: '../index.yml#/MsLatency'
   pair:
     type: string
-    description: Currency Pair that was evaluated from the request
+    description: The currency pair that was evaluated from the request.
   ticks:
     type: array
     items:

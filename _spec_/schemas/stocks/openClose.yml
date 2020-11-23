@@ -5,7 +5,7 @@ properties:
   from:
     type: string
     format: date
-    description: Requested date
+    description: The requested date.
   symbol:
     $ref: '../index.yml#/StockSymbol'
   open:
@@ -20,8 +20,8 @@ properties:
     $ref: '../index.yml#/Volume'
   preMarket:
     type: integer
-    description: Open price in pre-market trading
+    description: The open price of the ticker symbol in pre-market trading.
   afterHours:
     type: number
     format: double
-    description: Close price after hours trading
+    description: The close price of the ticker symbol in after hours trading.

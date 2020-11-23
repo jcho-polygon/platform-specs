@@ -1,11 +1,11 @@
 summary: Locales
 description: |
-  Get the list of currently supported locales
+  Get a list of locales currently supported by Polygon.io.
 tags:
   - Reference
 responses:
   200:
-    description: An array of locales
+    description: A list of locales
     content:
       application/json:
         schema:

@@ -13,15 +13,15 @@ properties:
   bidCount:
     type: number
     format: double
-    description: Combined total number of bids in the book
+    description: The combined total number of bids in the book.
   askCount:
     type: number
     format: double
-    description: Combined total number of asks in the book
+    description: The combined total number of asks in the book.
   spread:
     type: number
     format: double
-    description: Difference between the best bid and the best ask price accross exchanges
+    description: The difference between the best bid and the best ask price accross exchanges.
   updated:
     $ref: '../../../index.yml#/Updated'
 

@@ -1,2 +1,2 @@
 type: integer
-description: Number of aggregate (min or day) used to generate the response
+description: The number of aggregates (minute or day) used to generate the response.

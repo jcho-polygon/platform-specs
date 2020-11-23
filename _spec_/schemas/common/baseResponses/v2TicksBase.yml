@@ -6,8 +6,8 @@ properties:
     $ref: '../../index.yml#/Count'
   db_latency:
     type: integer
-    description: Milliseconds of latency for the query results from DB
+    description: Latency in milliseconds for the query results from the database.
   success:
     type: boolean
-    description: If this query was executed successfully
+    description: Whether or not this query was executed successfully.
   

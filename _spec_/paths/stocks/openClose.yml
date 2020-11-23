@@ -1,28 +1,28 @@
-summary: Daily Open / Close
+summary: Daily Open/Close
 description: |
-  Get the open, close and afterhours prices of a symbol on a certain date.
+  Get the open, close and afterhours prices of a stock symbol on a certain date.
 tags:
   - Stocks / Equities
 parameters:
   - $ref: '../../parameters.yml#/StocksTickerPathParam'
   - name: date
     in: path
-    description: Date of the requested open/close ( YYYY-MM-DD format )
+    description: The date of the requested open/close in the format YYYY-MM-DD.
     required: true
     schema:
       type: string
       format: date
-    example: "2020-06-03"
+    example: "2020-10-14"
 responses:
   200:
-    description: Open Close of this symbol
+    description: The open/close of this stock symbol.
     content:
       application/json:
         schema:
           $ref: '../../schemas/index.yml#/StocksOpenClose'
         example:
           status: OK
-          from: 2020-06-03
+          from: 2020-10-14
           symbol: AAPL
           open: 324.66
           high: 326.2

@@ -1,12 +1,12 @@
 summary: Ticker News
 description: |
-  Get news articles for this ticker.
+  Get the most recent news articles relating to a stock ticker symbol, including a summary of the article and a link to the original source.
 parameters:
   - $ref: '../../parameters.yml#/StocksTickerPathParam'
   - name: perpage
     in: query
     description: |
-      How many items to be on each page during pagination. Max 50
+      The maximum number of results to be returned on each page, max 50 and default 50.
     required: false
     schema:
       type: integer
@@ -14,7 +14,7 @@ parameters:
   - name: page
     in: query
     description: |
-      Which page of results to return
+      Which page of results to return.
     required: false
     schema:
       type: integer
@@ -23,20 +23,20 @@ tags:
   - Reference
 responses:
   200:
-    description: An array of news
+    description: An array of news articles.
     content:
       application/json:
         schema:
             $ref: '../../schemas/index.yml#/News'
         example:
-          symbols: [AAPL]
-          timestamp: 2020-03-26T23:52:51.000Z
-          title: "Apple (AAPL): Despite Likely iPhone 12 Delays, the Risk-Reward Remains Compelling, Says Analyst"
-          url: https://finance.yahoo.com/news/apple-aapl-despite-likely-iphone-235251688.html
-          source: finance yahoo
-          summary: When considering the fortunes of the FAANG family since the viral outbreak, it appears Apple (AAPL) has most to lose. Amazon and Netflix can count their internet driven models as particularly well set up for a hibernation period. And while Google and Facebook stand to lose significant advertising revenue
-          image: https://s.yimg.com/uu/api/res/1.2/Su.8VniRbi_GL2B3BruK5w--~B/aD0zMzc7dz0xMDI0O3NtPTE7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en-US/smarteranalyst_347/6909df17d6ef3af25ac79e2e6c0078d5
-          keywords: [aapl]
+          - symbols: [AAPL]
+            timestamp: 2020-03-26T23:52:51.000Z
+            title: "Apple (AAPL): Despite Likely iPhone 12 Delays, the Risk-Reward Remains Compelling, Says Analyst"
+            url: https://finance.yahoo.com/news/apple-aapl-despite-likely-iphone-235251688.html
+            source: finance yahoo
+            summary: When considering the fortunes of the FAANG family since the viral outbreak, it appears Apple (AAPL) has most to lose. Amazon and Netflix can count their internet driven models as particularly well set up for a hibernation period. And while Google and Facebook stand to lose significant advertising revenue
+            image: https://s.yimg.com/uu/api/res/1.2/Su.8VniRbi_GL2B3BruK5w--~B/aD0zMzc7dz0xMDI0O3NtPTE7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en-US/smarteranalyst_347/6909df17d6ef3af25ac79e2e6c0078d5
+            keywords: [aapl]
 
   401:
     $ref: '../../responses.yml#/Unauthorized'

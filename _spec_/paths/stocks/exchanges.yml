@@ -1,11 +1,11 @@
-summary: Exchanges
+summary: Stock Exchanges
 description: |
-  List of stock exchanges which are supported by Polygon.io
+  Get a list of stock exchanges which are supported by Polygon.io.
 tags:
   - Stocks / Equities
 responses:
   200:
-    description: An array of exchanges
+    description: A list of supported stock exchanges.
     content:
       application/json:
         schema:

@@ -1,2 +1,2 @@
 type: integer
-description: Exchange this trade happened on
+description: The exchange that this trade happened on.

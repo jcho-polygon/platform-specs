@@ -2,7 +2,7 @@ type: object
 properties:
   c:
     type: array
-    description: Conditions
+    description: The trade conditions.
     items:
       type: string
   i:
@@ -11,7 +11,7 @@ properties:
     $ref: '../../../index.yml#/Price'
   s:
     type: integer
-    description: Size (Volume)
+    description: The size (volume) of the trade.
   t:
     $ref: '../../../index.yml#/Timestamp'
   x:

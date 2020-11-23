@@ -2,7 +2,7 @@ type: object
 properties:
   av: 
     type: integer
-    description: Accumulated Volume
+    description: The accumulated volume.
   o: 
     $ref: '../../../index.yml#/Open'
   h: 

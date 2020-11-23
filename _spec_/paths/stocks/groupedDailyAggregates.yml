@@ -1,9 +1,6 @@
-summary: Grouped Daily ( Bars )
+summary: Grouped Daily (Bars)
 description: |
-  Get the daily OHLC for entire markets.
-
-  ### *** Warning, may cause browser to hang ***
-  The response size is large, and sometimes will cause the browser prettyprint to crash.
+  Get the daily open, high, low, and close (OHLC) for the entire stocks/equities markets.
 tags:
   - Stocks / Equities
 parameters:

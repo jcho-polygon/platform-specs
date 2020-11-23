@@ -1,13 +1,13 @@
 summary: Stock Financials
 description: |
-  Get the historical financials for this ticker.
+  Get historical financial data for a stock ticker.
 parameters:
   - $ref: '../../parameters.yml#/StocksTickerPathParam'
   - $ref: '../../parameters.yml#/LimitNoMax'
   - name: type
     in: query
     description: |
-      Type of reports.
+      Specify a type of report to return.
 
       Y = Year
       YA = Year annualized
@@ -22,7 +22,7 @@ parameters:
   - name: sort
     in: query
     description: |
-      Sort direction
+      The direction to sort the returned results.
     required: false
     schema:
       type: string
@@ -31,7 +31,7 @@ tags:
   - Reference
 responses:
   200:
-    description: An array of financials
+    description: A list of financials.
     content:
       application/json:
         schema:

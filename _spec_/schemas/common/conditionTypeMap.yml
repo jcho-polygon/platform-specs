@@ -3,8 +3,5 @@ properties:
   condition:
     type: string
     description: |
-      Polygon.io's unified numerical mapping for condition codes.
-      Each feed/exchange uses its own set of codes to identify conditions, so the same
-      condition may have a different code depending on the originator of the data. 
-      Polygon.io defines its own mapping to allow for uniformly identifying a condition across feeds/exchanges.
+      Polygon.io's mapping for condition codes.  For more information, see our <a href="https://polygon.io/glossary/us/stocks/trade-conditions" alt="Trade Conditions Glossary" target="_blank">Trade Conditions Glossary</a>.
 

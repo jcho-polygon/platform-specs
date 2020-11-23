@@ -7,7 +7,7 @@ properties:
       properties:
         locale:
           type: string
-          description: Abbreviated country name
+          description: An abbreviated country name.
         name: 
           type: string
-          description: Name of country
+          description: The name of the country.

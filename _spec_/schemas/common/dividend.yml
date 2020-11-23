@@ -10,16 +10,19 @@ properties:
         exDate:
           type: string
           format: date
-          description: Execution date of the trade
+          description: The execution date of the dividend.
         paymentDate:
           type: string
           format: date
-          description: Payment date of the trade
+          description: The payment date of the dividend.
         recordDate:
           type: string
           format: date
-          description: Record date of the trade
+          description: | 
+            The date of record for the dividend.
+
+            See <a rel="nofollow" target="_blank" href="https://www.investor.gov/introduction-investing/investing-basics/glossary/ex-dividend-dates-when-are-you-entitled-stock-and#:~:text=The%20ex%2Ddividend%20date%20for,the%20seller%20gets%20the%20dividend." alt="Investor.gov's explanation of dividend dates">Investor.gov</a> for an explanation on dividend dates and their meaning.
         amount:
           type: number
           format: double
-          description: Amount of the dividend
+          description: The amount of the dividend.

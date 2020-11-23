@@ -1,3 +1,3 @@
 type: number
 format: double
-description: Close price
+description: The close price for the symbol in the given time period.
