@@ -93,6 +93,9 @@
 /v2/aggs/ticker/{forexTicker}/range/{multiplier}/{timespan}/{from}/{to}:
   get:
     $ref: 'forex/aggregates.yml'
+/v2/snapshot/locale/global/markets/forex/tickers/{ticker}:
+  get:
+    $ref: 'forex/snapshotTicker.yml'
 /v2/snapshot/locale/global/markets/forex/tickers:
   get:
     $ref: 'forex/snapshotAllTickers.yml'

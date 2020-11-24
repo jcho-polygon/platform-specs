@@ -144,6 +144,8 @@ ForexSnapshotLastQuote:
   $ref: 'common/snapshot/forex/snapshotLastQuote.yml'
 ForexSnapshotPrevDay:
   $ref: 'common/snapshot/forex/snapshotPrevDay.yml'
+ForexSnapshotTicker:
+  $ref: 'common/snapshot/forex/snapshotTicker.yml'
 ForexSnapshotTickers:
   $ref: 'common/snapshot/forex/snapshotTickers.yml'
 # - Crypto
