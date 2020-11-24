@@ -51,7 +51,7 @@ responses:
             - $ref: '../../schemas/index.yml#/ForexHistoricTrades'
             
         example:
-          day: 2020-10-02
+          day: 2020-10-14
           map:
             a: ask
             b: bid

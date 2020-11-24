@@ -54,7 +54,7 @@ AggregateTimeFrom:
   required: true
   schema:
     type: string
-  example: "2020-01-01"
+  example: "2020-10-14"
 AggregateTimeTo:
   name: to
   in: path
@@ -62,7 +62,7 @@ AggregateTimeTo:
   required: true
   schema:
     type: string
-  example: "2020-02-01"
+  example: "2020-10-14"
 AggregateUnadjusted:
   name: unadjusted
   in: query

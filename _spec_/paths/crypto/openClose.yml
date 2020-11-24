@@ -25,7 +25,7 @@ parameters:
     schema:
       type: string
       format: date
-    example: "2020-10-09"
+    example: "2020-10-14"
 responses:
   200:
     description: The open/close of this symbol.
