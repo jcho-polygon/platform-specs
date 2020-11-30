@@ -22,15 +22,15 @@ responses:
           queryCount: 1
           resultsCount: 1
           adjusted: true
-          results: 
-            T: AAPL
-            v: 1.31704427e+08
-            vw: 116.3058
-            o: 115.55
-            c: 115.97
-            h: 117.59
-            l: 114.13
-            t: 1605042000000
+          results:
+            - T: AAPL
+              v: 1.31704427e+08
+              vw: 116.3058
+              o: 115.55
+              c: 115.97
+              h: 117.59
+              l: 114.13
+              t: 1605042000000
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:
