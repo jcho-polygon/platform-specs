@@ -31,6 +31,7 @@ responses:
               h: 117.59
               l: 114.13
               t: 1605042000000
+          request_id: 6a7e466379af0a71039d60cc78e72282
   default:
     $ref: "../../responses.yml#/DefaultError"
 x-polygon-entitlement-data-type:
