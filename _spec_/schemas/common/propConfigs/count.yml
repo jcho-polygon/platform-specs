@@ -1,2 +1,2 @@
 type: integer
-description: The total number of results for all pages.
+description: The total number of results for this request.

@@ -42,31 +42,5 @@ properties:
         z:
           $ref: '../index.yml#/Tape'
   map:
-    type: object
-    properties:
-      t: 
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      y: 
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      i: 
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      P: 
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      X: 
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      f: 
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      q: 
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      c: 
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      p: 
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      s: 
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      x: 
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      S: 
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
-      z: 
-        $ref: '../../schemas/index.yml#/TradeDetailsMapItem'
+    $ref: '../index.yml#/Map'
+

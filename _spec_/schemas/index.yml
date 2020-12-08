@@ -59,6 +59,8 @@ High:
   $ref: 'common/propConfigs/high.yml'
 Low:
   $ref: 'common/propConfigs/low.yml'
+Map:
+  $ref: 'common/propConfigs/map.yml'
 MsLatency:
   $ref: 'common/propConfigs/msLatency.yml'
 NumberOfItems:

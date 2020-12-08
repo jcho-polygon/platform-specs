@@ -121,11 +121,14 @@ LimitMax50000:
 AggregateLimitMax50000:
   name: limit
   in: query
-  description: Limits the number of base aggregates queried to create the aggregate results. Max 50000 and Default 5000
+  description: |
+    Limits the number of base aggregates queried to create the aggregate results. Max 50000 and Default 5000.
+    Read more about how limit is used to calculate aggregate results in our article on 
+    <a href="https://polygon.io/blog/aggs-api-updates/" target="_blank" alt="Aggregate Data API Improvements">Aggregate Data API Improvements</a>.
   required: false
   schema:
     type: integer
-  example: 10
+  example: 120
 LimitMax10000:
   name: limit
   in: query

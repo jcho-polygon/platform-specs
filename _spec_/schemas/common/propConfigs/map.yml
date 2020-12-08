@@ -1,0 +1,14 @@
+type: object
+description: A mapping of the keys returned in the results to their descriptive name and data types.
+properties:
+  key:
+    type: object
+    description: A dynamic key from the results set
+    properties:
+      name:
+        type: string
+        description: The descriptive name of this results key
+      type:
+        type: string
+        description: The data type of this results key
+        enum: ["string", "int", "int64", "float64"]
