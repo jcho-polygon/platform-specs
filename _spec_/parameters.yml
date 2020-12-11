@@ -72,6 +72,7 @@ AggregateUnadjusted:
   required: false
   schema:
     type: boolean
+  example: true
 AggregateSort:
   name: sort
   schema:
@@ -79,11 +80,11 @@ AggregateSort:
       - asc
       - desc
   in: query
-  example: asc
   description: |
     Sort the results by timestamp.
     `asc` will return results in ascending order (oldest at the top),
     `desc` will return results in descending order (newest at the top).
+  example: asc
 AggregateDate:
   name: date
   in: path
@@ -100,6 +101,7 @@ ReverseOrder:
   required: false
   schema:
     type: boolean
+  example: true
 SnapshotDirection:
   name: direction
   in: path
@@ -143,6 +145,6 @@ LimitNoMax:
   description: |
     Limit the number of results.
   required: false
-  example: 5
   schema:
     type: integer
+  example: 5
