@@ -13,6 +13,7 @@ parameters:
       type: string
       format: date
     example: "2020-10-14"
+  - $ref: '../../parameters.yml#/AggregateUnadjusted'
 responses:
   200:
     description: The open/close of this stock symbol.
