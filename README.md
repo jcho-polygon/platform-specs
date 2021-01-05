@@ -1,5 +1,5 @@
-# platform-open-api-specs
-Specifications for Polygon.io Platform APIs
+# platform-specs
+Specifications for Polygon.io Platform APIs using Open API 3, as well as Polygon's WebSockets using Async API 2.0
 
 # Spec tools
 
