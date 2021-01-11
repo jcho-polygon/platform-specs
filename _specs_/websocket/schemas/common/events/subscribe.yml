@@ -1,0 +1,11 @@
+allOf:
+  - $ref: '../../index.yml#/Event'
+  - title: subscribe
+    properties:
+      status:
+        enum:
+          - success
+          - auth_required
+          - error
+        description: The result of a subscribe action.
+    example: '{"ev":"status","status":"success","message":"subscribed to: T.MSFT"}'

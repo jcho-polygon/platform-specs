@@ -1,0 +1,9 @@
+allOf:
+  - $ref: '../../index.yml#/Event'
+  - title: connect
+    properties:
+      status:
+        enum:
+          - success
+        description: The status indicating that the connection event was successful.
+    example: '{"ev":"status","status":"success","message":"Connected Successfully"}'

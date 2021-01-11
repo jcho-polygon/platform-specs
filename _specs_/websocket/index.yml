@@ -1,0 +1,17 @@
+openapi: 3.0.3
+info:
+  title: Polygon Websocket Spec
+  description: The future of fintech.
+  version: "1.0.0"
+servers:
+  - url: wss://socket.polygon.io
+    description: Real-time
+  - url: wss://delayed.polygon.io
+    description: Delayed
+paths:
+  $ref: 'paths/index.yml'
+components:
+  schemas:
+    $ref: 'schemas/index.yml'
+  parameters:
+    $ref: 'parameters.yml'

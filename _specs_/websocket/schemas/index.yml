@@ -1,0 +1,46 @@
+# Common Actions
+AuthAction:
+  $ref: 'common/actions/auth.yml'
+SubscribeAction:
+  $ref: 'common/actions/subscribe.yml'
+UnsubscribeAction:
+  $ref: 'common/actions/unsubscribe.yml'
+
+# Common Events
+Event:
+  $ref: 'common/events/event.yml'
+ConnectEvent:
+  $ref: 'common/events/connect.yml'
+DisconnectEvent:
+  $ref: 'common/events/disconnect.yml'
+AuthEvent:
+  $ref: 'common/events/auth.yml'
+SubscribeEvent:
+  $ref: 'common/events/subscribe.yml'
+UnsubscribeEvent:
+  $ref: 'common/events/unsubscribe.yml'
+
+# Common Fields
+Timestamp:
+  $ref: 'common/propConfigs/timestamp.yml'
+
+# Stocks Actions
+StockTradeSubscribeAction:
+  $ref: 'stocks/actions/trades.yml#/SubscribeAction'
+StockTradeUnsubscribeAction:
+  $ref: 'stocks/actions/trades.yml#/UnsubscribeAction'
+StockQuoteSubscribeAction:
+  $ref: 'stocks/actions/quotes.yml#/SubscribeAction'
+StockQuoteUnsubscribeAction:
+  $ref: 'stocks/actions/quotes.yml#/UnsubscribeAction'
+
+# Stocks Events
+StockTradeEvent:
+  $ref: 'stocks/events/trade.yml'
+StockQuoteEvent:
+  $ref: 'stocks/events/quote.yml'
+
+# Stocks Fields
+StockSymbol:
+  $ref: 'stocks/propConfigs/stockSymbol.yml'
+

@@ -1,0 +1,29 @@
+summary: Trades
+description: |
+  Stream real-time trades for a given stock ticker symbol.
+responses:
+  default:
+    description: The WebSocket message for a quote event.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/StockTradeEvent'
+        example:
+          ev: T
+          sym: MSFT
+          x: 4
+          i: '12345'
+          z: 3
+          p: 114.125
+          s: 100
+          c:
+            - 0
+            - 12
+          t: 1536036818784
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/StockTradeSubscribeAction'
+  - $ref: '../../schemas/index.yml#/StockTradeUnsubscribeAction'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Trades'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Stocks'

@@ -1,0 +1,10 @@
+title: auth
+type: object
+properties:
+  action:
+    enum:
+      - auth
+  params:
+    type: string
+    description: The user's API key.
+example: '{"action":"auth","params":"*******"}'

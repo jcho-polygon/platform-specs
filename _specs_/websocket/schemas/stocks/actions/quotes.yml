@@ -1,0 +1,21 @@
+SubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/SubscribeAction'
+    - properties:
+        params:
+          pattern: /^Q\.(?<ticker>([a-zA-Z]+|\*))$/
+          description: |
+            The quotes to subscribe to, in the format Q.{ticker} to listen for quotes for a 
+            single ticker, or Q.* to listen for all quotes.
+      example: '{"action":"subscribe","params":"Q.LPL"}'
+UnsubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/UnsubscribeAction'
+    - properties:
+        params:
+          pattern: /^Q\.(?<ticker>([a-zA-Z]+|\*))$/
+          description: |
+            The quotes to unsubscribe from, in the format Q.{ticker} to stop 
+            listening for quotes for a specific ticker, or Q.* to 
+            stop listening to all quotes.
+      example: '{"action":"unsubscribe","params":"Q.LPL"}'

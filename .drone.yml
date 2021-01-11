@@ -11,7 +11,8 @@ steps:
 - name: validate spec
   image: polygonio/swagger-cli
   commands:
-  - swagger-cli validate _spec_/index.yml
+  - swagger-cli validate _specs_/api/index.yml
+  - swagger-cli validate _specs_/websocket/index.yml
 
 trigger:
   branch:
@@ -32,7 +33,7 @@ steps:
 - name: bundle spec
   image: polygonio/swagger-cli
   commands:
-  - swagger-cli bundle _spec_/index.yml --dereference --outfile _built_/spec.json --type json
+  - swagger-cli bundle _specs_/api/index.yml --dereference --outfile _built_/spec.json --type json
 
 - name: upload spec
   image: plugins/gcs
@@ -62,7 +63,7 @@ steps:
 - name: bundle spec
   image: polygonio/swagger-cli
   commands:
-  - swagger-cli bundle _spec_/index.yml --dereference --outfile _built_/spec.json --type json
+  - swagger-cli bundle _specs_/api/index.yml --dereference --outfile _built_/spec.json --type json
 
 - name: upload spec
   image: plugins/gcs

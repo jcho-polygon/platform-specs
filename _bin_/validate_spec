@@ -7,5 +7,5 @@ set -eou pipefail
   docker run \
     -v $(pwd):/opt/workdir \
     polygonio/swagger-cli \
-    validate "_spec_/index.yml"
+    validate "_specs_/api/index.yml"
 )

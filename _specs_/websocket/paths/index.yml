@@ -1,0 +1,10 @@
+# Stocks
+/stocks:
+  get:
+    $ref: 'stocks/index.yml'
+/stocks/T:
+  get:
+    $ref: 'stocks/trades.yml'
+/stocks/Q:
+  get:
+    $ref: 'stocks/quotes.yml'

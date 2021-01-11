@@ -1,0 +1,8 @@
+title: unsubscribe
+type: object
+properties:
+  action:
+    enum:
+      - unsubscribe
+x-polygon-parameters:
+  - $ref: '../../../parameters.yml#/TickerParam'

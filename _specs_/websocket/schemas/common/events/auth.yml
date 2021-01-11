@@ -1,0 +1,11 @@
+allOf:
+  - $ref: '../../index.yml#/Event'
+  - title: auth
+    properties:
+      status:
+        enum:
+          - auth_success
+          - auth_timeout
+          - auth_failed
+        description: The result of the authentication action.
+    example: '{"ev":"status","status":"auth_success","message":"authenticated"}'

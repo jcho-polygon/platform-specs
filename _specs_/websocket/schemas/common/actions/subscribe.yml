@@ -1,0 +1,10 @@
+title: subscribe
+type: object
+properties:
+  action:
+    enum:
+      - subscribe
+  params:
+    type: string
+x-polygon-parameters:
+  - $ref: '../../../parameters.yml#/TickerParam'

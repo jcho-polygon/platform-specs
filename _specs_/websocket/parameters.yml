@@ -1,0 +1,11 @@
+TickerParam:
+  name: ticker
+  in: query
+  description: |
+    Specify a ticker symbol or use * to retreive all tickers
+    or use a comma separated list to retrieve multiple tickers.
+  required: true
+  schema:
+    type: string
+    pattern: /^([a-zA-Z]+|\*)$/
+  example: '*'

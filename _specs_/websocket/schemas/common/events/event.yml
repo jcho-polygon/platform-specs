@@ -1,0 +1,11 @@
+type: object
+properties:
+  ev:
+    enum: 
+      - status
+    description: A constant denoting that this message describes a status event.
+  message:
+    type: string
+    description: The descriptive message explaining this status event.
+  status:
+    type: string

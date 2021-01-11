@@ -1,0 +1,11 @@
+allOf:
+  - $ref: '../../index.yml#/Event'
+  - title: disconnect
+    properties:
+      status:
+        enum:
+          - max_connections
+          - force_disconnect
+          - slow_consumer
+        description: The event that caused the WebSocket to disconnect.
+    example: '{"ev":"status","status":"max_connections","message":"Maximum number of connections exceeded."}'

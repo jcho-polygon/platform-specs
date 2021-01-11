@@ -1,0 +1,33 @@
+type: object
+properties:
+  ev:
+    enum:
+      - Q
+    description: The quote event type.
+  sym:
+    $ref: '../../index.yml#/StockSymbol'
+  bx:
+    type: integer
+    description: The bid exchange ID.
+  bp:
+    type: number
+    format: double
+    description: The bid price.
+  bs:
+    type: integer
+    description: The bid size.
+  ax:
+    type: integer
+    description: The ask exchange ID.
+  ap:
+    type: number
+    format: double
+    description: The ask price.
+  as:
+    type: integer
+    description: The ask size.
+  c:
+    type: integer
+    description: The condition.
+  t:
+    $ref: '../../index.yml#/Timestamp'

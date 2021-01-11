@@ -1,0 +1,21 @@
+SubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/SubscribeAction'
+    - properties:
+        params:
+          pattern: /^T\.(?<ticker>([a-zA-Z]+|\*))$/
+          description: |
+            The trades to subscribe to, in the format T.{ticker} to listen for trades for a 
+            single ticker, or T.* to listen for all trades.
+      example: '{"action":"subscribe","params":"T.LPL"}'
+UnsubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/UnsubscribeAction'
+    - properties:
+        params:
+          pattern: /^T\.(?<ticker>([a-zA-Z]+|\*))$/
+          description: |
+            The trades to unsubscribe from, in the format T.{ticker} to stop 
+            listening for trades for a specific ticker, or T.* to 
+            stop listening to all trades.
+      example: '{"action":"unsubscribe","params":"T.LPL"}'

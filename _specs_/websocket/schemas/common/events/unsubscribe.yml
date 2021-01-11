@@ -1,0 +1,9 @@
+allOf:
+  - $ref: '../../index.yml#/Event'
+  - title: unsubscribe
+    properties:
+      status:
+        enum:
+          - success
+        description: The result of an unsubscribe action.
+    example: '{"ev":"status","status":"success","message":"unsubscribed to: T.MSFT"}'

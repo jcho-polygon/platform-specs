@@ -1,0 +1,29 @@
+type: object
+properties:
+  ev:
+    enum:
+      - T
+    description: The trade event type.
+  sym:
+    $ref: '../../index.yml#/StockSymbol'
+  x:
+    type: integer
+    description: The exchange ID.
+  i:
+    type: string
+    description: The trade ID.
+  z:
+    type: integer
+    description: The tape. (1=A, 2=B, 3=C)
+  p:
+    type: number
+    format: double
+    description: The price.
+  s:
+    type: integer
+    description: The trade size.
+  c:
+    type: array
+    description: The trade conditions
+  t:
+    $ref: '../../index.yml#/Timestamp'
