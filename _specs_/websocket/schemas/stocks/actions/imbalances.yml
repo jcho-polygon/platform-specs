@@ -1,0 +1,21 @@
+SubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/StocksSubscribeAction'
+    - properties:
+        params:
+          pattern: /^NOI\.(?<ticker>([a-zA-Z]+|\*))$/
+          description: |
+            The imbalance events to subscribe to, in the format NOI.{ticker} to listen for imbalance events for a 
+            single ticker, or NOI.* to listen for all imbalance events.
+      example: '{"action":"subscribe","params":"NOI.LPL"}'
+UnsubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/StocksUnsubscribeAction'
+    - properties:
+        params:
+          pattern: /^NOI\.(?<ticker>([a-zA-Z]+|\*))$/
+          description: |
+            The imbalance events to unsubscribe from, in the format NOI.{ticker} to stop 
+            listening for imbalance events for a specific ticker, or NOI.* to 
+            stop listening to all imbalance events.
+      example: '{"action":"unsubscribe","params":"NOI.LPL"}'

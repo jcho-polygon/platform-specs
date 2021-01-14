@@ -1,0 +1,28 @@
+summary: Imbalances
+description: |
+  Stream real-time imbalance events for a given stock ticker symbol.
+responses:
+  200:
+    description: The WebSocket message for an imbalance event.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/StockImbalanceEvent'
+        example:
+          ev: NOI
+          T: NTEST.Q
+          t: 1601318039223013632
+          at: 930
+          a: M
+          i: 44
+          x: 10
+          o: 480
+          p: 440
+          b: 25.03
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/StockImbalanceSubscribeAction'
+  - $ref: '../../schemas/index.yml#/StockImbalanceUnsubscribeAction'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Trades'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Stocks'

@@ -1,0 +1,30 @@
+type: object
+properties:
+  ev:
+    type: string
+    enum:
+      - XQ
+  pair:
+    $ref: '../../index.yml#/CryptoPair'
+  bp:
+    type: number
+    format: double
+    description: The bid price.
+  bs:
+    type: number
+    format: double
+    description: The bid size.
+  ap:
+    type: number
+    format: double
+    description: The ask price.
+  as:
+    type: number
+    format: double
+    description: The ask size.
+  t:
+    $ref: '../../index.yml#/Timestamp'
+  x:
+    $ref: '../../index.yml#/CryptoExchangeID'
+  r:
+    $ref: '../../index.yml#/CryptoReceivedTimestamp'

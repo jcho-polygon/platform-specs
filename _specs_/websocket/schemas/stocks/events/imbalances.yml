@@ -1,0 +1,40 @@
+type: object
+properties:
+  ev:
+    enum:
+      - NOI
+    description: The imbalance event type.
+  T:
+    $ref: '../../index.yml#/StockSymbol'
+  t:
+    $ref: '../../index.yml#/Timestamp'
+  at:
+    type: integer
+    description: |
+      The time that the auction is planned to take place in the format (hour x 100) + minutes in Eastern Standard Time, 
+      for example 930 would be 9:30 am EST, and 1600 would be 4:00 pm EST.
+  a:
+    type: string
+    description: |
+      The auction type.
+      `O` - Early Opening Auction (non-NYSE only)
+      `M` - Core Opening Auction
+      `H` - Reopening Auction (Halt Resume)
+      `C` - Closing Auction
+      `P` - Extreme Closing Imbalance (NYSE only)
+      `R` - Regulatory Closing Imbalance (NYSE only)
+  i:
+    type: integer
+    description: The symbol sequence.
+  x:
+    $ref: '../../index.yml#/StockExchangeID'
+  o:
+    type: integer
+    description: The imbalance quantity.
+  p: 
+    type: integer
+    description: The paired quantity.
+  b:
+    type: number
+    format: double
+    description: The book clearing price.

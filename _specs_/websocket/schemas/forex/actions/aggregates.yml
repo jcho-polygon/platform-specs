@@ -1,0 +1,26 @@
+SubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/SubscribeAction'
+    - properties:
+        params:
+          pattern: /^CA\.((?<from>([A-Z]{3})\/?<to>([A-Z]{3}))|\*)$/
+          description: |
+            The forex minute aggregate events to subscribe to, in the format CA.{from}/{to} to 
+            listen for forex minute aggregate events for a single forex pair, or CA.* to listen 
+            for all forex minute aggregate events.
+      example: '{"action":"subscribe","params":"CA.CNY/HKD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/ForexTickerParam'
+UnsubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/UnsubscribeAction'
+    - properties:
+        params:
+          pattern: /^CA\.((?<from>([A-Z]{3})\/?<to>([A-Z]{3}))|\*)$/
+          description: |
+            The forex minute aggregate events to unsubscribe from, in the format CA.{from}/{to} to stop 
+            listening for forex minute aggregate events for a specific forex pair, or CA.* to 
+            stop listening to all forex minute aggregate events.
+      example: '{"action":"unsubscribe","params":"CA.CNY/HKD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/ForexTickerParam'

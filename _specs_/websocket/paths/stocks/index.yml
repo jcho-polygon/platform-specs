@@ -2,7 +2,7 @@ summary: Stocks
 description: |
   Stream real-time stock market data from Polygon.io.
 responses:
-  default:
+  200:
     description: The status event indicating a successful connection.
     content:
       application/json:

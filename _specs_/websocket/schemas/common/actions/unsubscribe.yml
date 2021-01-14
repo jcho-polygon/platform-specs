@@ -4,5 +4,3 @@ properties:
   action:
     enum:
       - unsubscribe
-x-polygon-parameters:
-  - $ref: '../../../parameters.yml#/TickerParam'

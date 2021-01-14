@@ -1,0 +1,26 @@
+SubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/SubscribeAction'
+    - properties:
+        params:
+          pattern: /^XQ\.((?<from>([A-Z]*)-(?<to>[A-Z]{3}))|\*)$/
+          description: |
+            The crypto quote events to subscribe to, in the format XQ.{from}-{to} to 
+            listen for crypto quote events for a single crypto pair, or XQ.* to listen 
+            for all crypto quote events.
+      example: '{"action":"subscribe","params":"XQ.BTC-USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/CryptoTickerParam'
+UnsubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/UnsubscribeAction'
+    - properties:
+        params:
+          pattern: /^XQ\.((?<from>([A-Z]*)-(?<to>[A-Z]{3}))|\*)$/
+          description: |
+            The crypto quote events to unsubscribe from, in the format XQ.{from}-{to} to stop 
+            listening for crypto quote events for a specific crypto pair, or XQ.* to 
+            stop listening to all crypto quote events.
+      example: '{"action":"unsubscribe","params":"XQ.BTC-USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/CryptoTickerParam'

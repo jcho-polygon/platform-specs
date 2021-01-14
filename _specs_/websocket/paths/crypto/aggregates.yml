@@ -1,0 +1,29 @@
+summary: Aggregates (Per Minute)
+description: |
+  Stream real-time per-minute crypto aggregates for a given crypto pair.
+responses:
+  200:
+    description: The WebSocket message for a crypto per-minute aggregate event.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/CryptoAggregateEvent'
+        example:
+          ev: XA
+          p: BCD-USD
+          v: 951.6112
+          vw: 0.7756
+          z: 73.33
+          o: 0.772
+          c: 0.784
+          h: 0.784
+          l: 0.771
+          s: 1610463240000
+          e: 1610463300000
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/CryptoAggregateSubscribeAction'
+  - $ref: '../../schemas/index.yml#/CryptoAggregateUnsubscribeAction'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Aggregates'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Crypto'

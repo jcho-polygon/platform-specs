@@ -1,11 +1,73 @@
-TickerParam:
+StocksTickerParam:
   name: ticker
   in: query
   description: |
-    Specify a ticker symbol or use * to retreive all tickers
-    or use a comma separated list to retrieve multiple tickers.
+    Specify a ticker symbol or use * to retreive all tickers.
+    You can also use a comma separated list to retrieve multiple tickers.
   required: true
   schema:
     type: string
     pattern: /^([a-zA-Z]+|\*)$/
+  example: '*'
+ForexTickerParam:
+  name: ticker
+  in: query
+  description: |
+    Specify a forex pair in the format {from}/{to} or use *
+    to retreive all forex pairs.  You can also use a comma 
+    separated list to retrieve multiple tickers.
+  required: true
+  schema:
+    type: string
+  example: '*'
+ForexBondsTickerParam:
+  name: ticker
+  in: query
+  description: |
+    Specify a bond ticker in the format {bondTicker}/{currency} or use *
+    to retreive all bond quotes.  You can also use a comma 
+    separated list to retrieve multiple bond tickers.
+    Supported Bonds Tickers:
+    `DE10YB/EUR, UK10YB/GBP, USB10Y/USD, USB02Y/USD, USB05Y/USD, USB30Y/USD`
+  required: true
+  schema:
+    type: string
+  example: '*'
+ForexCommoditiesTickerParam:
+  name: ticker
+  in: query
+  description: |
+    Specify a commodity ticker in the format {commodityTicker}/{currency} 
+    or use * to retreive all commodity quotes.  You can also use a comma 
+    separated list to retrieve multiple commodity tickers.
+    Supported Commodity Tickers:
+    `BCO/USD, CORN/USD, NATGAS/USD, SOYBN/USD, SUGAR/USD, WTICO/USD, WHEAT/USD`
+  required: true
+  schema:
+    type: string
+  example: '*'
+ForexMetalsTickerParam:
+  name: ticker
+  in: query
+  description: |
+    Specify a metals ticker in the format {metalTicker}/{currency} 
+    or use * to retreive all metal quotes.  You can also use a comma 
+    separated list to retrieve multiple metal tickers.  XAU is the ticker for Gold and XAG is the ticker for Silver.
+    Supported Metals Tickers:
+    `XAU/USD, XAU/AUD, XAU/CAD, XAU/CHF, XAU/EUR, XAU/GBP, XAU/HKD, XAU/JPY, XAU/NZD, XAU/SGD, XAU/XAG, XPD/USD, XPT/USD, XAG/USD, XAG/AUD, XAG/CAD, XAG/CHF, XAG/EUR, XAG/GBP, XAG/HKD, XAG/JPY, XAG/NZD, XAG/SGD`
+
+  required: true
+  schema:
+    type: string
+  example: '*'
+CryptoTickerParam:
+  name: ticker
+  in: query
+  description: |
+    Specify a crypto pair in the format {from}-{to} or use *
+    to retreive all crypto pairs.  You can also use a comma 
+    separated list to retrieve multiple tickers.
+  required: true
+  schema:
+    type: string
   example: '*'

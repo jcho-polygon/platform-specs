@@ -1,0 +1,32 @@
+summary: Aggregates (Per Minute)
+description: |
+  Stream real-time minute aggregates for a given stock ticker symbol.
+responses:
+  200:
+    description: The WebSocket message for a minute aggregate event.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/StockMinuteAggregateEvent'
+        example:
+          ev: AM
+          sym: GTE
+          v: 4110
+          av: 9470157
+          op: 0.4372
+          vw: 0.4488
+          o: 0.4488
+          c: 0.4486
+          h: 0.4489
+          l: 0.4486
+          a: 0.4352
+          z: 685
+          s: 1610144640000
+          e: 1610144700000
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/StockMinuteAggregateSubscribeAction'
+  - $ref: '../../schemas/index.yml#/StockMinuteAggregateUnsubscribeAction'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Aggregates'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Stocks'

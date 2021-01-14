@@ -1,0 +1,49 @@
+type: object
+properties:
+  ev:
+    description: The aggregate event type.
+  sym:
+    $ref: '../../index.yml#/StockSymbol'
+  v:
+    type: integer
+    description: The tick volume.
+  av:
+    type: integer
+    description: Today's accumulated volume.
+  op:
+    type: number
+    format: double
+    description: Today's official opening price.
+  vw:
+    type: number
+    format: float
+    description: Volume Weighted Average Price (VWAP)
+  o:
+    type: number
+    format: double
+    description: The opening tick price for this aggregate window.
+  c:
+    type: number
+    format: double
+    description: The closing tick price for this aggregate window.
+  h:
+    type: number
+    format: double
+    description: The highest tick price for this aggregate window.
+  l:
+    type: number
+    format: double
+    description: The lowest tick price for this aggregate window.
+  a:
+    type: number
+    format: float
+    description: The tick average/VWAP price.
+  z:
+    type: integer
+    description: The average trade size for this aggregate window.
+  s:
+    type: integer
+    description: The timestamp of the starting tick for this aggregate window in Unix Milliseconds.
+  e:
+    type: integer
+    description: The timestamp of the ending tick for this aggregate window in Unix Milliseconds.

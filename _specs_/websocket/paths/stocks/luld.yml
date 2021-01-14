@@ -1,0 +1,26 @@
+summary: Limit-Up Limit-Down (LULD)
+description: |
+  Stream real-time LULD events for a given stock ticker symbol.
+responses:
+  200:
+    description: The WebSocket message for a LULD event.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/StockLULDEvent'
+        example:
+          ev: LULD
+          T: MSFT
+          h: 218.96
+          l: 198.11
+          i: [21]
+          z: 3
+          t: 1601316752683746
+          q: 290317
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/StockLULDSubscribeAction'
+  - $ref: '../../schemas/index.yml#/StockLULDUnsubscribeAction'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Trades'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Stocks'

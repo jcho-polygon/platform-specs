@@ -1,0 +1,26 @@
+SubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/SubscribeAction'
+    - properties:
+        params:
+          pattern: /^BONDS\.(((?<bondTicker>(.*))\/(?<currency>(.*)))|\*)$/
+          description: |
+            The bond events to subscribe to, in the format BONDS.{bondTicker}/{currency} to 
+            listen for events for a specific bond, or BONDS.* to listen 
+            for all bond events.
+      example: '{"action":"subscribe","params":"BONDS.USB30Y/USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/ForexBondsTickerParam'
+UnsubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/UnsubscribeAction'
+    - properties:
+        params:
+          pattern: /^BONDS\.(((?<bondTicker>(.*))\/(?<currency>(.*)))|\*)$/
+          description: |
+            The bond events to unsubscribe from, in the format BONDS.{bondTicker}/{currency}
+            to stop listening for events for a specific bond, or BONDS.* to 
+            stop listening to all bond events.
+      example: '{"action":"unsubscribe","params":"BONDS.USB30Y/USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/ForexBondsTickerParam'

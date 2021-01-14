@@ -23,8 +23,26 @@ UnsubscribeEvent:
 # Common Fields
 Timestamp:
   $ref: 'common/propConfigs/timestamp.yml'
-
+AggsOpen:
+  $ref: 'common/propConfigs/aggsOpen.yml'
+AggsClose:
+  $ref: 'common/propConfigs/aggsClose.yml'
+AggsHigh:
+  $ref: 'common/propConfigs/aggsHigh.yml'
+AggsLow:
+  $ref: 'common/propConfigs/aggsLow.yml'
+AggsVolume:
+  $ref: 'common/propConfigs/aggsVolume.yml'
+AggsStartTime:
+  $ref: 'common/propConfigs/aggsStartTime.yml'
+AggsEndTime:
+  $ref: 'common/propConfigs/aggsEndTime.yml'
+  
 # Stocks Actions
+StocksSubscribeAction:
+  $ref: 'stocks/actions/subscribe.yml'
+StocksUnsubscribeAction:
+  $ref: 'stocks/actions/unsubscribe.yml'
 StockTradeSubscribeAction:
   $ref: 'stocks/actions/trades.yml#/SubscribeAction'
 StockTradeUnsubscribeAction:
@@ -33,14 +51,116 @@ StockQuoteSubscribeAction:
   $ref: 'stocks/actions/quotes.yml#/SubscribeAction'
 StockQuoteUnsubscribeAction:
   $ref: 'stocks/actions/quotes.yml#/UnsubscribeAction'
+StockSecondAggregateSubscribeAction:
+  $ref: 'stocks/actions/secondAggregates.yml#/SubscribeAction'
+StockSecondAggregateUnsubscribeAction:
+  $ref: 'stocks/actions/secondAggregates.yml#/UnsubscribeAction'
+StockMinuteAggregateSubscribeAction:
+  $ref: 'stocks/actions/minuteAggregates.yml#/SubscribeAction'
+StockMinuteAggregateUnsubscribeAction:
+  $ref: 'stocks/actions/minuteAggregates.yml#/UnsubscribeAction'
+StockLULDSubscribeAction:
+  $ref: 'stocks/actions/luld.yml#/SubscribeAction'
+StockLULDUnsubscribeAction:
+  $ref: 'stocks/actions/luld.yml#/UnsubscribeAction'
+StockImbalanceSubscribeAction:
+  $ref: 'stocks/actions/imbalances.yml#/SubscribeAction'
+StockImbalanceUnsubscribeAction:
+  $ref: 'stocks/actions/imbalances.yml#/UnsubscribeAction'
 
 # Stocks Events
 StockTradeEvent:
   $ref: 'stocks/events/trade.yml'
 StockQuoteEvent:
   $ref: 'stocks/events/quote.yml'
+StockBaseAggregateEvent:
+  $ref: 'stocks/events/baseAggregate.yml'
+StockSecondAggregateEvent:
+  $ref: 'stocks/events/secondAggregate.yml'
+StockMinuteAggregateEvent:
+  $ref: 'stocks/events/minuteAggregate.yml'
+StockLULDEvent:
+  $ref: 'stocks/events/luld.yml'
+StockImbalanceEvent:
+  $ref: 'stocks/events/imbalances.yml'
 
 # Stocks Fields
 StockSymbol:
-  $ref: 'stocks/propConfigs/stockSymbol.yml'
+  $ref: 'stocks/propConfigs/symbol.yml'
+StockTape:
+  $ref: 'stocks/propConfigs/tape.yml'
+StockExchangeID:
+  $ref: 'stocks/propConfigs/exchangeID.yml'
 
+# Forex Actions
+ForexQuoteSubscribeAction:
+  $ref: 'forex/actions/quotes.yml#/SubscribeAction'
+ForexQuoteUnsubscribeAction:
+  $ref: 'forex/actions/quotes.yml#/UnsubscribeAction'
+ForexAggregateSubscribeAction:
+  $ref: 'forex/actions/aggregates.yml#/SubscribeAction'
+ForexAggregateUnsubscribeAction:
+  $ref: 'forex/actions/aggregates.yml#/UnsubscribeAction'
+ForexBondSubscribeAction:
+  $ref: 'forex/actions/bonds.yml#/SubscribeAction'
+ForexBondUnsubscribeAction:
+  $ref: 'forex/actions/bonds.yml#/UnsubscribeAction'
+ForexCommoditySubscribeAction:
+  $ref: 'forex/actions/commodities.yml#/SubscribeAction'
+ForexCommodityUnsubscribeAction:
+  $ref: 'forex/actions/commodities.yml#/UnsubscribeAction'
+ForexMetalSubscribeAction:
+  $ref: 'forex/actions/metals.yml#/SubscribeAction'
+ForexMetalUnsubscribeAction:
+  $ref: 'forex/actions/metals.yml#/UnsubscribeAction'
+
+# Forex Events
+ForexBaseQuoteEvent:
+  $ref: 'forex/events/baseQuote.yml'
+ForexQuoteEvent:
+  $ref: 'forex/events/quotes.yml'
+ForexAggregateEvent:
+  $ref: 'forex/events/aggregates.yml'
+ForexBondEvent:
+  $ref: 'forex/events/bonds.yml'
+ForexCommodityEvent:
+  $ref: 'forex/events/commodities.yml'
+ForexMetalEvent:
+  $ref: 'forex/events/metals.yml'
+
+# Crypto Actions
+CryptoQuoteSubscribeAction:
+  $ref: 'crypto/actions/quotes.yml#/SubscribeAction'
+CryptoQuoteUnsubscribeAction:
+  $ref: 'crypto/actions/quotes.yml#/UnsubscribeAction'
+CryptoTradeSubscribeAction:
+  $ref: 'crypto/actions/trades.yml#/SubscribeAction'
+CryptoTradeUnsubscribeAction:
+  $ref: 'crypto/actions/trades.yml#/UnsubscribeAction'
+CryptoAggregateSubscribeAction:
+  $ref: 'crypto/actions/aggregates.yml#/SubscribeAction'
+CryptoAggregateUnsubscribeAction:
+  $ref: 'crypto/actions/aggregates.yml#/UnsubscribeAction'
+CryptoL2BookSubscribeAction:
+  $ref: 'crypto/actions/l2Book.yml#/SubscribeAction'
+CryptoL2BookUnsubscribeAction:
+  $ref: 'crypto/actions/l2Book.yml#/UnsubscribeAction'
+
+# Crypto Events
+CryptoQuoteEvent:
+  $ref: 'crypto/events/quotes.yml'
+CryptoTradeEvent:
+  $ref: 'crypto/events/trades.yml'
+CryptoAggregateEvent:
+  $ref: 'crypto/events/aggregates.yml'
+CryptoL2BookEvent:
+  $ref: 'crypto/events/l2Book.yml'
+
+
+# Crypto Fields
+CryptoPair:
+  $ref: 'crypto/propConfigs/pair.yml'
+CryptoExchangeID:
+  $ref: 'crypto/propConfigs/exchangeID.yml'
+CryptoReceivedTimestamp:
+  $ref: 'crypto/propConfigs/receivedTimestamp.yml'

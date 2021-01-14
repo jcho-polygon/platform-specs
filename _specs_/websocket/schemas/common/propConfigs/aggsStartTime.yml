@@ -1,0 +1,2 @@
+type: integer
+description: The start time for this aggregate window in Unix Milliseconds.

@@ -1,0 +1,32 @@
+summary: Aggregates (Per Second)
+description: |
+  Stream real-time second aggregates for a given stock ticker symbol.
+responses:
+  200:
+    description: The WebSocket message for a second aggregate event.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/StockSecondAggregateEvent'
+        example:
+          ev: A
+          sym: SPCE
+          v: 200
+          av: 8642007
+          op: 25.66
+          vw: 25.3981
+          o: 25.39
+          c: 25.39
+          h: 25.39
+          l: 25.39
+          a: 25.3714
+          z: 50
+          s: 1610144868000
+          e: 1610144869000
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/StockSecondAggregateSubscribeAction'
+  - $ref: '../../schemas/index.yml#/StockSecondAggregateUnsubscribeAction'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Aggregates'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Stocks'

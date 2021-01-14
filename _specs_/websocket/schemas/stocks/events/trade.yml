@@ -7,14 +7,12 @@ properties:
   sym:
     $ref: '../../index.yml#/StockSymbol'
   x:
-    type: integer
-    description: The exchange ID.
+    $ref: '../../index.yml#/StockExchangeID'
   i:
     type: string
     description: The trade ID.
   z:
-    type: integer
-    description: The tape. (1=A, 2=B, 3=C)
+    $ref: '../../index.yml#/StockTape'
   p:
     type: number
     format: double

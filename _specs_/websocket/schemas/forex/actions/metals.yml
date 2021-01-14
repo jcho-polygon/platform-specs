@@ -1,0 +1,28 @@
+SubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/SubscribeAction'
+    - properties:
+        params:
+          pattern: /^METALS\.(((?<metalsTicker>(.*))\/(?<currency>(.*)))|\*)$/
+          description: |
+            The metal events to subscribe to, in the format 
+            METALS.{metalsTicker}/{currency} to listen for events for a 
+            specific metal, or METALS.* to listen 
+            for all metal events.
+      example: '{"action":"subscribe","params":"METALS.SOYBN/USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/ForexMetalsTickerParam'
+UnsubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/UnsubscribeAction'
+    - properties:
+        params:
+          pattern: /^METALS\.(((?<metalsTicker>(.*))\/(?<currency>(.*)))|\*)$/
+          description: |
+            The metal events to unsubscribe from, in the format 
+            METALS.{metalsTicker}/{currency} to stop listening for events 
+            for a specific metal, or METALS.* to stop listening 
+            to all metal events.
+      example: '{"action":"unsubscribe","params":"METALS.SOYBN/USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/ForexMetalsTickerParam'

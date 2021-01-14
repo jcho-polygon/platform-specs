@@ -1,0 +1,2 @@
+type: integer
+description: The volume of trades during this aggregate window.

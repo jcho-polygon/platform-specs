@@ -1,0 +1,26 @@
+SubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/SubscribeAction'
+    - properties:
+        params:
+          pattern: /^C\.((?<from>([A-Z]{3})\/?<to>([A-Z]{3}))|\*)$/
+          description: |
+            The forex quote events to subscribe to, in the format C.{from}/{to} to 
+            listen for quote events for a single forex pair, or C.* to listen 
+            for all forex quote events.
+      example: '{"action":"subscribe","params":"C.CNY/HKD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/ForexTickerParam'
+UnsubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/UnsubscribeAction'
+    - properties:
+        params:
+          pattern: /^C\.((?<from>([A-Z]{3})\/?<to>([A-Z]{3}))|\*)$/
+          description: |
+            The forex quote events to unsubscribe from, in the format C.{from}/{to} to stop 
+            listening for quote events for a specific forex pair, or C.* to 
+            stop listening to all forex quote events.
+      example: '{"action":"unsubscribe","params":"C.CNY/HKD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/ForexTickerParam'

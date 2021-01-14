@@ -6,5 +6,3 @@ properties:
       - subscribe
   params:
     type: string
-x-polygon-parameters:
-  - $ref: '../../../parameters.yml#/TickerParam'

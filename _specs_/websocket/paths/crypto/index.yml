@@ -1,0 +1,20 @@
+summary: Crypto
+description: |
+  Stream real-time Crypto data from Polygon.io.
+responses:
+  200:
+    description: The status event indicating a successful connection.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/ConnectEvent'
+x-polygon-events:
+  - $ref: '../../schemas/index.yml#/ConnectEvent'
+  - $ref: '../../schemas/index.yml#/DisconnectEvent'
+  - $ref: '../../schemas/index.yml#/AuthEvent'
+  - $ref: '../../schemas/index.yml#/SubscribeEvent'
+  - $ref: '../../schemas/index.yml#/UnsubscribeEvent'
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/AuthAction'
+  - $ref: '../../schemas/index.yml#/SubscribeAction'
+  - $ref: '../../schemas/index.yml#/UnsubscribeAction'

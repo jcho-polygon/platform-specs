@@ -1,0 +1,3 @@
+type: number
+format: double
+description: The high price for this aggregate window.

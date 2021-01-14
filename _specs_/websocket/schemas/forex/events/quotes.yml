@@ -1,0 +1,7 @@
+allOf:
+  - $ref: '../../index.yml#/ForexBaseQuoteEvent'
+  - properties:
+      ev:
+        enum:
+          - C
+        description: The Currency/Forex quote event type.

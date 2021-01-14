@@ -2,7 +2,7 @@ summary: Quotes
 description: |
   Stream real-time quotes for a given stock ticker symbol.
 responses:
-  default:
+  200:
     description: The WebSocket message for a quote event.
     content:
       application/json:

@@ -1,0 +1,25 @@
+summary: Level 2 Book
+description: |
+  Stream real-time level 2 book data for a given crypto pair.
+responses:
+  200:
+    description: The WebSocket message for a crypto level 2 book event.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/CryptoL2BookEvent'
+        example:
+          ev: XL2
+          pair: BTC-USD
+          t: 1610462411115
+          r: 1610462411128
+          x: 1
+          b: [[33712.71,0.18635],[33712.70,0.134]]
+          a: [[33718.23,3.5527483],[33718.24,0.1]]
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/CryptoL2BookSubscribeAction'
+  - $ref: '../../schemas/index.yml#/CryptoL2BookUnsubscribeAction'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/NBBO'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Crypto'

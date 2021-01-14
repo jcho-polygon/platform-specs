@@ -1,0 +1,26 @@
+summary: Aggregates (Per Minute)
+description: |
+  Stream real-time per-minute forex aggregates for a given forex pair.
+responses:
+  200:
+    description: The WebSocket message for a forex per-minute aggregate event.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/ForexAggregateEvent'
+        example:
+          ev: CA
+          p: USD/EUR
+          o: 0.8687
+          c: 0.86889
+          h: 0.86889
+          l: 0.8686
+          v: 20
+          s: 1539145740000
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/ForexAggregateSubscribeAction'
+  - $ref: '../../schemas/index.yml#/ForexAggregateUnsubscribeAction'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Aggregates'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Forex'

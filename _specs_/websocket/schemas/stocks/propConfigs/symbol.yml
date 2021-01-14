@@ -1,0 +1,2 @@
+type: string
+description: The ticker symbol for the given stock.

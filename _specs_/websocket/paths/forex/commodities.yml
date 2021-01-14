@@ -1,0 +1,24 @@
+summary: Commodities Quotes
+description: |
+  Stream real-time commodities quotes.
+responses:
+  200:
+    description: The WebSocket message for a commodities quote event.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/ForexCommodityEvent'
+        example:
+          ev: COMMODITIES
+          p: SUGAR/USD
+          x: 60
+          b: 0.15389
+          a: 0.15414
+          t: 1610386368110
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/ForexCommoditySubscribeAction'
+  - $ref: '../../schemas/index.yml#/ForexCommodityUnsubscribeAction'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/NBBO'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Forex'

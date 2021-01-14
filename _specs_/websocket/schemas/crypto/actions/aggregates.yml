@@ -1,0 +1,26 @@
+SubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/SubscribeAction'
+    - properties:
+        params:
+          pattern: /^XA\.((?<from>([A-Z]*)-(?<to>[A-Z]{3}))|\*)$/
+          description: |
+            The crypto minute aggregate events to subscribe to, in the format XA.{from}-{to} to 
+            listen for crypto minute aggregate events for a single crypto pair, or XA.* to listen 
+            for all crypto minute aggregate events.
+      example: '{"action":"subscribe","params":"XA.BTC-USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/CryptoTickerParam'
+UnsubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/UnsubscribeAction'
+    - properties:
+        params:
+          pattern: /^XA\.((?<from>([A-Z]*)-(?<to>[A-Z]{3}))|\*)$/
+          description: |
+            The crypto minute aggregate events to unsubscribe from, in the format XA.{from}-{to} to stop 
+            listening for crypto minute aggregate events for a specific crypto pair, or XA.* to 
+            stop listening to all crypto minute aggregate events.
+      example: '{"action":"unsubscribe","params":"XA.BTC-USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/CryptoTickerParam'

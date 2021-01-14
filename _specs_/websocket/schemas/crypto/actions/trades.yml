@@ -1,0 +1,26 @@
+SubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/SubscribeAction'
+    - properties:
+        params:
+          pattern: /^XT\.((?<from>([A-Z]*)-(?<to>[A-Z]{3}))|\*)$/
+          description: |
+            The crypto trade events to subscribe to, in the format XT.{from}-{to} to 
+            listen for crypto trade events for a single crypto pair, or XT.* to listen 
+            for all crypto trade events.
+      example: '{"action":"subscribe","params":"XT.BTC-USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/CryptoTickerParam'
+UnsubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/UnsubscribeAction'
+    - properties:
+        params:
+          pattern: /^XT\.((?<from>([A-Z]*)-(?<to>[A-Z]{3}))|\*)$/
+          description: |
+            The crypto trade events to unsubscribe from, in the format XT.{from}-{to} to stop 
+            listening for crypto trade events for a specific crypto pair, or XT.* to 
+            stop listening to all crypto trade events.
+      example: '{"action":"unsubscribe","params":"XT.BTC-USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/CryptoTickerParam'

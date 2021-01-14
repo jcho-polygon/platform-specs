@@ -1,0 +1,26 @@
+type: object
+properties:
+  ev:
+    enum:
+      - LULD
+    description: The level-up level-down event type.
+  T:
+    $ref: '../../index.yml#/StockSymbol'
+  h:
+    type: number
+    format: double
+    description: The high price.
+  l:
+    type: number
+    format: double
+    description: The low price.
+  i:
+    type: array
+    description: The Indicators.
+  z:
+    $ref: '../../index.yml#/StockTape'
+  t:
+    $ref: '../../index.yml#/Timestamp'
+  q:
+    type: integer
+    description: The sequence number.

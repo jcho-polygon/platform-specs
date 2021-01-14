@@ -1,0 +1,24 @@
+summary: Quotes
+description: |
+  Stream real-time forex quotes for a given forex pair.
+responses:
+  200:
+    description: The WebSocket message for a forex quote event.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/ForexQuoteEvent'
+        example:
+          ev: C
+          p: USD/CNH
+          x: '44'
+          a: 6.83366
+          b: 6.83363
+          t: 1536036818784
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/ForexQuoteSubscribeAction'
+  - $ref: '../../schemas/index.yml#/ForexQuoteUnsubscribeAction'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/NBBO'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Forex'

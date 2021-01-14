@@ -1,0 +1,27 @@
+summary: Quotes
+description: |
+  Stream real-time crypto quotes for a given crypto pair.
+responses:
+  200:
+    description: The WebSocket message for a crypto quote event.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/CryptoQuoteEvent'
+        example:
+          ev: XQ
+          pair: BTC-USD
+          bp: 33052.79
+          bs: 0.48
+          ap: 33073.19
+          as: 0.601
+          t: 1610462411115
+          x: 1
+          r: 1610462411128
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/CryptoQuoteSubscribeAction'
+  - $ref: '../../schemas/index.yml#/CryptoQuoteUnsubscribeAction'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/NBBO'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Crypto'

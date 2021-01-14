@@ -1,6 +1,6 @@
 SubscribeAction:
   allOf:
-    - $ref: '../../index.yml#/SubscribeAction'
+    - $ref: '../../index.yml#/StocksSubscribeAction'
     - properties:
         params:
           pattern: /^T\.(?<ticker>([a-zA-Z]+|\*))$/
@@ -10,7 +10,7 @@ SubscribeAction:
       example: '{"action":"subscribe","params":"T.LPL"}'
 UnsubscribeAction:
   allOf:
-    - $ref: '../../index.yml#/UnsubscribeAction'
+    - $ref: '../../index.yml#/StocksUnsubscribeAction'
     - properties:
         params:
           pattern: /^T\.(?<ticker>([a-zA-Z]+|\*))$/

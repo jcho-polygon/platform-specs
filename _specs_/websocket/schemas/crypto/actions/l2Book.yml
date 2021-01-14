@@ -1,0 +1,24 @@
+SubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/SubscribeAction'
+    - properties:
+        params:
+          pattern: /^XL2\.((?<from>([A-Z]*)-(?<to>[A-Z]{3}))|\*)$/
+          description: |
+            The crypto level 2 book events to subscribe to, in the format XL2.{from}-{to} to 
+            listen for crypto level 2 book events for a single crypto pair.
+      example: '{"action":"subscribe","params":"XL2.BTC-USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/CryptoTickerParam'
+UnsubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/UnsubscribeAction'
+    - properties:
+        params:
+          pattern: /^XL2\.((?<from>([A-Z]*)-(?<to>[A-Z]{3}))|\*)$/
+          description: |
+            The crypto level 2 book events to unsubscribe from, in the format XL2.{from}-{to} to stop 
+            listening for crypto level 2 book events for a specific crypto pair.
+      example: '{"action":"unsubscribe","params":"XL2.BTC-USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/CryptoTickerParam'

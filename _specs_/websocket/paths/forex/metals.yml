@@ -1,0 +1,24 @@
+summary: Metals Quotes
+description: |
+  Stream real-time metals quotes.
+responses:
+  200:
+    description: The WebSocket message for a metals quote event.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/ForexMetalEvent'
+        example:
+          ev: METALS
+          p: XAU/EUR
+          x: 60
+          b: 1518.809
+          a: 1519.366
+          t: 1610386364477
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/ForexMetalSubscribeAction'
+  - $ref: '../../schemas/index.yml#/ForexMetalUnsubscribeAction'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/NBBO'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Forex'

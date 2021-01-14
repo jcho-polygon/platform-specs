@@ -11,7 +11,7 @@ steps:
 - name: validate spec
   image: polygonio/swagger-cli
   commands:
-  - swagger-cli validate _specs_/api/index.yml
+  - swagger-cli validate _specs_/rest/index.yml
   - swagger-cli validate _specs_/websocket/index.yml
 
 trigger:
@@ -33,14 +33,24 @@ steps:
 - name: bundle spec
   image: polygonio/swagger-cli
   commands:
-  - swagger-cli bundle _specs_/api/index.yml --dereference --outfile _built_/spec.json --type json
+  - swagger-cli bundle _specs_/rest/index.yml --dereference --outfile _built_/rest.json --type json
+  - swagger-cli bundle _specs_/websocket/index.yml --dereference --outfile _built_/websocket.json --type json
 
-- name: upload spec
+- name: upload rest spec
   image: plugins/gcs
   settings:
     cache_control: no-cache
-    source: _built_/spec.json
-    target: polygon-io-public/docs/api_specs/platform/staging/spec.json
+    source: _built_/rest.json
+    target: polygon-io-public/docs/api_specs/platform/staging/rest.json
+    token:
+      from_secret: gcs_api_spec_editor_token
+
+- name: upload websocket spec
+  image: plugins/gcs
+  settings:
+    cache_control: no-cache
+    source: _built_/websocket.json
+    target: polygon-io-public/docs/api_specs/platform/staging/websocket.json
     token:
       from_secret: gcs_api_spec_editor_token
 
@@ -63,14 +73,24 @@ steps:
 - name: bundle spec
   image: polygonio/swagger-cli
   commands:
-  - swagger-cli bundle _specs_/api/index.yml --dereference --outfile _built_/spec.json --type json
+  - swagger-cli bundle _specs_/rest/index.yml --dereference --outfile _built_/rest.json --type json
+  - swagger-cli bundle _specs_/websocket/index.yml --dereference --outfile _built_/websocket.json --type json
 
-- name: upload spec
+- name: upload rest spec
   image: plugins/gcs
   settings:
     cache_control: no-cache
     source: _built_/spec.json
-    target: polygon-io-public/docs/api_specs/platform/prod/spec.json
+    target: polygon-io-public/docs/api_specs/platform/prod/rest.json
+    token:
+      from_secret: gcs_api_spec_editor_token
+
+- name: upload websocket spec
+  image: plugins/gcs
+  settings:
+    cache_control: no-cache
+    source: _built_/spec.json
+    target: polygon-io-public/docs/api_specs/platform/prod/websocket.json
     token:
       from_secret: gcs_api_spec_editor_token
 

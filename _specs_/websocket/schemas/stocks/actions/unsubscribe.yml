@@ -1,0 +1,4 @@
+allOf:
+  - $ref: '../../index.yml#/UnsubscribeAction'
+  - x-polygon-parameters:
+      $ref: '../../../parameters.yml#/StocksTickerParam'

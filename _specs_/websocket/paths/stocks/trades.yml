@@ -2,8 +2,8 @@ summary: Trades
 description: |
   Stream real-time trades for a given stock ticker symbol.
 responses:
-  default:
-    description: The WebSocket message for a quote event.
+  200:
+    description: The WebSocket message for a trade event.
     content:
       application/json:
         schema:

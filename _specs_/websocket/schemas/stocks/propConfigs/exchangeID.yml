@@ -1,0 +1,2 @@
+type: integer
+description: The exchange ID. See <a target="_blank" href="https://polygon.io/docs/get_v1_meta_exchanges_anchor" alt="Exchanges">Exchanges</a> for Polygon.io's mapping of exchange IDs.

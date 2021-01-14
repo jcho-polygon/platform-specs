@@ -1,0 +1,35 @@
+type: object
+properties:
+  ev:
+    type: string
+    enum:
+      - XT
+  pair:
+    $ref: '../../index.yml#/CryptoPair'
+  p:
+    type: number
+    format: double
+    description: The price.
+  t:
+    $ref: '../../index.yml#/Timestamp'
+  s:
+    type: number
+    format: double
+    description: The size.
+  c:
+    type: array
+    description: |
+      The conditions.
+      0 (or empty array): empty
+      1: sellside
+      2: buyside
+    items:
+      type: integer
+      description: The ID of the condition.
+  i:
+    type: integer
+    description: The ID of the trade (optional).
+  x:
+    $ref: '../../index.yml#/CryptoExchangeID'
+  r:
+    $ref: '../../index.yml#/CryptoReceivedTimestamp'

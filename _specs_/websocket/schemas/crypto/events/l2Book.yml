@@ -1,0 +1,32 @@
+type: object
+properties:
+  ev:
+    type: string
+    enum:
+      - XL2
+  pair:
+    $ref: '../../index.yml#/CryptoPair'
+  b:
+    type: array
+    description: An array of bid prices with a maximum depth of 100.
+    items:
+      type: array
+      description: An array where the first item is bid price and the second item is size.
+      items:
+        type: number
+        format: double
+  a:
+    type: array
+    description: An array of ask prices with a maximum depth of 100.
+    items:
+      type: array
+      description: An array where the first item is ask price and the second item is size.
+      items:
+        type: number
+        format: double
+  t:
+    $ref: '../../index.yml#/Timestamp'
+  x:
+    $ref: '../../index.yml#/CryptoExchangeID'
+  r:
+    $ref: '../../index.yml#/CryptoReceivedTimestamp'

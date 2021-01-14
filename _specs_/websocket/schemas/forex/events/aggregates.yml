@@ -1,0 +1,23 @@
+type: object
+properties:
+  ev:
+    type: string
+    enum:
+      - CA
+  pair:
+    type: string
+    description: The currency pair.
+  o:
+    $ref: '../../index.yml#/AggsOpen'
+  c:
+    $ref: '../../index.yml#/AggsClose'
+  h:
+    $ref: '../../index.yml#/AggsHigh'
+  l:
+    $ref: '../../index.yml#/AggsLow'
+  v:
+    $ref: '../../index.yml#/AggsVolume'
+  s:
+    $ref: '../../index.yml#/AggsStartTime'
+  e:
+    $ref: '../../index.yml#/AggsEndTime'

@@ -1,0 +1,7 @@
+allOf:
+  - $ref: '../../index.yml#/ForexBaseQuoteEvent'
+  - properties:
+      ev:
+        enum:
+          - BONDS
+        description: The Bonds quote event type.

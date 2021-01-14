@@ -1,0 +1,28 @@
+SubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/SubscribeAction'
+    - properties:
+        params:
+          pattern: /^COMMODITIES\.(((?<commoditiesTicker>(.*))\/(?<currency>(.*)))|\*)$/
+          description: |
+            The commodity events to subscribe to, in the format 
+            COMMODITIES.{commoditiesTicker}/{currency} to listen for events for a 
+            specific commodity, or COMMODITIES.* to listen 
+            for all commodity events.
+      example: '{"action":"subscribe","params":"COMMODITIES.SOYBN/USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/ForexCommoditiesTickerParam'
+UnsubscribeAction:
+  allOf:
+    - $ref: '../../index.yml#/UnsubscribeAction'
+    - properties:
+        params:
+          pattern: /^COMMODITIES\.(((?<commoditiesTicker>(.*))\/(?<currency>(.*)))|\*)$/
+          description: |
+            The commodity events to unsubscribe from, in the format 
+            COMMODITIES.{commoditiesTicker}/{currency} to stop listening for events 
+            for a specific commodity, or COMMODITIES.* to stop listening 
+            to all commodity events.
+      example: '{"action":"unsubscribe","params":"COMMODITIES.SOYBN/USD"}'
+      x-polygon-parameters:
+        $ref: '../../../parameters.yml#/ForexCommoditiesTickerParam'

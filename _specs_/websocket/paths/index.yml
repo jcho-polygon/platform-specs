@@ -8,3 +8,52 @@
 /stocks/Q:
   get:
     $ref: 'stocks/quotes.yml'
+/stocks/A:
+  get:
+    $ref: 'stocks/secondAggregates.yml'
+/stocks/AM:
+  get:
+    $ref: 'stocks/minuteAggregates.yml'
+/stocks/LULD:
+  get:
+    $ref: 'stocks/luld.yml'
+/stocks/NOI:
+  get:
+    $ref: 'stocks/imbalances.yml'
+
+# Forex
+/forex:
+  get:
+    $ref: 'forex/index.yml'
+/forex/C:
+  get:
+    $ref: 'forex/quotes.yml'
+/forex/CA:
+  get:
+    $ref: 'forex/aggregates.yml'
+/forex/BONDS:
+  get:
+    $ref: 'forex/bonds.yml'
+/forex/COMMODITIES:
+  get:
+    $ref: 'forex/commodities.yml'
+/forex/METALS:
+  get:
+    $ref: 'forex/metals.yml'
+
+# Crypto
+/crypto:
+  get:
+    $ref: 'crypto/index.yml'
+/crypto/XT:
+  get:
+    $ref: 'crypto/trades.yml'
+/crypto/XQ:
+  get:
+    $ref: 'crypto/quotes.yml'
+/crypto/XL2:
+  get:
+    $ref: 'crypto/l2Book.yml'
+/crypto/XA:
+  get:
+    $ref: 'crypto/aggregates.yml'

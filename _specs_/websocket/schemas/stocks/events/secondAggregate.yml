@@ -1,0 +1,6 @@
+allOf:
+  - $ref: '../../index.yml#/StockBaseAggregateEvent'
+  - properties:
+      ev:
+        enum:
+          - A

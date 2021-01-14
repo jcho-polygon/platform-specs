@@ -1,0 +1,27 @@
+summary: Trades
+description: |
+  Stream real-time crypto trades for a given crypto pair.
+responses:
+  200:
+    description: The WebSocket message for a crypto trade event.
+    content:
+      application/json:
+        schema:
+          $ref: '../../schemas/index.yml#/CryptoTradeEvent'
+        example:
+          ev: XT
+          pair: BTC-USD
+          p: 33021.9
+          t: 1610462007425
+          s: 0.01616617
+          c: [2]
+          i: 14272084
+          x: 3
+          r: 1610462007576
+x-polygon-actions:
+  - $ref: '../../schemas/index.yml#/CryptoTradeSubscribeAction'
+  - $ref: '../../schemas/index.yml#/CryptoTradeUnsubscribeAction'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Trades'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Crypto'
