@@ -21,6 +21,6 @@ x-polygon-actions:
   - $ref: '../../schemas/index.yml#/StockLULDSubscribeAction'
   - $ref: '../../schemas/index.yml#/StockLULDUnsubscribeAction'
 x-polygon-entitlement-data-type:
-  $ref: '../../schemas/common/entitlementDataTypes.yml#/Trades'
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/LULD'
 x-polygon-entitlement-market-type:
   $ref: '../../schemas/common/entitlementMarketTypes.yml#/Stocks'

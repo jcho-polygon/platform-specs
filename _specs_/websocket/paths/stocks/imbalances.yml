@@ -23,6 +23,6 @@ x-polygon-actions:
   - $ref: '../../schemas/index.yml#/StockImbalanceSubscribeAction'
   - $ref: '../../schemas/index.yml#/StockImbalanceUnsubscribeAction'
 x-polygon-entitlement-data-type:
-  $ref: '../../schemas/common/entitlementDataTypes.yml#/Trades'
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Imbalances'
 x-polygon-entitlement-market-type:
   $ref: '../../schemas/common/entitlementMarketTypes.yml#/Stocks'
