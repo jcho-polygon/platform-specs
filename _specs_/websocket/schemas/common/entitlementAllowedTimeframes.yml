@@ -4,3 +4,6 @@ RealTime:
 Delayed:
   name: delayed
   description: 15 minute delayed data
+EOD:
+  name: EOD
+  description: End of day data
