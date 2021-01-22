@@ -17,7 +17,7 @@ properties:
   vw:
     type: number
     format: float
-    description: Volume Weighted Average Price (VWAP)
+    description: Today's volume weighted average price.
   o:
     type: number
     format: double
@@ -37,7 +37,7 @@ properties:
   a:
     type: number
     format: float
-    description: The tick average/VWAP price.
+    description: The tick's volume weighted average price.
   z:
     type: integer
     description: The average trade size for this aggregate window.
