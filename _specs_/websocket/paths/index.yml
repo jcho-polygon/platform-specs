@@ -31,15 +31,6 @@
 /forex/CA:
   get:
     $ref: 'forex/aggregates.yml'
-/forex/BONDS:
-  get:
-    $ref: 'forex/bonds.yml'
-/forex/COMMODITIES:
-  get:
-    $ref: 'forex/commodities.yml'
-/forex/METALS:
-  get:
-    $ref: 'forex/metals.yml'
 
 # Crypto
 /crypto:

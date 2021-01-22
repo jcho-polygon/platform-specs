@@ -1,7 +1,0 @@
-allOf:
-  - $ref: '../../index.yml#/ForexBaseQuoteEvent'
-  - properties:
-      ev:
-        enum:
-          - COMMODITIES
-        description: The Commodities quote event type.

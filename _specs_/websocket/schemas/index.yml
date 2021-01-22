@@ -101,18 +101,6 @@ ForexAggregateSubscribeAction:
   $ref: 'forex/actions/aggregates.yml#/SubscribeAction'
 ForexAggregateUnsubscribeAction:
   $ref: 'forex/actions/aggregates.yml#/UnsubscribeAction'
-ForexBondSubscribeAction:
-  $ref: 'forex/actions/bonds.yml#/SubscribeAction'
-ForexBondUnsubscribeAction:
-  $ref: 'forex/actions/bonds.yml#/UnsubscribeAction'
-ForexCommoditySubscribeAction:
-  $ref: 'forex/actions/commodities.yml#/SubscribeAction'
-ForexCommodityUnsubscribeAction:
-  $ref: 'forex/actions/commodities.yml#/UnsubscribeAction'
-ForexMetalSubscribeAction:
-  $ref: 'forex/actions/metals.yml#/SubscribeAction'
-ForexMetalUnsubscribeAction:
-  $ref: 'forex/actions/metals.yml#/UnsubscribeAction'
 
 # Forex Events
 ForexBaseQuoteEvent:
@@ -121,12 +109,6 @@ ForexQuoteEvent:
   $ref: 'forex/events/quotes.yml'
 ForexAggregateEvent:
   $ref: 'forex/events/aggregates.yml'
-ForexBondEvent:
-  $ref: 'forex/events/bonds.yml'
-ForexCommodityEvent:
-  $ref: 'forex/events/commodities.yml'
-ForexMetalEvent:
-  $ref: 'forex/events/metals.yml'
 
 # Crypto Actions
 CryptoQuoteSubscribeAction:

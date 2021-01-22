@@ -1,7 +1,0 @@
-allOf:
-  - $ref: '../../index.yml#/ForexBaseQuoteEvent'
-  - properties:
-      ev:
-        enum:
-          - METALS
-        description: The Metals quote event type.
