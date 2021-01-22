@@ -21,7 +21,7 @@ properties:
             description: The condition code. These are the conditions of this message.  See <a href="https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor" alt="Condition Mappings">Condition Mappings</a> for a mapping to exchange conditions.
         i:
           type: array
-          description: The indicators.  For more information, see our glossary of <a href="https://polygon.io/glossary/us/stocks/trade-conditions" alt="Conditions and Indicators Glossary" target="_blank">Conditions and Indicators</a>.
+          description: The indicators.  For more information, see our glossary of <a href="https://polygon.io/glossary/us/stocks/conditions-indicators" alt="Conditions and Indicators Glossary" target="_blank">Conditions and Indicators</a>.
           items:
             type: integer
             description: The indicator code.
