@@ -201,6 +201,8 @@ ForexPreviousClose:
 # Crypto
 CryptoExchange:
  $ref: 'crypto/cryptoExchange.yml'
+CryptoTradeExchange:
+ $ref: 'crypto/cryptoTradeExchange.yml'
 CryptoHistoricTrades:
  $ref: 'crypto/cryptoHistoricTrades.yml'
 CryptoLastTrade:

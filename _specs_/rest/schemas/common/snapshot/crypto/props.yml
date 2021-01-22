@@ -1,7 +1,11 @@
 day:
   $ref: '../../../index.yml#/SnapshotOHLCVVW'
 lastTrade:
-  $ref: '../../../index.yml#/SnapshotLastTrade'
+  allOf:
+    - $ref: '../../../index.yml#/SnapshotLastTrade'
+    - properties:
+        x:
+          $ref: '../../../index.yml#/CryptoTradeExchange'
 min:
   description: The last available minute bar.
   $ref: '../../../index.yml#/CryptoSnapshotMinute'

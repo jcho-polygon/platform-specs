@@ -1,0 +1,4 @@
+type: integer
+description: |
+  The exchange that this crypto trade happened on.  
+  See <a href="https://polygon.io/docs/get_v1_meta_crypto-exchanges_anchor">Crypto Exchanges</a> for a mapping of exchanges to IDs.

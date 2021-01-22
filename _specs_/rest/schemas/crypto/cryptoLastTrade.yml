@@ -6,7 +6,7 @@ properties:
       conditions:
         $ref: '../index.yml#/Conditions'
       exchange:
-        $ref: '../index.yml#/TradeExchange'
+        $ref: '../index.yml#/CryptoTradeExchange'
       price:
         $ref: '../index.yml#/Price'
       size:

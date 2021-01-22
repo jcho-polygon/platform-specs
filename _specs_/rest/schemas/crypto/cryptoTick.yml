@@ -5,7 +5,7 @@ properties:
   s:
     $ref: '../index.yml#/Size'
   x:
-    $ref: '../index.yml#/TradeExchange'
+    $ref: '../index.yml#/CryptoTradeExchange'
   c:
     $ref: '../index.yml#/Conditions'
   t:
