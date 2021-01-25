@@ -80,7 +80,7 @@ steps:
   image: plugins/gcs
   settings:
     cache_control: no-cache
-    source: _built_/spec.json
+    source: _built_/rest.json
     target: polygon-io-public/docs/api_specs/platform/prod/rest.json
     token:
       from_secret: gcs_api_spec_editor_token
@@ -89,7 +89,7 @@ steps:
   image: plugins/gcs
   settings:
     cache_control: no-cache
-    source: _built_/spec.json
+    source: _built_/websocket.json
     target: polygon-io-public/docs/api_specs/platform/prod/websocket.json
     token:
       from_secret: gcs_api_spec_editor_token
