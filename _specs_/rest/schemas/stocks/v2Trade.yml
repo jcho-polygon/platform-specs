@@ -32,6 +32,7 @@ properties:
           $ref: '../index.yml#/TimestampTRF'
         q:
           type: integer
+          format: int64
           description: |
             The sequence number representing the sequence in which trade events happened. These are increasing and unique per ticker symbol, but will not always be sequential (e.g., 1, 2, 6, 9, 10, 11).
         c:
