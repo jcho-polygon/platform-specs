@@ -3,7 +3,7 @@ properties:
   ev:
     enum:
       - Q
-    description: The quote event type.
+    description: The event type.
   sym:
     $ref: '../../index.yml#/StockSymbol'
   bx:

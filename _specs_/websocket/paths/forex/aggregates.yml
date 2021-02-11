@@ -10,7 +10,7 @@ responses:
           $ref: '../../schemas/index.yml#/ForexAggregateEvent'
         example:
           ev: CA
-          p: USD/EUR
+          pair: USD/EUR
           o: 0.8687
           c: 0.86889
           h: 0.86889

@@ -10,7 +10,7 @@ responses:
           $ref: '../../schemas/index.yml#/CryptoAggregateEvent'
         example:
           ev: XA
-          p: BCD-USD
+          pair: BCD-USD
           v: 951.6112
           vw: 0.7756
           z: 73.33

@@ -1,7 +1,7 @@
 type: object
 properties:
   ev:
-    description: The aggregate event type.
+    description: The event type.
   sym:
     $ref: '../../index.yml#/StockSymbol'
   v:

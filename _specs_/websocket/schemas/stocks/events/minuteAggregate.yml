@@ -4,3 +4,4 @@ allOf:
       ev:
         enum:
           - AM
+        description: The event type.

@@ -3,7 +3,7 @@ properties:
   ev:
     enum:
       - T
-    description: The trade event type.
+    description: The event type.
   sym:
     $ref: '../../index.yml#/StockSymbol'
   x:
@@ -23,5 +23,8 @@ properties:
   c:
     type: array
     description: The trade conditions
+    items:
+      type: integer
+      description: The ID of the condition.
   t:
     $ref: '../../index.yml#/Timestamp'

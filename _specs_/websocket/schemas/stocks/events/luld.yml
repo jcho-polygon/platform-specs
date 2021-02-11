@@ -3,7 +3,7 @@ properties:
   ev:
     enum:
       - LULD
-    description: The level-up level-down event type.
+    description: The event type.
   T:
     $ref: '../../index.yml#/StockSymbol'
   h:

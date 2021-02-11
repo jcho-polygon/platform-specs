@@ -3,7 +3,7 @@ properties:
   ev:
     enum:
       - NOI
-    description: The imbalance event type.
+    description: The event type.
   T:
     $ref: '../../index.yml#/StockSymbol'
   t:

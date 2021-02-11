@@ -4,4 +4,4 @@ allOf:
       ev:
         enum:
           - C
-        description: The Currency/Forex quote event type.
+        description: The event type.

@@ -4,6 +4,7 @@ properties:
     type: string
     enum:
       - CA
+    description: The event type.
   pair:
     type: string
     description: The currency pair.

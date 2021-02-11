@@ -4,6 +4,7 @@ properties:
     type: string
     enum:
       - XA
+    description: The event type.
   pair:
     $ref: '../../index.yml#/CryptoPair'
   o:
