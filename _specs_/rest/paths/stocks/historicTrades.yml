@@ -98,7 +98,7 @@ responses:
               type: int64
             q:
               name: sequence_number
-              type: int
+              type: int64
             c:
               name: conditions
               type: int
