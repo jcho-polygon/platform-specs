@@ -128,5 +128,4 @@ responses:
 x-polygon-entitlement-data-type:
   $ref: '../../schemas/common/entitlementDataTypes.yml#/Reference'
 x-polygon-experimental:
-    date: 1617181200000
     newAPI: 'get_v2_reference_tickers_anchor'
