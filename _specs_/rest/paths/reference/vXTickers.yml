@@ -10,7 +10,6 @@ parameters:
     required: false
     schema:
       type: string
-    example: AAPL
   - name: type
     in: query
     description: |
@@ -19,7 +18,6 @@ parameters:
     required: false
     schema:
       type: string
-    example: CS
   - name: exchange
     in: query
     description: |
@@ -28,7 +26,6 @@ parameters:
     required: false
     schema:
       type: string
-    example: XNAS
   - name: cusip
     in: query
     description: |
@@ -37,7 +34,6 @@ parameters:
     required: false
     schema:
       type: string
-    example: "000000000"
   - name: date
     in: query
     description: |
