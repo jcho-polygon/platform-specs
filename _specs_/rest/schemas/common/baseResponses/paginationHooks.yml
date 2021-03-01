@@ -1,0 +1,5 @@
+type: object
+properties:
+  next_page_path:
+    type: string
+    description: If present, this value can be used to fetch the next page of data by appending this to the API url host.

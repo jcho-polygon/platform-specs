@@ -1,0 +1,136 @@
+summary: Tickers vX
+description: | 
+  Query all ticker symbols which are supported by Polygon.io. This API currently includes Stocks/Equities.
+parameters: 
+  - name: ticker
+    in: query
+    description: |
+      Specify a ticker symbol.
+      Defaults to empty string which queries all tickers.
+    required: false
+    schema:
+      type: string
+    example: AAPL
+  - name: type
+    in: query
+    description: |
+      Specify the type of the tickers. Find the types that we support via our [Ticker Types API](https://polygon.io/docs/get_v2_reference_types_anchor).
+      Defaults to empty string which queries all types.
+    required: false
+    schema:
+      type: string
+    example: CS
+  - name: exchange
+    in: query
+    description: |
+      Specify the primary exchange of the asset in the ISO code format. Find more information about the ISO codes [at the ISO org website](https://www.iso20022.org/market-identifier-codes).
+      Defaults to empty string which queries all exchanges.
+    required: false
+    schema:
+      type: string
+    example: XNAS
+  - name: cusip
+    in: query
+    description: |
+      Specify the CUSIP code of the asset you want to search for. Find more information about CUSIP codes [at their website](https://www.cusip.com/identifiers.html#/CUSIP).
+      Defaults to empty string which queries all CUSIPs.
+    required: false
+    schema:
+      type: string
+    example: "000000000"
+  - name: date
+    in: query
+    description: |
+      Specify a point in time to retrieve tickers available on that date.
+      Defaults to the most recent available date.
+    required: false
+    schema:
+      oneOf:
+        - type: string
+          format: date-time
+        - type: string
+          format: date
+    examples:
+      date:
+        summary: Date string format
+        value: "2006-01-02"
+      date-time:
+        summary: Date-time string format
+        value: "2006-01-02T15:04:05Z07:00"
+  - name: active
+    in: query
+    description: |
+      Specify if the tickers returned should be actively traded on the queried date. Default is true.
+    required: false
+    schema:
+      type: boolean
+    example: true
+  - name: sort
+    in: query
+    description: |
+      The field to sort the results on. Default is ticker.
+    required: false
+    schema:
+      type: string
+    example: ticker
+  - name: order
+    in: query
+    description: |
+      The order to sort the results on. Default is asc (ascending).
+    required: false
+    schema:
+      type: string
+      enum:
+        - asc
+        - desc
+    example: asc
+  - name: limit
+    in: query
+    description: Limit the size of the response, default is 100 and max is 500.
+    required: false
+    schema:
+      type: integer
+    example: 10
+tags:
+  - Reference
+responses:
+  200:
+    description: |
+      An array of tickers that match your query.
+
+      Note: Although you can query by CUSIP, for legal reasons we are not allowed to return the CUSIP
+      in the response body.
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: '../../schemas/index.yml#/vXTickers'
+            - $ref: '../../schemas/index.yml#/PaginationHooksBase'
+        example:
+          {
+            "results": [
+              {
+                "ticker": "AAPL",
+                "name": "APPLE COMPUTER INC",
+                "market": "stocks",
+                "locale": "us",
+                "active": true,
+                "date_utc": "2005-01-02T00:00:00Z",
+                "currency_name": "usd",
+                "cik": "0000320193",
+                "composite_figi": "BBG000B9XRY4",
+                "share_class_figi": "BBG001S5N8V8",
+                "last_updated_utc": "2004-12-31T00:00:00Z"
+              }
+            ],
+            "status": "OK",
+            "request_id": "986c0d94-03d7-4a47-a9f0-4866fa22161f",
+            "count": 1
+          }
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Reference'
+x-polygon-experimental:
+    date: 1617181200000
+    newAPI: 'get_v2_reference_tickers_anchor'

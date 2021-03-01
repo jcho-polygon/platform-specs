@@ -2,6 +2,9 @@
 /v2/reference/tickers:
   get:
     $ref: 'reference/tickers.yml'
+/vX/reference/tickers:
+  get:
+    $ref: 'reference/vXTickers.yml'
 /v2/reference/types:
   get:
     $ref: 'reference/tickerTypes.yml'
