@@ -111,7 +111,6 @@ responses:
                 "market": "stocks",
                 "locale": "us",
                 "active": true,
-                "date_utc": "2005-01-02T00:00:00Z",
                 "currency_name": "usd",
                 "cik": "0000320193",
                 "composite_figi": "BBG000B9XRY4",
