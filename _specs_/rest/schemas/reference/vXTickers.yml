@@ -1,46 +1,54 @@
 type: object
 required: [ ticker ]
 properties:
-  ticker:
-    $ref: '../index.yml#/StockSymbol'
-  name:
-    type: string
-    description: The name of the asset.
-  market:
-    type: string
-    description: The market type of the asset.
-    enum:
-      - stocks
-  locale:
-    type: string
-    description: The locale of the asset.
-    enum:
-      - us
-  primary_exchange:
-    type: string
-    description: The ISO code of the primary listing exchange for this asset.
-  type:
-    type: string
-    description: The type of the asset. Find the types that we support via our [Ticker Types API](https://polygon.io/docs/get_v2_reference_types_anchor).
-  active:
-    type: boolean
-    description: Whether or not the asset is actively traded. False means the asset has been delisted.
-  currency_name:
-    type: string
-    description: The name of the currency that this asset is traded with.
-  cik:
-    type: string
-    description: The CIK number for this ticker. Find more information [here](https://en.wikipedia.org/wiki/Central_Index_Key).
-  composite_figi:
-    type: string
-    description: The composite OpenFIGI number for this ticker. Find more information [here](https://www.openfigi.com/)
-  share_class_figi:
-    type: string
-    description: The share Class OpenFIGI number for this ticker. Find more information [here](https://www.openfigi.com/)
-  last_updated_utc:
-    type: integer
-    description: The last time this asset record was updated.
-  delisted_utc:
-    type: string
-    format: date-time
-    description: The last date that the asset was traded.
+  results:
+    type: array
+    description: |
+      An array of tickers that match your query.
+
+      Note: Although you can query by CUSIP, for legal reasons we are not allowed to return the CUSIP
+      in the response body.
+    properties:
+      ticker:
+        $ref: '../index.yml#/StockSymbol'
+      name:
+        type: string
+        description: The name of the asset.
+      market:
+        type: string
+        description: The market type of the asset.
+        enum:
+          - stocks
+      locale:
+        type: string
+        description: The locale of the asset.
+        enum:
+          - us
+      primary_exchange:
+        type: string
+        description: The ISO code of the primary listing exchange for this asset.
+      type:
+        type: string
+        description: The type of the asset. Find the types that we support via our [Ticker Types API](https://polygon.io/docs/get_v2_reference_types_anchor).
+      active:
+        type: boolean
+        description: Whether or not the asset is actively traded. False means the asset has been delisted.
+      currency_name:
+        type: string
+        description: The name of the currency that this asset is traded with.
+      cik:
+        type: string
+        description: The CIK number for this ticker. Find more information [here](https://en.wikipedia.org/wiki/Central_Index_Key).
+      composite_figi:
+        type: string
+        description: The composite OpenFIGI number for this ticker. Find more information [here](https://www.openfigi.com/)
+      share_class_figi:
+        type: string
+        description: The share Class OpenFIGI number for this ticker. Find more information [here](https://www.openfigi.com/)
+      last_updated_utc:
+        type: integer
+        description: The last time this asset record was updated.
+      delisted_utc:
+        type: string
+        format: date-time
+        description: The last date that the asset was traded.

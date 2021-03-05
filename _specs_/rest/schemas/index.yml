@@ -7,8 +7,12 @@ StatusCountBase:
   $ref: 'common/baseResponses/statusCountBase.yml'
 RequestIdBase:
   $ref: 'common/baseResponses/requestIdBase.yml'
+StandardBase:
+ allOf:
+   - $ref: 'common/baseResponses/requestIdBase.yml'
+   - $ref: 'common/baseResponses/statusCountBase.yml'
 PaginationHooksBase:
- $ref: 'common/baseResponses/paginationHooks.yml'
+  $ref: 'common/baseResponses/paginationHooks.yml'
 V1LastBase:
   $ref: 'common/baseResponses/v1LastBase.yml'
 V2TicksBase:
