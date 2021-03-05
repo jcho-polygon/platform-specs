@@ -21,7 +21,7 @@ parameters:
   - name: market
     in: query
     description: |
-      Specify a market type.
+      Filter by market type. By default all markets are included.
     required: false
     schema:
       type: string
@@ -43,8 +43,7 @@ parameters:
       Specify the CUSIP code of the asset you want to search for. Find more information about CUSIP codes [at their website](https://www.cusip.com/identifiers.html#/CUSIP).
       Defaults to empty string which queries all CUSIPs.
 
-      Note: Although you can query by CUSIP, for legal reasons we are not allowed to return the CUSIP
-      in the response body.
+      Note: Although you can query by CUSIP, due to legal reasons we do not return the CUSIP in the response.
     required: false
     schema:
       type: string
