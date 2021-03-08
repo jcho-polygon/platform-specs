@@ -114,16 +114,18 @@ responses:
                 "name": "APPLE COMPUTER INC",
                 "market": "stocks",
                 "locale": "us",
+                "primary_exchange": "XNAS",
+                "type": "CS",
                 "active": true,
                 "currency_name": "usd",
                 "cik": "0000320193",
                 "composite_figi": "BBG000B9XRY4",
                 "share_class_figi": "BBG001S5N8V8",
-                "last_updated_utc": "2004-12-31T00:00:00Z"
+                "last_updated_utc": "2019-01-25T00:00:00.000Z"
               }
             ],
             "status": "OK",
-            "request_id": "986c0d94-03d7-4a47-a9f0-4866fa22161f",
+            "request_id": "80b8c50f9de25d05168db79b5723341e",
             "count": 1
           }
   401:
