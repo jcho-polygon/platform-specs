@@ -18,7 +18,8 @@ responses:
           ap: 114.128
           as: 160
           c: 0
-          t: 1536036818784
+          t: 1536036818784 
+          z: 3
 x-polygon-actions:
   - $ref: '../../schemas/index.yml#/StockQuoteSubscribeAction'
   - $ref: '../../schemas/index.yml#/StockQuoteUnsubscribeAction'

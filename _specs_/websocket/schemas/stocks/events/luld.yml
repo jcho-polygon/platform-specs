@@ -17,6 +17,8 @@ properties:
   i:
     type: array
     description: The Indicators.
+    items:
+      type: integer
   z:
     $ref: '../../index.yml#/StockTape'
   t:

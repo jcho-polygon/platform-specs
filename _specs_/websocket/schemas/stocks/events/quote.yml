@@ -15,7 +15,7 @@ properties:
     description: The bid price.
   bs:
     type: integer
-    description: The bid size.
+    description: The bid size. This represents the number of round lot orders at the given bid price. The normal round lot size is 100 shares. A bid size of 2 means there are 200 shares for purchase at the given bid price.
   ax:
     type: integer
     description: The ask exchange ID.
@@ -25,9 +25,12 @@ properties:
     description: The ask price.
   as:
     type: integer
-    description: The ask size.
+    description: The ask size. This represents the number of round lot orders at the given ask price. The normal round lot size is 100 shares. An ask size of 2 means there are 200 shares available to purchase at the given ask price.
   c:
     type: integer
     description: The condition.
   t:
     $ref: '../../index.yml#/Timestamp'
+  z: 
+    type: integer
+    description: The tape. (1 = NYSE, 2 = AMEX, 3 = Nasdaq).
