@@ -1,0 +1,62 @@
+type: object
+properties:
+  results:
+    type: object
+    description: |
+      Ticker with details.
+    properties:
+      ticker:
+        $ref: '../index.yml#/StockSymbol'
+      name:
+        type: string
+        description: |
+          The name of the asset. For stocks/equities this will be the companies registered name. For crypto/fx this will be the name of the currency or coin pair.
+      market:
+        type: string
+        description: The market type of the asset.
+        enum:
+          - stocks
+          - crypto
+          - fx
+      locale:
+        type: string
+        description: The locale of the asset.
+        enum:
+          - us
+          - global
+      primary_exchange:
+        type: string
+        description: The ISO code of the primary listing exchange for this asset.
+      type:
+        type: string
+        description: The type of the asset. Find the types that we support via our [Ticker Types API](https://polygon.io/docs/get_v2_reference_types_anchor).
+      active:
+        type: boolean
+        description: Whether or not the asset is actively traded. False means the asset has been delisted.
+      currency_name:
+        type: string
+        description: The name of the currency that this asset is traded with.
+      cik:
+        type: string
+        description: The CIK number for this ticker. Find more information [here](https://en.wikipedia.org/wiki/Central_Index_Key).
+      composite_figi:
+        type: string
+        description: The composite OpenFIGI number for this ticker. Find more information [here](https://www.openfigi.com/assets/content/Open_Symbology_Fields-2a61f8aa4d.pdf)
+      share_class_figi:
+        type: string
+        description: The share Class OpenFIGI number for this ticker. Find more information [here](https://www.openfigi.com/assets/content/Open_Symbology_Fields-2a61f8aa4d.pdf)
+      last_updated_utc:
+        type: integer
+        description: The last time this asset record was updated.
+      delisted_utc:
+        type: string
+        format: date-time
+        description: The last date that the asset was traded.
+      outstanding_shares:
+        type: number
+        format: double
+        description: The recorded number of outstanding shares.
+      market_cap:
+        type: number
+        format: double
+        description: The most recent close price of the ticker multiplied by outstanding shares.

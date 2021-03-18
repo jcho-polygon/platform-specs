@@ -1,4 +1,4 @@
-summary: Tickers vX
+summary: List Tickers vX
 description: | 
   Query all ticker symbols which are supported by Polygon.io. This API currently includes Stocks/Equities, Crypto, and Forex.
 parameters: 

@@ -4,7 +4,10 @@
     $ref: 'reference/tickers.yml'
 /vX/reference/tickers:
   get:
-    $ref: 'reference/vXTickers.yml'
+    $ref: 'reference/vXListTickers.yml'
+/vX/reference/tickers/{ticker}:
+  get:
+    $ref: 'reference/vXGetTicker.yml'
 /v2/reference/types:
   get:
     $ref: 'reference/tickerTypes.yml'

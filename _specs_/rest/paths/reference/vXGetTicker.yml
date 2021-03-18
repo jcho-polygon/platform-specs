@@ -1,0 +1,58 @@
+summary: Get Tickers vX
+description: |
+  Get a single ticker supported by Polygon.io. This ticker will have detailed information, currently only market cap and outstanding shares.
+parameters:
+  - $ref: '../../parameters.yml#/GeneralTickerPathParam'
+  - name: date
+    in: query
+    description: |
+      Specify a point in time to retrieve tickers available on that date.
+      Defaults to the most recent available date.
+    required: false
+    schema:
+      oneOf:
+        - type: string
+          format: date-time
+        - type: string
+          format: date
+tags:
+  - Reference
+responses:
+  200:
+    description: Reference Tickers.
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: '../../schemas/index.yml#/vXTickerDetails'
+            - $ref: '../../schemas/index.yml#/RequestIdBase'
+            - $ref: '../../schemas/index.yml#/StatusCountBase'
+        example:
+          {
+            "results": {
+              "ticker": "AAPL",
+              "name": "Apple Inc.",
+              "market": "stocks",
+              "locale": "us",
+              "primary_exchange": "XNAS",
+              "type": "CS",
+              "active": true,
+              "currency_name": "usd",
+              "cik": "0000320193",
+              "composite_figi": "BBG000B9XRY4",
+              "share_class_figi": "BBG001S5N8V8",
+              "last_updated_utc": "2021-03-16T00:00:00Z",
+              "outstanding_shares": 16788099999,
+              "market_cap": 2039418387878.52
+            },
+            "status": "OK",
+            "request_id": "d238ef4c-3ea3-46f5-9398-b0d8faf86307",
+            "count": 1
+          }
+
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Reference'
+x-polygon-experimental:
+    newAPI: 'get_v1_meta_symbols__stocksTicker__company_anchor'
