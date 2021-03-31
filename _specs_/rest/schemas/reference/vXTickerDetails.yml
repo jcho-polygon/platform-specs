@@ -60,3 +60,24 @@ properties:
         type: number
         format: double
         description: The most recent close price of the ticker multiplied by outstanding shares.
+      phone_number:
+        type: string
+        description: The phone number for the company behind this ticker.
+      address:
+        type: object
+        properties:
+          address1:
+            type: string
+            description: The first line of the company's headquarters address.
+          city:
+            type: string
+            description: The city of the company's headquarters address.
+          state:
+            type: string
+            description: The state of the company's headquarters address.
+      sic_code:
+        type: string
+        description: The standard industrial classification code for this ticker
+      sic_description:
+        type: string
+        description: A description of this ticker's SIC code.
