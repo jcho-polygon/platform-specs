@@ -5,15 +5,15 @@
 /vX/reference/tickers:
   get:
     $ref: 'reference/vXListTickers.yml'
-/vX/reference/tickers/{ticker}:
-  get:
-    $ref: 'reference/vXGetTicker.yml'
 /v2/reference/types:
   get:
     $ref: 'reference/tickerTypes.yml'
 /v1/meta/symbols/{stocksTicker}/company:
   get:
     $ref: 'reference/tickerDetails.yml'
+/vX/reference/tickers/{ticker}:
+  get:
+    $ref: 'reference/vXGetTicker.yml'
 /v1/meta/symbols/{stocksTicker}/news:
   get:
     $ref: 'reference/tickerNews.yml'

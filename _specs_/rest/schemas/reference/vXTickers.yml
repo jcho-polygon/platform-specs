@@ -50,7 +50,8 @@ properties:
           type: string
           description: The share Class OpenFIGI number for this ticker. Find more information [here](https://www.openfigi.com/assets/content/Open_Symbology_Fields-2a61f8aa4d.pdf)
         last_updated_utc:
-          type: integer
+          type: string
+          format: date-time
           description: The last time this asset record was updated.
         delisted_utc:
           type: string
