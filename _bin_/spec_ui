@@ -2,15 +2,12 @@
 
 set -eou pipefail
 
-main() {
-	(
-		cd $(git rev-parse --show-toplevel)
-		docker run --rm \
-			-p 8080:8080 \
-			-e SWAGGER_JSON="/spec/rest.json" \
-			-v $(pwd)/_built_:/spec \
-			swaggerapi/swagger-ui
-	)
-}
-
-main
+(
+  cd $(git rev-parse --show-toplevel)
+  docker run \
+    -p 8080:8080 \
+    -e SWAGGER_JSON=/spec/spec.yml \
+    -v $(pwd)/_built_:/spec \
+    -v $(pwd)/spec:/usr/share/nginx/html/spec \
+    swaggerapi/swagger-ui
+)

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -eou pipefail
+
+pkgs=(store)
+
+cp -r mocks mocks.bk
+for pkg in "${pkgs[@]}"; do
+  mockery -dir ${pkg} -all
+done
+
+failed=$(diff mocks mocks.bk) || echo "Run \`mockery -dir ${pkgs} -all\` and update HEAD"
+
+# restore mocks code
+git checkout mocks
+rm -rf mocks.bk/
+
+if [[ "$(echo -n "${failed}" | wc -l)" -ne "0" ]];then
+  exit 1
+fi
