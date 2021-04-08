@@ -133,4 +133,6 @@ responses:
 x-polygon-entitlement-data-type:
   $ref: '../../schemas/common/entitlementDataTypes.yml#/Reference'
 x-polygon-experimental:
-    newAPI: 'get_v2_reference_tickers_anchor'
+  replaces: 
+    path: 'get_v2_reference_tickers_anchor'
+    name: 'Tickers'
