@@ -78,7 +78,8 @@ properties:
             description: The state of the company's headquarters address.
       sic_code:
         type: string
-        description: The standard industrial classification code for this ticker
+        description: |
+          The standard industrial classification code for this ticker.  For a list of SIC Codes, see the SEC's <a rel="nofollow" target="_blank" href="https://www.sec.gov/info/edgar/siccodes.htm">SIC Code List</a>.
       sic_description:
         type: string
         description: A description of this ticker's SIC code.
