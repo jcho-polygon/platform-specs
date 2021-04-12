@@ -88,7 +88,12 @@ parameters:
     example: asc
   - name: limit
     in: query
-    description: Limit the size of the response, default is 100 and max is 500.
+    description: |
+      Limit the size of the response, default is 100 and max is 500.
+
+      If your query returns more than the max limit and you want to retrieve the next page of results,
+      see the `next_page_path` response attribute.
+
     required: false
     schema:
       type: integer
@@ -126,7 +131,8 @@ responses:
             ],
             "status": "OK",
             "request_id": "80b8c50f9de25d05168db79b5723341e",
-            "count": 1
+            "count": 1,
+            "next_page_path": "/vX/reference/tickers?active=true&apiKey=*******&date=2021-04-06&limit=1&order=asc&page_marker=AAPL%7C6ec768e0068819a88ae4282b7bf2fbadab7717e0b3a916e1ba61ac63cc1a8972&search=apple&sort=ticker"
           }
   401:
     $ref: '../../responses.yml#/Unauthorized'
