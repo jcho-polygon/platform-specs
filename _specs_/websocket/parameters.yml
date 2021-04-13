@@ -2,7 +2,7 @@ StocksTickerParam:
   name: ticker
   in: query
   description: |
-    Specify a ticker symbol or use * to retreive all tickers.
+    Specify a ticker symbol or use * to retrieve all tickers.
     You can also use a comma separated list to retrieve multiple tickers.
   required: true
   schema:
@@ -14,7 +14,7 @@ ForexTickerParam:
   in: query
   description: |
     Specify a forex pair in the format {from}/{to} or use *
-    to retreive all forex pairs.  You can also use a comma 
+    to retrieve all forex pairs.  You can also use a comma 
     separated list to retrieve multiple tickers.
   required: true
   schema:
@@ -25,7 +25,7 @@ CryptoTickerParam:
   in: query
   description: |
     Specify a crypto pair in the format {from}-{to} or use *
-    to retreive all crypto pairs.  You can also use a comma 
+    to retrieve all crypto pairs.  You can also use a comma 
     separated list to retrieve multiple tickers.
   required: true
   schema:
