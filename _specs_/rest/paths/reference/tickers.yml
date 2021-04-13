@@ -126,9 +126,9 @@ responses:
               primaryExch: FX
               updated: 2019-01-25
               attrs:
-                currencyName: Australian dollar,
-                currency: AUD,
-                baseName: United Arab Emirates dirham,
+                currencyName: Australian dollar
+                currency: AUD
+                baseName: United Arab Emirates dirham
                 base: AED
               url: https://api.polygon.io/v2/tickers/$AEDAUD
   401:
