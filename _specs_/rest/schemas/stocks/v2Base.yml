@@ -1,0 +1,12 @@
+type: object
+properties:
+  T:
+    $ref: '../index.yml#/StockSymbol'
+  t:
+    $ref: '../index.yml#/TimestampSIP'
+  y:
+    $ref: '../index.yml#/TimestampExchange'
+  f:
+    $ref: '../index.yml#/TimestampTRF'
+  q:
+    $ref: '../index.yml#/SequenceNumber'

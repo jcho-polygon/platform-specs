@@ -1,2 +1,6 @@
 type: integer
-description: The trade ID.
+description: |
+  The Trade ID which uniquely identifies a trade. These are unique per
+  combination of ticker, exchange, and TRF. For example: A trade for AAPL
+  executed on NYSE and a trade for AAPL executed on NASDAQ could potentially
+  have the same Trade ID.

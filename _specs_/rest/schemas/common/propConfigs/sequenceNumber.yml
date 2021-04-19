@@ -1,4 +1,6 @@
 type: integer
 format: int64
 description: |
-  The sequence number represents the sequence in which message events happened. These are increasing and unique per ticker symbol, but will not always be sequential (e.g., 1, 2, 6, 9, 10, 11).
+  The sequence number represents the sequence in which message events happened.
+  These are increasing and unique per ticker symbol, but will not always be
+  sequential (e.g., 1, 2, 6, 9, 10, 11).

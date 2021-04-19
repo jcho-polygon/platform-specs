@@ -44,7 +44,7 @@ responses:
         schema:
           allOf:
             - $ref: '../../schemas/index.yml#/V2TicksBase'
-            - $ref: '../../schemas/index.yml#/StocksV2NBBO'
+            - $ref: '../../schemas/index.yml#/StocksV2NBBOs'
         example:
           ticker: AAPL
           success: true

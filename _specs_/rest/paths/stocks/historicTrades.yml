@@ -43,7 +43,7 @@ responses:
         schema:
           allOf:
             - $ref: '../../schemas/index.yml#/V2TicksBase'
-            - $ref: '../../schemas/index.yml#/StocksV2Trade'
+            - $ref: '../../schemas/index.yml#/StocksV2Trades'
         example:
           ticker: AAPL
           results_count: 2

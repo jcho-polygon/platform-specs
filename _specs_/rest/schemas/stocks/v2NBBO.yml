@@ -1,46 +1,22 @@
-type: object
-properties:
-  results:
-    type: array
-    items:
-      type: object
-      properties:
-        t:
-          $ref: '../index.yml#/TimestampSIP'
-        y:
-          $ref: '../index.yml#/TimestampExchange'
-        f:
-          $ref: '../index.yml#/TimestampTRF'
-        q:
-          $ref: '../index.yml#/SequenceNumber'
-        c:
-          type: array
-          description: A list of condition codes.
-          items:
-            type: integer
-            description: The condition code. These are the conditions of this message.  See <a href="https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor" alt="Condition Mappings">Condition Mappings</a> for a mapping to exchange conditions.
-        i:
-          type: array
-          description: The indicators.  For more information, see our glossary of <a href="https://polygon.io/glossary/us/stocks/conditions-indicators" alt="Conditions and Indicators Glossary" target="_blank">Conditions and Indicators</a>.
-          items:
-            type: integer
-            description: The indicator code.
-        p:
-          $ref: '../index.yml#/BidPrice'
-        x:
-          type: integer
-          description: The bid Exchange ID.
-        s:
-          $ref: '../index.yml#/BidSize'
-        P:
-          $ref: '../index.yml#/AskPrice'
-        X:
-          type: integer
-          description: The ask Exchange ID.
-        S:
-          $ref: '../index.yml#/AskSize'
-        z:
-          $ref: '../index.yml#/Tape'
-  map:
-    $ref: '../index.yml#/Map'
-
+allOf:
+  - $ref: '../index.yml#/StocksV2Base'
+  - type: object
+    properties:
+      c:
+        $ref: '../index.yml#/Conditions'
+      i:
+        $ref: '../index.yml#/Indicators'
+      p:
+        $ref: '../index.yml#/BidPrice'
+      s:
+        $ref: '../index.yml#/BidSize'
+      x:
+        $ref: '../index.yml#/BidExchangeId'
+      P:
+        $ref: '../index.yml#/AskPrice'
+      S:
+        $ref: '../index.yml#/AskSize'
+      X:
+        $ref: '../index.yml#/AskExchangeId'
+      z:
+        $ref: '../index.yml#/Tape'

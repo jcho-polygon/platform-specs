@@ -1,0 +1,44 @@
+summary: Last Trade for a Symbol
+description: |
+  Get the most recent trade for a given stock.
+tags:
+  - Stocks / Equities
+parameters:
+  - $ref: '../../parameters.yml#/StocksTickerPathParam'
+responses:
+  200:
+    description: The last trade for this stock.
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: '../../schemas/index.yml#/V2LastBase'
+            - type: object
+              properties:
+                results:
+                  $ref: '../../schemas/index.yml#/StocksV2Trade'
+        example:
+          request_id: f05562305bd26ced64b98ed68b3c5d96
+          status: OK
+          results:
+            T: AAPL
+            c:
+              - 37
+            f: 1617901342969796400
+            i: '118749'
+            p: 129.8473
+            q: 3135876
+            r: 202
+            s: 25
+            t: 1617901342969834000
+            x: 4
+            y: 1617901342968000000
+            z: 3
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Trades'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Stocks'

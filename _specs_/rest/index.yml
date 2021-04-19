@@ -6,6 +6,8 @@ info:
 servers:
   - url: 'https://api.polygon.io'
     description: 'Polygon Platform API'
+  - url: 'https://api.staging.polygon.io'
+    description: 'Polygon Platform API (Staging)'
 tags:
   - name: Reference
   - name: Stocks / Equities

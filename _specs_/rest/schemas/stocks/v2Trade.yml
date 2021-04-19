@@ -1,50 +1,24 @@
-type: object
-properties:
-  results:
-    type: array
-    items:
-      type: object
-      properties:
-        I:
-          type: integer
-          description: The original ID of the trade.  This is used when there is a trade correction to indicate the ID of the corrected trade.
-        x:
-          $ref: '../index.yml#/ExchangeId'
-        p:
-          type: number
-          format: double
-          description: The price of the trade. This is the actual dollar value per whole share of this trade.  A trade of 100 shares with a price of $2.00 would be worth a total dollar value of $200.00. 
-        i:
-          type: string
-          description: |
-            The Trade ID which uniquely identifies a trade. These are unique per combination of ticker, exchange, and TRF. For example: A trade for AAPL executed on NYSE and a trade for AAPL executed on NASDAQ could potentially have the same Trade ID.
-        e:
-          type: integer
-          description: The trade correction indicator.
-        r:
-          type: integer
-          description: The ID for the Trade Reporting Facility where the trade took place.
-        t:
-          $ref: '../index.yml#/TimestampSIP'
-        y:
-          $ref: '../index.yml#/TimestampExchange'
-        f:
-          $ref: '../index.yml#/TimestampTRF'
-        q:
-          type: integer
-          format: int64
-          description: |
-            The sequence number representing the sequence in which trade events happened. These are increasing and unique per ticker symbol, but will not always be sequential (e.g., 1, 2, 6, 9, 10, 11).
-        c:
-          type: array
-          description: The trade conditions.  These are the conditions of this message.  See <a href="https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor" alt="Condition Mappings">Condition Mappings</a> for a mapping to exchange conditions.
-          items:
-            type: integer
-            description: The condition code for this trade condition.
-        s:
-          type: integer
-          description: The size of a trade (also known as volume) as a number of whole shares traded.
-        z:
-          $ref: '../index.yml#/Tape'
-  map:
-    $ref: '../index.yml#/Map'
+allOf:
+  - $ref: '../index.yml#/StocksV2Base'
+  - type: object
+    properties:
+      c:
+        $ref: '../index.yml#/Conditions'
+      i:
+        $ref: '../index.yml#/TradeId'
+      p:
+        $ref: '../index.yml#/Price'
+      s:
+        $ref: '../index.yml#/Size'
+      e:
+        type: integer
+        description: |
+          The trade correction indicator.
+      x:
+        $ref: '../index.yml#/ExchangeId'
+      r:
+        type: integer
+        description: |
+          The ID for the Trade Reporting Facility where the trade took place.
+      z:
+        $ref: '../index.yml#/Tape'

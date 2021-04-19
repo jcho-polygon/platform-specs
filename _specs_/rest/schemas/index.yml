@@ -15,6 +15,8 @@ PaginationHooksBase:
   $ref: 'common/baseResponses/paginationHooks.yml'
 V1LastBase:
   $ref: 'common/baseResponses/v1LastBase.yml'
+V2LastBase:
+  $ref: 'common/baseResponses/v2LastBase.yml'
 V2TicksBase:
   $ref: 'common/baseResponses/v2TicksBase.yml'
 V2AggsBase:
@@ -45,10 +47,18 @@ Company:
 # PropConfigs
 Adjusted:
   $ref: 'common/propConfigs/adjusted.yml'
+AskExchangeId:
+  allOf:
+    - $ref: 'common/propConfigs/exchangeId.yml'
+    - description: Ask Exchange Id
 AskPrice:
   $ref: 'common/propConfigs/askPrice.yml'
 AskSize:
   $ref: 'common/propConfigs/askSize.yml'
+BidExchangeId:
+  allOf:
+    - $ref: 'common/propConfigs/exchangeId.yml'
+    - description: Bid Exchange Id
 BidPrice:
   $ref: 'common/propConfigs/bidPrice.yml'
 BidSize:
@@ -63,6 +73,8 @@ ExchangeId:
   $ref: 'common/propConfigs/exchangeId.yml'
 High:
   $ref: 'common/propConfigs/high.yml'
+Indicators:
+  $ref: 'common/propConfigs/indicators.yml'
 Low:
   $ref: 'common/propConfigs/low.yml'
 Map:
@@ -77,12 +89,12 @@ Price:
   $ref: 'common/propConfigs/price.yml'
 QueryCount:
   $ref: 'common/propConfigs/queryCount.yml'
+RequestID:
+  $ref: 'common/propConfigs/requestId.yml'
 Size:
   $ref: 'common/propConfigs/size.yml'
 SequenceNumber:
   $ref: 'common/propConfigs/sequenceNumber.yml'
-RequestID:
-  $ref: 'common/propConfigs/requestId.yml'
 Status:
   $ref: 'common/propConfigs/status.yml'
 StockSymbol:
@@ -193,10 +205,16 @@ StocksLastQuote:
   $ref: 'stocks/stocksLastQuote.yml'
 StocksLastTrade:
   $ref: 'stocks/stocksLastTrade.yml'
+StocksV2Base:
+  $ref: 'stocks/v2Base.yml'
 StocksV2Trade:
   $ref: 'stocks/v2Trade.yml'
+StocksV2Trades:
+  $ref: 'stocks/v2Trades.yml'
 StocksV2NBBO:
   $ref: 'stocks/v2NBBO.yml'
+StocksV2NBBOs:
+  $ref: 'stocks/v2NBBOs.yml'
 
 # Forex
 ForexConversion:

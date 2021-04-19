@@ -1,0 +1,42 @@
+summary: Last NBBO for a Symbol
+description: |
+  Get the most recent NBBO tick for a given stock.
+tags:
+  - Stocks / Equities
+parameters:
+  - $ref: '../../parameters.yml#/StocksTickerPathParam'
+responses:
+  200:
+    description: The last NBBO tick for this stock.
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: '../../schemas/index.yml#/V2LastBase'
+            - type: object
+              properties:
+                results:
+                  $ref: '../../schemas/index.yml#/StocksV2NBBO'
+        example:
+          request_id: b84e24636301f19f88e0dfbf9a45ed5c
+          status: OK
+          results:
+            P: 127.98
+            S: 7
+            T: AAPL
+            X: 19
+            p: 127.96
+            q: 83480742
+            s: 1
+            t: 1617827221349730300
+            x: 11
+            y: 1617827221349366000
+            z: 3
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/NBBO'
+x-polygon-entitlement-market-type:
+  $ref: '../../schemas/common/entitlementMarketTypes.yml#/Stocks'

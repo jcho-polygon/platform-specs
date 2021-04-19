@@ -1,0 +1,8 @@
+type: array
+description: |
+  The indicators. For more information, see our glossary of [Conditions and
+  Indicators](https://polygon.io/glossary/us/stocks/conditions-indicators).
+items:
+  type: integer
+  description: |
+    The indicator code.

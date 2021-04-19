@@ -1,0 +1,12 @@
+type: object
+properties:
+  ticker:
+    $ref: '../../index.yml#/StockSymbol'
+  db_latency:
+    type: integer
+    description: |
+      Latency in milliseconds for the query results from the database.
+  success:
+    type: boolean
+    description: |
+      Whether or not this query was executed successfully.

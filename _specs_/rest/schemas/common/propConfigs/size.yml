@@ -1,3 +1,4 @@
 type: number
 format: double
-description: The size of the trade.
+description: |
+  The size of a trade (also known as volume).

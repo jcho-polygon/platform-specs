@@ -1,9 +1,9 @@
 type: array
+description: |
+  A list of condition codes.
 items:
   type: integer
   description: |
-    Conditions of this trade.
-
-    empty: 0 (or empty array)
-    sellside: 1
-    buyside: 2
+    The condition code. These are the conditions of this message. See
+    [Condition Mappings](https://polygon.io/docs/get_v1_meta_conditions__ticktype__anchor)
+    for a mapping to exchange conditions.

@@ -1,3 +1,6 @@
 type: number
 format: double
-description: The price of the trade.
+description: |
+  The price of the trade. This is the actual dollar value per whole share of
+  this trade. A trade of 100 shares with a price of $2.00 would be worth a
+  total dollar value of $200.00.

@@ -55,6 +55,14 @@
 /v1/last_quote/stocks/{stocksTicker}:
   get:
     $ref: 'stocks/lastQuote.yml'
+/v2/last/trade/{stocksTicker}:
+  get:
+    $ref: 'stocks/v2LastTrade.yml'
+  x-polygon-draft: true
+/v2/last/nbbo/{stocksTicker}:
+  get:
+    $ref: 'stocks/v2LastNBBO.yml'
+  x-polygon-draft: true
 /v1/open-close/{stocksTicker}/{date}:
   get:
     $ref: 'stocks/openClose.yml'
