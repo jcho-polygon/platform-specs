@@ -1,0 +1,81 @@
+LimitQueryParam:
+  name: limit
+  in: query
+  description: |
+    Limit the maximum number of results returned.
+  schema:
+    type: integer
+    minimum: 1
+    maximum: 1000
+    default: 100
+OrderQueryParam:
+  name: order
+  in: query
+  description: |
+    Order the results in ascending or descending order.
+  required: false
+  schema:
+    type: string
+    enum:
+      - asc
+      - ascending
+      - desc
+      - descending
+    default: ascending
+SortQueryParam:
+  name: sort
+  in: query
+  description: |
+    The field key to sort the results on.
+  schema:
+    type: string
+EqQueryParam:
+  # This is a template that needs to be extended with a concrete name and a
+  # schema. For example:
+  #
+  # name: ticker
+  # schema:
+  #   $ref: '#/Ticker'
+  in: query
+  description: |
+    Return results where this field equals the value.
+LTQueryParam:
+  # This is a template that needs to be extended with a concrete name than ends
+  # with `.lt` and a schema. For example:
+  #
+  # name: ticker.lt
+  # schema:
+  #   $ref: '#/Ticker'
+  in: query
+  description: |
+    Return results where this field is less than the value.
+LTEQueryParam:
+  # This is a template that needs to be extended with a concrete name than ends
+  # with `.lte` and a schema. For example:
+  #
+  # name: ticker.lte
+  # schema:
+  #   $ref: '#/Ticker'
+  in: query
+  description: |
+    Return results where this field is less than or equal to the value.
+GTQueryParam:
+  # This is a template that needs to be extended with a concrete name than ends
+  # with `.gt` and a schema. For example:
+  #
+  # name: ticker.gt
+  # schema:
+  #   $ref: '#/Ticker'
+  in: query
+  description: |
+    Return results where this field is greater than the value.
+GTEQueryParam:
+  # This is a template that needs to be extended with a concrete name than ends
+  # with `.gte` and a schema. For example:
+  #
+  # name: ticker.gte
+  # schema:
+  #   $ref: '#/Ticker'
+  in: query
+  description: |
+    Return results where this field is greater than or equal to the value.

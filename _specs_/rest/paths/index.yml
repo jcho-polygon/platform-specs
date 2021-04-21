@@ -38,6 +38,10 @@
 /v1/marketstatus/now:
   get:
     $ref: 'reference/marketStatus.yml'
+/v2/reference/news:
+  get:
+    $ref: 'reference/v2News.yml'
+  x-polygon-draft: true
 
 # Stocks
 /v1/meta/exchanges:

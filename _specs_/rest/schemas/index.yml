@@ -197,6 +197,8 @@ Markets:
   $ref: 'reference/markets.yml'
 Locales:
   $ref: 'reference/locales.yml'
+V2News:
+  $ref: 'reference/v2News.yml'
 
 # Stocks
 StocksOpenClose:

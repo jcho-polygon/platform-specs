@@ -1,0 +1,73 @@
+summary: News v2
+description: |
+  Get the most recent news articles relating to a stock ticker symbol,
+  including a summary of the article and a link to the original source.
+parameters:
+  # Standard Pagination
+  - $ref: '../../pagination.yml#/LimitQueryParam'
+  - $ref: '../../pagination.yml#/OrderQueryParam'
+  - $ref: '../../pagination.yml#/SortQueryParam'
+    schema:
+      enum:
+        - published_utc
+        - ticker
+      default: published_utc
+  # Result Filtering: ticker
+  - $ref: '../../pagination.yml#/EqQueryParam'
+    name: ticker
+    schema:
+      $ref: 'schemas/index.yml#/StockSymbol'
+  - $ref: '../../pagination.yml#/LTQueryParam'
+    name: ticker.lt
+    schema:
+      $ref: 'schemas/index.yml#/StockSymbol'
+  - $ref: '../../pagination.yml#/LTEQueryParam'
+    name: ticker.lte
+    schema:
+      $ref: 'schemas/index.yml#/StockSymbol'
+  - $ref: '../../pagination.yml#/GTQueryParam'
+    name: ticker.gt
+    schema:
+      $ref: 'schemas/index.yml#/StockSymbol'
+  - $ref: '../../pagination.yml#/GTEQueryParam'
+    name: ticker.gte
+    schema:
+      $ref: 'schemas/index.yml#/StockSymbol'
+  # Result Filtering: published
+  - $ref: '../../pagination.yml#/EqQueryParam'
+    name: published
+    schema:
+      $ref: 'schemas/index.yml#/Timestamp'
+  - $ref: '../../pagination.yml#/LTQueryParam'
+    name: published.lt
+    schema:
+      $ref: 'schemas/index.yml#/Timestamp'
+  - $ref: '../../pagination.yml#/LTEQueryParam'
+    name: published.lte
+    schema:
+      $ref: 'schemas/index.yml#/Timestamp'
+  - $ref: '../../pagination.yml#/GTQueryParam'
+    name: published.gt
+    schema:
+      $ref: 'schemas/index.yml#/Timestamp'
+  - $ref: '../../pagination.yml#/GTEQueryParam'
+    name: published.gte
+    schema:
+      $ref: 'schemas/index.yml#/Timestamp'
+tags:
+  - Reference
+responses:
+  200:
+    description: An array of news articles.
+    content:
+      application/json:
+        schema:
+            $ref: '../../schemas/index.yml#/V2News'
+        example:
+          - FIXME: with a real example
+  401:
+    $ref: '../../responses.yml#/Unauthorized'
+  404:
+    $ref: '../../responses.yml#/NotFound'
+x-polygon-entitlement-data-type:
+  $ref: '../../schemas/common/entitlementDataTypes.yml#/Reference'

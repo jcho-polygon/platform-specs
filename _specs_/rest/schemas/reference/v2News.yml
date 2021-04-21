@@ -1,0 +1,84 @@
+type: object
+required:
+  - publisher
+  - title
+  - published
+  - article_url
+  - tickers
+  - guid
+properties:
+  publisher:
+    type: object
+    required:
+      - name
+      - logo_url
+      - homepage_url
+    properties:
+      name:
+        type: string
+        description: |
+          The publisher's name.
+      logo_url:
+        type: string
+        format: url
+        description: |
+          The publisher's logo URL.
+      homepage_url:
+        type: string
+        format: url
+        description: |
+          The publisher's homepage URL.
+      favicon_url:
+        type: string
+        format: url
+        description: |
+          The publisher's homepage favicon URL.
+  title:
+    type: string
+    description: |
+      The title of the news article.
+  published:
+    type: string
+    format: date-time
+    description: |
+      The date the article was published on.
+  author:
+    type: string
+    description: |
+      The article's author.
+  description:
+    type: string
+    description: |
+      A description of the article.
+  article_url:
+    type: string
+    format: url
+    description: |
+      A link to the news artcle.
+  amp_url:
+    type: string
+    format: url
+    description: |
+      The mobile friendly Accelerated Mobile Page (AMP) URL.
+  image_url:
+    type: string
+    format: url
+    description: |
+      The article's image URL.
+  tickers:
+    type: array
+    description: |
+      The ticker symbols associated with the article.
+    items:
+      $ref: '../index.yml#/StockSymbol'
+  keywords:
+    type: array
+    description: |
+      The keywords associated with the article (which will vary depending on
+      the publishing source).
+    items:
+      type: string
+  guid:
+    type: string
+    description: |
+      A globally unique identifier for the article.
