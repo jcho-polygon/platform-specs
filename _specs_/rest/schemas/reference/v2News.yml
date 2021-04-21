@@ -2,7 +2,7 @@ type: object
 required:
   - publisher
   - title
-  - published
+  - published_utc
   - article_url
   - tickers
   - guid
@@ -37,7 +37,7 @@ properties:
     type: string
     description: |
       The title of the news article.
-  published:
+  published_utc:
     type: string
     format: date-time
     description: |

@@ -33,25 +33,25 @@ parameters:
     name: ticker.gte
     schema:
       $ref: 'schemas/index.yml#/StockSymbol'
-  # Result Filtering: published
+  # Result Filtering: published_utc
   - $ref: '../../pagination.yml#/EqQueryParam'
-    name: published
+    name: published_utc
     schema:
       $ref: 'schemas/index.yml#/Timestamp'
   - $ref: '../../pagination.yml#/LTQueryParam'
-    name: published.lt
+    name: published_utc.lt
     schema:
       $ref: 'schemas/index.yml#/Timestamp'
   - $ref: '../../pagination.yml#/LTEQueryParam'
-    name: published.lte
+    name: published_utc.lte
     schema:
       $ref: 'schemas/index.yml#/Timestamp'
   - $ref: '../../pagination.yml#/GTQueryParam'
-    name: published.gt
+    name: published_utc.gt
     schema:
       $ref: 'schemas/index.yml#/Timestamp'
   - $ref: '../../pagination.yml#/GTEQueryParam'
-    name: published.gte
+    name: published_utc.gte
     schema:
       $ref: 'schemas/index.yml#/Timestamp'
 tags:
