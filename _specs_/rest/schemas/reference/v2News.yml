@@ -1,12 +1,17 @@
 type: object
 required:
+  - id
   - publisher
   - title
+  - author
   - published_utc
   - article_url
   - tickers
-  - guid
 properties:
+  id:
+    type: string
+    description: |
+      Unique identifier for the article.
   publisher:
     type: object
     required:
@@ -37,24 +42,26 @@ properties:
     type: string
     description: |
       The title of the news article.
+  author:
+    type: string
+    description: |
+      The article's author.
   published_utc:
     type: string
     format: date-time
     description: |
       The date the article was published on.
-  author:
-    type: string
-    description: |
-      The article's author.
-  description:
-    type: string
-    description: |
-      A description of the article.
   article_url:
     type: string
     format: url
     description: |
       A link to the news artcle.
+  tickers:
+    type: array
+    description: |
+      The ticker symbols associated with the article.
+    items:
+      $ref: '../index.yml#/StockSymbol'
   amp_url:
     type: string
     format: url
@@ -65,12 +72,10 @@ properties:
     format: url
     description: |
       The article's image URL.
-  tickers:
-    type: array
+  description:
+    type: string
     description: |
-      The ticker symbols associated with the article.
-    items:
-      $ref: '../index.yml#/StockSymbol'
+      A description of the article.
   keywords:
     type: array
     description: |
@@ -78,7 +83,3 @@ properties:
       the publishing source).
     items:
       type: string
-  guid:
-    type: string
-    description: |
-      A globally unique identifier for the article.
