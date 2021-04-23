@@ -10,7 +10,6 @@ parameters:
     schema:
       enum:
         - published_utc
-        - ticker
       default: published_utc
   # Result Filtering: ticker
   - $ref: '../../pagination.yml#/EqQueryParam'
