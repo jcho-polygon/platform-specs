@@ -11,3 +11,6 @@ which runs the npm package `swagger-cli`.
 
 If you want to view the specs locally for a sanity check, first run `./_bin_/bundle_spec` to build the spec, then run `./_bin_/spec_ui`
 and go to http://localhost:8080. Note: This is the Swagger UI view, not the custom Polygon.io view.
+
+To get a better view into our docs locally you could serve the docs on a local server using `./_bin_/serve_spec`, then you can 
+run our ui-docs locally with the following env var set `NEXT_PUBLIC_API_SPECS="http://localhost:9000/rest.json"`

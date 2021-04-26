@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+ROOT_DIR="$(git rev-parse --show-toplevel)"
+
+"${ROOT_DIR}"/_bin_/bundle_spec
+
+docker run --rm -it \
+  -v "${ROOT_DIR}":/opt/workdir \
+  -w /opt/workdir \
+  -e GO111MODULE=off \
+  -p 9000:9000 \
+  golang \
+  go run .
