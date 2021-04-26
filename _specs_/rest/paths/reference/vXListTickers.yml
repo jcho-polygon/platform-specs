@@ -54,11 +54,7 @@ parameters:
       Defaults to the most recent available date.
     required: false
     schema:
-      oneOf:
-        - type: string
-          format: date-time
-        - type: string
-          format: date
+      $ref: '../../schemas/index.yml#/Date'
   - name: active
     in: query
     description: |

@@ -69,6 +69,8 @@ Conditions:
   $ref: 'common/propConfigs/conditions.yml'
 Count:
   $ref: 'common/propConfigs/count.yml'
+Date:
+  $ref: 'common/propConfigs/date.yml'
 ExchangeId:
   $ref: 'common/propConfigs/exchangeId.yml'
 High:
