@@ -10,6 +10,23 @@ parameters:
     required: false
     schema:
       type: string
+  # Result Filtering: ticker
+  - $ref: '../../pagination.yml#/LTQueryParam'
+    name: ticker.lt
+    schema:
+      $ref: 'schemas/index.yml#/StockSymbol'
+  - $ref: '../../pagination.yml#/LTEQueryParam'
+    name: ticker.lte
+    schema:
+      $ref: 'schemas/index.yml#/StockSymbol'
+  - $ref: '../../pagination.yml#/GTQueryParam'
+    name: ticker.gt
+    schema:
+      $ref: 'schemas/index.yml#/StockSymbol'
+  - $ref: '../../pagination.yml#/GTEQueryParam'
+    name: ticker.gte
+    schema:
+      $ref: 'schemas/index.yml#/StockSymbol'
   - name: type
     in: query
     description: |
@@ -55,6 +72,13 @@ parameters:
     required: false
     schema:
       $ref: '../../schemas/index.yml#/Date'
+  - name: search
+    in: query
+    description: |
+      Search for terms within the ticker and/or company name.
+    required: false
+    schema:
+      type: string
   - name: active
     in: query
     description: |
@@ -111,24 +135,24 @@ responses:
           {
             "results": [
               {
-                "ticker": "AAPL",
-                "name": "APPLE COMPUTER INC",
+                "ticker": "A",
+                "name": "Agilent Technologies Inc.",
                 "market": "stocks",
                 "locale": "us",
-                "primary_exchange": "XNAS",
+                "primary_exchange": "XNYS",
                 "type": "CS",
                 "active": true,
                 "currency_name": "usd",
-                "cik": "0000320193",
-                "composite_figi": "BBG000B9XRY4",
-                "share_class_figi": "BBG001S5N8V8",
-                "last_updated_utc": "2019-01-25T00:00:00.000Z"
+                "cik": "0001090872",
+                "composite_figi": "BBG000BWQYZ5",
+                "share_class_figi": "BBG001SCTQY4",
+                "last_updated_utc": "2021-04-25T00:00:00Z"
               }
             ],
             "status": "OK",
-            "request_id": "80b8c50f9de25d05168db79b5723341e",
+            "request_id": "e70013d92930de90e089dc8fa098888e",
             "count": 1,
-            "next_page_path": "/vX/reference/tickers?active=true&apiKey=*******&date=2021-04-06&limit=1&order=asc&page_marker=AAPL%7C6ec768e0068819a88ae4282b7bf2fbadab7717e0b3a916e1ba61ac63cc1a8972&search=apple&sort=ticker"
+            "next_url": "https://api.polygon.io/vX/reference/tickers?cursor=YWN0aXZlPXRydWUmZGF0ZT0yMDIxLTA0LTI1JmxpbWl0PTEmb3JkZXI9YXNjJnBhZ2VfbWFya2VyPUElN0M5YWRjMjY0ZTgyM2E1ZjBiOGUyNDc5YmZiOGE1YmYwNDVkYzU0YjgwMDcyMWE2YmI1ZjBjMjQwMjU4MjFmNGZiJnNvcnQ9dGlja2Vy"
           }
   401:
     $ref: '../../responses.yml#/Unauthorized'

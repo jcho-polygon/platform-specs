@@ -139,3 +139,8 @@ responses:
     $ref: '../../responses.yml#/Conflict'
 x-polygon-entitlement-data-type:
   $ref: '../../schemas/common/entitlementDataTypes.yml#/Reference'
+x-polygon-deprecation:
+  date: 1623074400000
+  replaces:
+    path: '/v2/reference/news'
+    name: 'Ticker News v2'
