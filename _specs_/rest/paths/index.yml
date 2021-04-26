@@ -20,7 +20,6 @@
 /v2/reference/news:
   get:
     $ref: 'reference/v2News.yml'
-  x-polygon-draft: true
 /v2/reference/markets:
   get:
     $ref: 'reference/markets.yml'
