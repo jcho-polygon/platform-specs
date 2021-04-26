@@ -54,29 +54,7 @@ steps:
     token:
       from_secret: gcs_api_spec_editor_token
 
-trigger:
-  branch:
-  - master
-  event:
-  - push
-
----
-kind: pipeline
-type: docker
-name: build and deploy to production
-
-platform:
-  os: linux
-  arch: amd64
-
-steps:
-- name: bundle spec
-  image: polygonio/swagger-cli
-  commands:
-  - swagger-cli bundle _specs_/rest/index.yml --dereference --outfile _built_/rest.json --type json
-  - swagger-cli bundle _specs_/websocket/index.yml --dereference --outfile _built_/websocket.json --type json
-
-- name: upload rest spec
+- name: upload prod rest spec
   image: plugins/gcs
   settings:
     cache_control: no-cache
@@ -85,7 +63,7 @@ steps:
     token:
       from_secret: gcs_api_spec_editor_token
 
-- name: upload websocket spec
+- name: upload prod websocket spec
   image: plugins/gcs
   settings:
     cache_control: no-cache
@@ -95,9 +73,9 @@ steps:
       from_secret: gcs_api_spec_editor_token
 
 trigger:
+  branch:
+  - master
   event:
-  - tag
-  ref:
-  - refs/tags/production-*
+  - push
 
 ...

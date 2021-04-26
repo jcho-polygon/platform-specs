@@ -55,7 +55,7 @@ properties:
     type: string
     format: url
     description: |
-      A link to the news artcle.
+      A link to the news article.
   tickers:
     type: array
     description: |
