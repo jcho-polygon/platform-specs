@@ -1,4 +1,4 @@
-summary: Tickers vX
+summary: Tickers v3
 description: | 
   Query all ticker symbols which are supported by Polygon.io. This API currently includes Stocks/Equities, Crypto, and Forex.
 parameters: 
@@ -158,7 +158,3 @@ responses:
     $ref: '../../responses.yml#/Unauthorized'
 x-polygon-entitlement-data-type:
   $ref: '../../schemas/common/entitlementDataTypes.yml#/Reference'
-x-polygon-experimental:
-  replaces: 
-    path: 'get_v2_reference_tickers_anchor'
-    name: 'Tickers'
