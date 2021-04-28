@@ -127,7 +127,7 @@ responses:
       application/json:
         schema:
           allOf:
-            - $ref: '../../schemas/index.yml#/vXTickers'
+            - $ref: '../../schemas/index.yml#/v3Tickers'
             - $ref: '../../schemas/index.yml#/PaginationHooksBase'
             - $ref: '../../schemas/index.yml#/RequestIdBase'
             - $ref: '../../schemas/index.yml#/StatusCountBase'

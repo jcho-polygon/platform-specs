@@ -183,8 +183,8 @@ CryptoSnapshotTickerFullBook:
 # Reference
 Tickers:
   $ref: 'reference/tickers.yml'
-vXTickers:
-  $ref: 'reference/vXTickers.yml'
+v3Tickers:
+  $ref: 'reference/v3Tickers.yml'
 vXTickerDetails:
  $ref: 'reference/vXTickerDetails.yml'
 TickerTypes:

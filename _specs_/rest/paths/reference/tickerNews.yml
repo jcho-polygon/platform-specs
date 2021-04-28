@@ -49,5 +49,5 @@ x-polygon-entitlement-data-type:
 x-polygon-deprecation:
   date: 1623074400000
   replaces:
-    path: '/v2/reference/news'
+    path: 'get_v2_reference_news_anchor'
     name: 'Ticker News v2'
