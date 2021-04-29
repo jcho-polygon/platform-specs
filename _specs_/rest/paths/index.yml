@@ -11,7 +11,7 @@
 /v1/meta/symbols/{stocksTicker}/company:
   get:
     $ref: 'reference/tickerDetails.yml'
-/v3/reference/tickers/{ticker}:
+/vX/reference/tickers/{ticker}:
   get:
     $ref: 'reference/vXGetTicker.yml'
 /v1/meta/symbols/{stocksTicker}/news:
