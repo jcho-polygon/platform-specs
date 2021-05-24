@@ -1,6 +1,6 @@
-summary: Last NBBO for a Symbol
+summary: Last NBBO for a Symbol v2
 description: |
-  Get the most recent NBBO tick for a given stock.
+  Get the most recent NBBO (Quote) tick for a given stock.
 tags:
   - Stocks / Equities
 parameters:
