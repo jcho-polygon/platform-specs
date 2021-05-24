@@ -32,3 +32,8 @@ x-polygon-entitlement-data-type:
   $ref: '../../schemas/common/entitlementDataTypes.yml#/Trades'
 x-polygon-entitlement-market-type:
   $ref: '../../schemas/common/entitlementMarketTypes.yml#/Stocks'
+x-polygon-deprecation:
+  date: 1630504800000
+  replaces:
+    path: 'get_v2_last_trade__stocksTicker__anchor'
+    name: 'Last Trade for a Symbol v2'

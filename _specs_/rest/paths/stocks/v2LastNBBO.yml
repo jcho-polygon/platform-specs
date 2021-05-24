@@ -1,4 +1,4 @@
-summary: Last NBBO for a Symbol v2
+summary: Last Quote for a Symbol v2
 description: |
   Get the most recent NBBO (Quote) tick for a given stock.
 tags:
